@@ -1,0 +1,1011 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: 'VogueTTF';
+  src: url('/assets/Vogue.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'LaSeduction';
+  src: url('/assets/LaSeduction.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html, body, #root {
+  width: 100%;
+  height: 100%;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+body {
+  font-family: 'EB Garamond', serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* ── Magazine Scene ─────────────────────────────── */
+.magazine-scene {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  position: relative;
+  background-image: url('/assets/marble-bg.jpeg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  overflow-y: auto;
+}
+
+.marble-overlay {
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(ellipse 60% 40% at 50% 10%, rgba(255,255,255,0.2) 0%, transparent 60%),
+    rgba(255,255,255,0.08);
+  pointer-events: none;
+  z-index: 1;
+}
+
+.homepage-wrapper {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  max-width: 1400px;
+  padding: 60px 30px 80px;
+}
+
+/* ── Homepage Header ────────────────────────────── */
+.homepage-header {
+  text-align: center;
+  margin-bottom: 36px;
+  user-select: none;
+}
+
+.homepage-wordmark {
+  font-family: 'EB Garamond', serif;
+  font-style: italic;
+  font-size: clamp(48px, 10vw, 96px);
+  color: #111111;
+  line-height: 1;
+  letter-spacing: 0.02em;
+  white-space: nowrap;
+  margin-bottom: 14px;
+}
+
+.homepage-rule {
+  width: 48px;
+  height: 1px;
+  background: #111111;
+  margin: 0 auto 14px;
+}
+
+.homepage-subtitle {
+  font-family: 'EB Garamond', serif;
+  font-size: clamp(10px, 1.8vw, 13px);
+  color: #111111;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+}
+
+.covers-grid {
+  position: relative;
+  z-index: 2;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 18px;
+  max-width: 560px;
+  width: 100%;
+}
+
+/* ── Magazine Card ──────────────────────────────── */
+.magazine-card {
+  aspect-ratio: 3 / 4;
+  position: relative;
+  cursor: pointer;
+  box-shadow: 6px 14px 28px rgba(0,0,0,0.3);
+  transition:
+    transform 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+    box-shadow 0.4s ease;
+  overflow: hidden;
+  border-radius: 1px;
+  container-type: inline-size;
+}
+
+.magazine-card:nth-child(1) { transform: rotate(-1.4deg); }
+.magazine-card:nth-child(2) { transform: rotate(1.1deg); }
+.magazine-card:nth-child(3) { transform: rotate(0.9deg); }
+.magazine-card:nth-child(4) { transform: rotate(-0.7deg); }
+
+.magazine-card:hover {
+  transform: rotate(0deg) translateY(-12px) scale(1.04) !important;
+  box-shadow: 10px 24px 48px rgba(0,0,0,0.5);
+}
+
+/* Cover photo */
+.card-photo {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
+  display: block;
+}
+
+/* Dark gradient overlay */
+.card-gradient {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(0,0,0,0.18) 0%,
+    rgba(0,0,0,0.0) 28%,
+    rgba(0,0,0,0.0) 50%,
+    rgba(0,0,0,0.72) 100%
+  );
+  pointer-events: none;
+}
+
+/* Left spine shadow */
+.card-spine {
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 6px;
+  background: linear-gradient(to right, rgba(0,0,0,0.55), transparent);
+  pointer-events: none;
+  z-index: 3;
+}
+
+/* Right page-edge */
+.card-edge {
+  position: absolute;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  width: 4px;
+  background: repeating-linear-gradient(
+    to bottom,
+    #f2ead8 0px,
+    #f2ead8 3px,
+    #d4c9b0 3px,
+    #d4c9b0 6px
+  );
+  pointer-events: none;
+  z-index: 3;
+}
+
+/* Card content layer */
+.card-content {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  padding: 10px 12px 0 12px;
+  z-index: 2;
+  overflow: hidden;
+}
+
+/* Masthead — centered, full width */
+.card-masthead {
+  font-family: 'VogueTTF', serif;
+  font-size: clamp(24px, 16cqw, 72px);
+  color: #ffffff;
+  text-align: center !important;
+  letter-spacing: 0.04em;
+  line-height: 0.9;
+  text-shadow: 0 2px 14px rgba(0,0,0,0.55);
+  flex-shrink: 0;
+  white-space: nowrap;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+/* Small italic quote */
+.card-quote {
+  font-family: 'Cormorant Garamond', serif;
+  font-style: italic;
+  font-weight: 700;
+  font-size: clamp(9px, 1.8vw, 11px);
+  color: #ffffff;
+  letter-spacing: 0.02em;
+  line-height: 1.35;
+  text-shadow: 0 1px 6px rgba(0,0,0,0.7);
+}
+
+/* Issue title */
+.card-issue {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  padding: 0 9px 14px 9px;
+  font-family: 'VogueTTF', serif;
+  font-style: italic;
+  font-size: clamp(13px, 6cqw, 28px);
+  color: #ffffff;
+  text-align: center !important;
+  letter-spacing: 0.06em;
+  text-shadow: 0 1px 8px rgba(0,0,0,0.5);
+  z-index: 2;
+  box-sizing: border-box;
+}
+
+/* Hover CTA */
+.card-hover-cta {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-family: 'EB Garamond', serif;
+  font-size: clamp(9px, 2.8cqw, 12px);
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: #ffffff;
+  background: rgba(0,0,0,0.52);
+  border: 1px solid rgba(255,255,255,0.45);
+  padding: 7px 14px;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  pointer-events: none;
+  z-index: 5;
+  white-space: nowrap;
+}
+
+.magazine-card:hover .card-hover-cta {
+  opacity: 1;
+}
+
+/* ═══════════════════════════════════════════════════
+   MAGAZINE INTERIOR — open book system
+   (all classes prefixed .mag-* to avoid conflicts)
+═══════════════════════════════════════════════════ */
+
+/* Dim overlay — marble remains visible behind */
+.mag-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(10, 8, 5, 0.82);
+  animation: magFadeIn 0.35s ease forwards;
+}
+
+@keyframes magFadeIn {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+@keyframes magFadeOut {
+  0%   { opacity: 1; }
+  100% { opacity: 0; }
+}
+
+@keyframes bookClose {
+  0%   { transform: scale(1) translateY(0);    opacity: 1; }
+  100% { transform: scale(0.88) translateY(28px); opacity: 0; }
+}
+
+.mag-overlay--closing {
+  animation: magFadeOut 0.55s ease forwards;
+  pointer-events: none;
+}
+
+.mag-book--closing {
+  animation: bookClose 0.5s cubic-bezier(0.4, 0, 1, 1) forwards;
+}
+
+/* ── Book wrapper ────────────────────────────────
+   Wider than it is tall — like an open magazine
+   Page stacks on left and right via pseudo-elements
+──────────────────────────────────────────────── */
+.mag-book {
+  position: relative;
+  /* Portrait — matches the cover card */
+  width: min(46vh, 340px);
+  height: min(78vh, 510px);
+  animation: bookZoomIn 0.5s cubic-bezier(0.2, 0, 0.2, 1) forwards;
+  filter: drop-shadow(0 28px 55px rgba(0,0,0,0.65))
+          drop-shadow(0 4px 12px rgba(0,0,0,0.4));
+  /* Expand to two portrait pages side by side */
+  transition: width 0.75s cubic-bezier(0.4, 0, 0.2, 1),
+              height 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Two portrait pages side by side — each page ~430×600, A4-like ratio */
+.mag-book--open {
+  width: min(92vw, 900px);
+  height: min(90vh, 620px);
+}
+
+@keyframes bookZoomIn {
+  0%   { transform: scale(0.72) translateY(24px) rotate(-3deg); opacity: 0; }
+  55%  { transform: scale(1.03) translateY(-6px) rotate(0.5deg); opacity: 1; }
+  100% { transform: scale(1)    translateY(0)    rotate(0deg);   opacity: 1; }
+}
+
+/* Left page-stack — only visible when open (landscape) */
+.mag-book--open::before {
+  content: '';
+  position: absolute;
+  top: 3px;
+  left: -5px;
+  width: calc(50% + 5px);
+  height: 100%;
+  background: linear-gradient(to left, #cfc8bc 0%, #bfb8ac 60%, #b0a99c 100%);
+  border-radius: 2px 0 0 2px;
+  z-index: -1;
+}
+
+/* Right page-stack */
+.mag-book--open::after {
+  content: '';
+  position: absolute;
+  top: 3px;
+  right: -5px;
+  width: calc(50% + 5px);
+  height: 100%;
+  background: linear-gradient(to right, #cfc8bc 0%, #bfb8ac 60%, #b0a99c 100%);
+  border-radius: 0 2px 2px 0;
+  z-index: -1;
+}
+
+/* ── 3D cover flipper ── */
+.mag-flipper {
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+  transition: transform 0.75s cubic-bezier(0.645, 0.045, 0.355, 1.000);
+}
+
+.mag-flipper--flipped {
+  transform: rotateY(-180deg);
+}
+
+/* ── The two book faces ── */
+.mag-face {
+  position: absolute;
+  inset: 0;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  border-radius: 1px;
+  overflow: hidden;
+}
+
+.mag-face--back {
+  transform: rotateY(180deg);
+  /* Two clearly distinct pages */
+  background:
+    linear-gradient(to right,
+      #f0ece3 0%,
+      #f5f1ea 49.5%,
+      #2a1e10 49.5%,   /* hard spine line */
+      #2a1e10 50.5%,
+      #ede8df 50.5%,
+      #f2ede4 100%
+    );
+}
+
+/* ── Page area (clickable spread) ── */
+.mag-page-area {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+  user-select: none;
+}
+
+/* ── Open-book physical detail overlays ── */
+
+/* Center gutter / spine — hard dark seam + deep shadow on both pages */
+.mag-gutter {
+  position: absolute;
+  left: calc(50% - 24px);
+  top: 0;
+  bottom: 0;
+  width: 48px;
+  pointer-events: none;
+  z-index: 9;
+  background: linear-gradient(to right,
+    rgba(0,0,0,0.0)     0%,
+    rgba(0,0,0,0.12)    28%,
+    rgba(0,0,0,0.32)    44%,
+    rgba(0,0,0,0.55)    49%,
+    rgba(0,0,0,0.55)    51%,
+    rgba(0,0,0,0.32)    56%,
+    rgba(0,0,0,0.12)    72%,
+    rgba(0,0,0,0.0)     100%
+  );
+}
+
+/* Left-page inner shadow: pages curve toward spine */
+.mag-inner-shadow--left {
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 50%;
+  pointer-events: none;
+  z-index: 8;
+  background: linear-gradient(to right,
+    rgba(0,0,0,0.1) 0%,
+    rgba(0,0,0,0.04) 20%,
+    transparent 50%
+  );
+}
+
+/* Right-page inner shadow */
+.mag-inner-shadow--right {
+  position: absolute;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  width: 50%;
+  pointer-events: none;
+  z-index: 8;
+  background: linear-gradient(to left,
+    rgba(0,0,0,0.1) 0%,
+    rgba(0,0,0,0.04) 20%,
+    transparent 50%
+  );
+}
+
+/* Top-edge glare (paper catches the light) */
+.mag-top-glare {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  pointer-events: none;
+  z-index: 10;
+  background: linear-gradient(to bottom,
+    rgba(255,255,255,0.55),
+    transparent
+  );
+}
+
+/* ── Nav hint arrows ── */
+.mag-nav-hint {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 46%;
+  display: flex;
+  align-items: center;
+  pointer-events: none;
+  opacity: 0; /* hidden when can't navigate */
+  transition: opacity 0.25s;
+  z-index: 12;
+}
+
+.mag-nav-hint--left  { left: 0;  justify-content: flex-start; padding-left: 14px; }
+.mag-nav-hint--right { right: 0; justify-content: flex-end;  padding-right: 14px; }
+
+/* Visible (navigable) — controlled via JS edge-hover state */
+.mag-nav-hint--visible { opacity: 1.0; }
+
+.mag-nav-arrow {
+  font-family: 'EB Garamond', serif;
+  font-size: 36px;
+  color: #ffffff;
+  line-height: 1;
+  pointer-events: none;
+  background: rgba(0,0,0,0.35);
+  border-radius: 50%;
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-shadow: none;
+}
+
+/* ── Page content + flip animation ── */
+.mag-page-content {
+  width: 100%;
+  height: 100%;
+  will-change: transform, opacity;
+}
+
+/*
+  One-page-at-a-time flip:
+  - Exit overlays clip to only the TURNING half (right half for forward, left for backward)
+  - Enter overlays clip to only the ARRIVING half (left for forward, right for backward)
+  - The pivot is always at center (the gutter/spine)
+  - The static half stays visible via the base layer underneath
+*/
+
+@keyframes flipExitForward {
+  0%   { transform: perspective(1600px) rotateY(0deg);   opacity: 1; }
+  45%  { transform: perspective(1600px) rotateY(-50deg); opacity: 0.85; box-shadow: -10px 0 22px rgba(0,0,0,0.25) inset; }
+  100% { transform: perspective(1600px) rotateY(-90deg); opacity: 0; }
+}
+@keyframes flipEnterForward {
+  0%   { transform: perspective(1600px) rotateY(90deg);  opacity: 0; }
+  55%  { transform: perspective(1600px) rotateY(30deg);  opacity: 0.85; box-shadow: -8px 0 18px rgba(0,0,0,0.18) inset; }
+  100% { transform: perspective(1600px) rotateY(0deg);   opacity: 1; box-shadow: none; }
+}
+
+@keyframes flipExitBackward {
+  0%   { transform: perspective(1600px) rotateY(0deg);   opacity: 1; }
+  45%  { transform: perspective(1600px) rotateY(50deg);  opacity: 0.85; box-shadow: 10px 0 22px rgba(0,0,0,0.25) inset; }
+  100% { transform: perspective(1600px) rotateY(90deg);  opacity: 0; }
+}
+@keyframes flipEnterBackward {
+  0%   { transform: perspective(1600px) rotateY(-90deg); opacity: 0; }
+  55%  { transform: perspective(1600px) rotateY(-30deg); opacity: 0.85; box-shadow: 8px 0 18px rgba(0,0,0,0.18) inset; }
+  100% { transform: perspective(1600px) rotateY(0deg);   opacity: 1; box-shadow: none; }
+}
+
+/* Exit: right half folds left (forward) — pivot at center = gutter */
+.page-flip-exit-forward {
+  animation: flipExitForward 0.2s cubic-bezier(0.55, 0, 1, 0.5) forwards;
+  transform-origin: center center;
+  clip-path: inset(0 0 0 50%);
+  will-change: transform, opacity;
+}
+/* Enter: left half unfolds from center (forward) */
+.page-flip-enter-forward {
+  animation: flipEnterForward 0.2s cubic-bezier(0, 0.2, 0.35, 1) forwards;
+  transform-origin: center center;
+  clip-path: inset(0 50% 0 0);
+  will-change: transform, opacity;
+}
+/* Exit: left half folds right (backward) */
+.page-flip-exit-backward {
+  animation: flipExitBackward 0.2s cubic-bezier(0.55, 0, 1, 0.5) forwards;
+  transform-origin: center center;
+  clip-path: inset(0 50% 0 0);
+  will-change: transform, opacity;
+}
+/* Enter: right half unfolds from center (backward) */
+.page-flip-enter-backward {
+  animation: flipEnterBackward 0.2s cubic-bezier(0, 0.2, 0.35, 1) forwards;
+  transform-origin: center center;
+  clip-path: inset(0 0 0 50%);
+  will-change: transform, opacity;
+}
+
+/* ── UI chrome (above book, outside 3D space) ── */
+.mag-back-btn {
+  position: absolute;
+  top: -30px;
+  left: 0;
+  background: none;
+  border: none;
+  font-family: 'EB Garamond', serif;
+  font-style: italic;
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  color: rgba(255,255,255,0.92);
+  cursor: pointer;
+  padding: 0;
+  transition: color 0.2s;
+}
+.mag-back-btn:hover { color: #fff; }
+
+.mag-issue-label {
+  position: absolute;
+  top: -26px;
+  right: 0;
+  font-family: 'EB Garamond', serif;
+  font-size: 10px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.45);
+}
+
+/* ── Page indicator dots ── */
+.mag-page-dots {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 6px;
+  z-index: 11;
+  pointer-events: all; /* clickable */
+}
+
+.mag-page-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: rgba(90, 70, 50, 0.45);
+  transition: background 0.2s, transform 0.2s;
+}
+
+.mag-page-dot--active {
+  background: rgba(90, 70, 50, 0.9);
+  transform: scale(1.4);
+}
+
+/* ── Prevent mid-word breaks in editorial headlines ── */
+h1 { hyphens: none; word-break: keep-all; }
+
+/* ── Coming soon ── */
+.mag-coming-soon {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #f5f1ea;
+}
+.mag-coming-soon p {
+  font-family: 'EB Garamond', serif;
+  font-style: italic;
+  font-size: 15px;
+  color: #9a8070;
+  letter-spacing: 0.08em;
+}
+
+/* ── World map pulse animation ── */
+@keyframes mapPulse {
+  0%, 100% { transform: scale(1);   opacity: 0.18; }
+  50%       { transform: scale(2.2); opacity: 0;    }
+}
+
+/* ── Container query on interior pages ──
+   Makes cqw units inside spreads relative to the book width,
+   so typography scales correctly on all screen sizes. ── */
+.mag-page-area {
+  container-type: inline-size;
+}
+
+/* ── "Click to flip" first-visit hint ── */
+@keyframes flipHintFade {
+  0%   { opacity: 0; }
+  20%  { opacity: 1; }
+  75%  { opacity: 1; }
+  100% { opacity: 0; }
+}
+
+/* ── Splash screen animations ── */
+@keyframes splashPulse {
+  0%, 100% { opacity: 1;    }
+  50%       { opacity: 0.88; }
+}
+@keyframes splashBlink {
+  0%, 100% { opacity: 0.35; }
+  50%       { opacity: 0.7;  }
+}
+@keyframes splashFadeOut {
+  from { opacity: 1; }
+  to   { opacity: 0; }
+}
+
+/* ══════════════════════════════════════════
+   MOBILE  (<768px)
+══════════════════════════════════════════ */
+@media (max-width: 767px) {
+  /* Covers grid: 2 columns, tighter */
+  .covers-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+    max-width: 420px;
+  }
+
+  .homepage-wrapper {
+    padding: 40px 20px 60px;
+  }
+
+  .polaroids-row {
+    gap: 8px;
+  }
+  .polaroid-card {
+    width: 160px;
+  }
+
+  /* Open book: fill the screen width, maintain aspect ratio */
+  .mag-book--open {
+    width: 99vw;
+    height: 58vw; /* ~760:530 ratio ≈ 1.43, inverse ≈ 0.70; use 58vw for slight crop */
+  }
+
+  /* Chrome labels */
+  .mag-back-btn    { font-size: 11px; top: -22px; }
+  .mag-issue-label { font-size: 9px;  top: -20px; }
+
+  /* Dots: slightly larger tap target on touch */
+  .mag-page-dot {
+    width: 7px;
+    height: 7px;
+  }
+
+  /* Chevrons: bigger on touch */
+  .mag-nav-arrow { font-size: 44px; }
+}
+
+/* Ultra-narrow: single column covers */
+@media (max-width: 390px) {
+  .covers-grid {
+    grid-template-columns: 1fr;
+    max-width: 260px;
+    gap: 16px;
+  }
+}
+
+/* ── Personal Section ───────────────────────────── */
+.personal-section {
+  margin-top: 64px;
+  padding-bottom: 80px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.personal-header {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 10px;
+  width: 100%;
+  max-width: 520px;
+}
+
+.personal-rule {
+  flex: 1;
+  height: 1px;
+  background: rgba(17,17,17,0.3);
+}
+
+.personal-label {
+  font-family: 'EB Garamond', serif;
+  font-style: italic;
+  font-size: clamp(13px, 2.5vw, 16px);
+  color: #111111;
+  letter-spacing: 0.14em;
+  white-space: nowrap;
+}
+
+.personal-intro {
+  font-family: 'EB Garamond', serif;
+  font-size: clamp(10px, 1.8vw, 12px);
+  color: #111111;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  margin-bottom: 32px;
+}
+
+/* ── Polaroid Scattered Layout ──────────────────── */
+.polaroids-row {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: center;
+  gap: 2px;
+  width: 100%;
+  padding: 20px 0 60px;
+  box-sizing: border-box;
+}
+
+/* Offset each card vertically for scattered look */
+.polaroids-row .polaroid-card:nth-child(1) { margin-top: 24px; }
+.polaroids-row .polaroid-card:nth-child(2) { margin-top: -8px; }
+.polaroids-row .polaroid-card:nth-child(3) { margin-top: 32px; }
+.polaroids-row .polaroid-card:nth-child(4) { margin-top: 4px; width: clamp(125px, 10.5vw, 148px); }
+.polaroids-row .polaroid-card:nth-child(5) { margin-top: -12px; }
+.polaroids-row .polaroid-card:nth-child(6) { margin-top: 20px; }
+.polaroids-row .polaroid-card:nth-child(7) { margin-top: -8px; }
+.polaroids-row .polaroid-card:nth-child(8) { margin-top: 28px; }
+
+/* ── Polaroid Card ──────────────────────────────── */
+.polaroid-card {
+  width: clamp(150px, 12.5vw, 175px);
+  aspect-ratio: 1 / 1.35;
+  cursor: pointer;
+  transform: rotate(var(--rotate, 0deg));
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  perspective: 700px;
+}
+
+.polaroid-card:hover {
+  transform: rotate(0deg) translateY(-6px) scale(1.05) !important;
+  box-shadow: 0 16px 40px rgba(0,0,0,0.5);
+}
+
+.polaroid-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+  transition: transform 0.55s cubic-bezier(0.4, 0.2, 0.2, 1);
+}
+
+.polaroid-card.flipped .polaroid-inner {
+  transform: rotateY(180deg);
+}
+
+.polaroid-front,
+.polaroid-back {
+  position: absolute;
+  inset: 0;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  border-radius: 2px;
+}
+
+/* Front — clean white polaroid card */
+.polaroid-front {
+  position: absolute;
+  inset: 0;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  background: #ffffff;
+  box-shadow: 2px 8px 28px rgba(0,0,0,0.3);
+  padding: 8px 8px 36px 8px;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Photo sits inside the white border */
+.polaroid-photo {
+  width: 100%;
+  flex: 1;
+  min-height: 0;
+  object-fit: cover;
+  display: block;
+}
+
+.polaroid-caption {
+  font-family: 'EB Garamond', serif;
+  font-style: italic;
+  font-size: clamp(9px, 1.4vw, 13px);
+  color: #444;
+  text-align: center;
+  letter-spacing: 0.04em;
+  margin-top: 6px;
+  line-height: 1;
+}
+
+.polaroid-tap-hint {
+  font-family: 'EB Garamond', serif;
+  font-size: clamp(8px, 1vw, 11px);
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: rgba(0,0,0,0.6);
+  text-align: center;
+  margin-top: 4px;
+  opacity: 0;
+  transition: opacity 0.2s ease;
+}
+.polaroid-card:hover .polaroid-tap-hint { opacity: 1; }
+
+/* Back */
+.polaroid-back {
+  background: #ffffff;
+  transform: rotateY(180deg);
+  box-shadow: 2px 4px 16px rgba(0,0,0,0.35);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 10px;
+  gap: 6px;
+}
+
+.polaroid-back-text {
+  font-family: 'EB Garamond', serif;
+  font-style: italic;
+  font-size: 14px;
+  color: #333;
+  text-align: center;
+  line-height: 1.6;
+  letter-spacing: 0.02em;
+}
+
+.polaroid-back-rule {
+  width: 28px;
+  height: 1px;
+  background: #800020;
+}
+
+.polaroid-back-name {
+  font-family: 'EB Garamond', serif;
+  font-size: 8.5px;
+  color: #800020;
+  letter-spacing: 0.1em;
+}
+
+/* ── Envelope Contact Cards ─────────────────── */
+.env-scene {
+  height: 116px;
+  display: flex;
+  gap: 80px;
+  justify-content: center;
+  align-items: flex-end;
+  /* clip-path: extends upward so sliding letter is visible, clips at bottom */
+  clip-path: inset(-260px -400px 0px -400px);
+}
+
+.env-wrap {
+  width: 240px;
+  height: 170px;
+  position: relative;
+  cursor: pointer;
+  flex-shrink: 0;
+}
+
+/* Body — cream parchment */
+.env-body {
+  position: absolute;
+  inset: 0;
+  background: #f2ece0;
+  border: 1px solid #c8b79c;
+  box-shadow: 2px 5px 16px rgba(100,75,40,0.13);
+  z-index: 1;
+}
+
+/* Diagonal fold lines — bottom V crease of envelope */
+.env-body::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(135deg, transparent calc(50% - 0.5px), rgba(165,140,105,0.35) calc(50% - 0.5px), rgba(165,140,105,0.35) calc(50% + 0.5px), transparent calc(50% + 0.5px)),
+    linear-gradient(45deg,  transparent calc(50% - 0.5px), rgba(165,140,105,0.35) calc(50% - 0.5px), rgba(165,140,105,0.35) calc(50% + 0.5px), transparent calc(50% + 0.5px));
+}
+
+/* Flap — V triangle pointing downward */
+.env-flap {
+  position: absolute;
+  top: -1px;
+  left: -1px;
+  right: -1px;
+  z-index: 3;
+  transform-origin: top center;
+  transition: transform 0.52s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.env-flap svg { display: block; }
+
+.env-wrap:hover .env-flap {
+  transform: perspective(600px) rotateX(-172deg);
+}
+
+/* Letter on white paper inside */
+.env-letter {
+  position: absolute;
+  top: 20px;
+  left: 22px;
+  right: 22px;
+  background: #fffef8;
+  border: 1px solid #ddd5c2;
+  border-top: 3px solid #c8b79c;
+  padding: 12px 12px 14px;
+  text-align: center;
+  z-index: 2;
+  box-shadow: inset 0 1px 0 rgba(255,255,255,0.8);
+  transition: transform 0.52s cubic-bezier(0.4, 0, 0.2, 1) 0.1s;
+}
+
+.env-wrap:hover .env-letter {
+  transform: translateY(-94px);
+  z-index: 4;
+}
