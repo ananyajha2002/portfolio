@@ -166,7 +166,7 @@ export const ProjectsPage4 = (
     <R>
       <div style={{ position: 'absolute', top: 0, left: 0, right: 0, height: '3px', background: BL }} />
       <div style={{ marginTop: '10px' }}>
-        <K color={BL}>Product Launch · Endless Dubai · March 2025</K>
+        <K color={BL}>Product Launch · Endless Dubai · March 2026</K>
       </div>
       <div style={{ fontFamily: "'VogueTTF', serif", fontSize: 'clamp(26px, 8cqw, 44px)', color: TX, lineHeight: 0.85, letterSpacing: '0.01em', marginBottom: '8px', marginTop: '4px' }}>THE<br />VAULT.</div>
       <Rule />
@@ -236,7 +236,7 @@ export const ProjectsPage6 = (
     <R>
       <div style={{ position: 'absolute', top: 0, left: 0, right: 0, height: '3px', background: BL }} />
       <div style={{ marginTop: '10px' }}>
-        <K color={BL}>Brand Activation · Dubai · 2024</K>
+        <K color={BL}>Brand Activation · Dubai · 2025</K>
       </div>
       <div style={{ fontFamily: "'VogueTTF', serif", fontSize: 'clamp(20px, 6cqw, 30px)', color: TX, lineHeight: 0.88, letterSpacing: '0.01em', marginBottom: '8px', marginTop: '4px' }}>THE BIKE<br />BOXES.</div>
       <Rule />
