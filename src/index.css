@@ -715,32 +715,28 @@ h1 { hyphens: none; word-break: keep-all; }
     padding: 40px 20px 60px;
   }
 
-  /* Polaroids: horizontal scroll, no vertical scatter offsets */
+  /* Polaroids: 4×2 grid, no scatter */
   .polaroids-row {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
     gap: 10px;
-    overflow-x: auto;
-    overflow-y: visible;
-    justify-content: flex-start;
-    padding: 10px 20px 20px;
-    -webkit-overflow-scrolling: touch;
-    scrollbar-width: none;
+    padding: 0 4px;
+    overflow: visible;
+    justify-content: unset;
   }
-  .polaroids-row::-webkit-scrollbar { display: none; }
-
-  /* Reset all per-card vertical offsets on mobile */
+  /* Kill all the per-card vertical scatter offsets */
   .polaroids-row .polaroid-card:nth-child(n) {
     margin-top: 0 !important;
+    width: 100% !important;
   }
-
   .polaroid-card {
-    width: 140px;
-    flex-shrink: 0;
+    width: 100%;
   }
 
-  /* Open book: fill screen width, correct 900:620 aspect ratio */
+  /* Open book: full width, as tall as it can be to avoid cropping */
   .mag-book--open {
     width: 99vw;
-    height: 69vw;
+    height: min(90vh, 620px);
   }
 
   /* Chrome labels */
