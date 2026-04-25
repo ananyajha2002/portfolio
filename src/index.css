@@ -732,10 +732,10 @@ h1 { hyphens: none; word-break: keep-all; }
     width: 100%;
   }
 
-  /* Open book: full width, as tall as it can be to avoid cropping */
+  /* Open book: slightly inset so sides aren't clipped */
   .mag-book--open {
-    width: 99vw;
-    height: min(90vh, 620px);
+    width: 92vw;
+    height: calc(92vw * 620 / 900);
   }
 
   /* Chrome labels */
