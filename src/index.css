@@ -715,16 +715,15 @@ h1 { hyphens: none; word-break: keep-all; }
     padding: 40px 20px 60px;
   }
 
-  /* Polaroids: 4×2 grid, no scatter */
+  /* Polaroids: 3-column grid, no scatter */
   .polaroids-row {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 10px;
-    padding: 0 4px;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+    padding: 0;
     overflow: visible;
     justify-content: unset;
   }
-  /* Kill all the per-card vertical scatter offsets */
   .polaroids-row .polaroid-card:nth-child(n) {
     margin-top: 0 !important;
     width: 100% !important;
