@@ -715,17 +715,32 @@ h1 { hyphens: none; word-break: keep-all; }
     padding: 40px 20px 60px;
   }
 
+  /* Polaroids: horizontal scroll, no vertical scatter offsets */
   .polaroids-row {
-    gap: 8px;
+    gap: 10px;
+    overflow-x: auto;
+    overflow-y: visible;
+    justify-content: flex-start;
+    padding: 10px 20px 20px;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
   }
-  .polaroid-card {
-    width: 160px;
+  .polaroids-row::-webkit-scrollbar { display: none; }
+
+  /* Reset all per-card vertical offsets on mobile */
+  .polaroids-row .polaroid-card:nth-child(n) {
+    margin-top: 0 !important;
   }
 
-  /* Open book: fill the screen width, maintain aspect ratio */
+  .polaroid-card {
+    width: 140px;
+    flex-shrink: 0;
+  }
+
+  /* Open book: fill screen width, correct 900:620 aspect ratio */
   .mag-book--open {
     width: 99vw;
-    height: 58vw; /* ~760:530 ratio ≈ 1.43, inverse ≈ 0.70; use 58vw for slight crop */
+    height: 69vw;
   }
 
   /* Chrome labels */
