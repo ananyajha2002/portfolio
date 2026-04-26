@@ -113,8 +113,10 @@ export const CareerPage3 = (
       <div style={{ position: 'absolute', bottom: '18px', right: '18px', fontFamily: "'EB Garamond', serif", fontSize: '9px', letterSpacing: '0.12em', color: 'rgba(255,255,255,0.55)' }}>CAREER · 5 / 10</div>
     </L>
     <R>
-      <div style={{ height: '4px', background: BL, margin: '-24px -20px 14px -14px' }} />
-      <K color={BL}>Atlanta, GA · 2023–2025</K>
+      <div style={{ position: 'absolute', top: 0, left: 0, right: 0, height: '4px', background: BL }} />
+      <div style={{ marginTop: '10px' }}>
+        <K color={BL}>Atlanta, GA · 2023–2025</K>
+      </div>
       <H size="clamp(16px, 5cqw, 24px)">THE CITY THAT TAUGHT ME EVERYTHING.</H>
       <Rule />
       <B>I came to Atlanta the summer of my junior year for an internship at the City of Atlanta's procurement office, where everything was still on paper. The new Chief Procurement Officer had just launched a Center of Excellence to digitize and rebuild the function from the ground up, and I joined as a Business Analyst intern.</B>
