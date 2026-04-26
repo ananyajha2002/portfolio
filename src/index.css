@@ -729,10 +729,10 @@ h1 { hyphens: none; word-break: keep-all; }
     right: 16px !important;
   }
 
-  /* Magazine: 92vw with breathing room on sides */
+  /* Magazine: 92vw wide, tall enough for text content to fit */
   .mag-book--open {
     width: 92vw;
-    height: calc(92vw * 620 / 900);
+    height: min(75vh, 500px);
   }
   /* Remove filter on mobile — CSS filter flattens 3D context on iOS Safari,
      breaking backface-visibility and causing mirrored text bleed-through */
