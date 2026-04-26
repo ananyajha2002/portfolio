@@ -124,7 +124,7 @@ function SplashScreen({ onEnter }) {
 export default function App() {
   const [entered,   setEntered]   = useState(false)
   const [openCover, setOpenCover] = useState(null)
-  const { muted, toggleMute, playPageTurn, startBgm } = useAudio()
+  const { muted, toggleMute, playPageTurn, startBgm, nextTrack, prevTrack } = useAudio()
 
   const handleEnter = () => {
     startBgm()
@@ -142,7 +142,7 @@ export default function App() {
   return (
     <>
       {/* ── Vinyl player — spins when music is on ── */}
-      <VinylPlayer muted={muted} onToggle={toggleMute} />
+      <VinylPlayer muted={muted} onToggle={toggleMute} onNext={nextTrack} onPrev={prevTrack} />
 
       {/* ── Homepage: marble table with magazine grid ── */}
       <div className="magazine-scene">
