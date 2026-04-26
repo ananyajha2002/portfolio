@@ -1,11 +1,11 @@
 import { useRef, useState, useCallback, useEffect } from 'react'
 
 const TRACKS = [
+  '/assets/Dexys Midnight Runners, Kevin Rowland - Come On Eileen (1982 Version).mp3',
   '/assets/Dominic Fike - Açaí Bowl (Official Audio).mp3',
   '/assets/Linger (SiriusXM Session).mp3',
   '/assets/Blackbird (Remastered 2009).mp3',
   '/assets/The Killers - Mr. Brightside (Official Music Video).mp3',
-  '/assets/Dexys Midnight Runners, Kevin Rowland - Come On Eileen (1982 Version).mp3',
 ]
 
 export default function useAudio() {

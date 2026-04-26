@@ -707,10 +707,16 @@ h1 { hyphens: none; word-break: keep-all; }
   to   { transform: rotate(360deg); }
 }
 
+/* Hint pill: show correct version per device */
+.mag-hint--mobile  { display: none; }
+.mag-hint--desktop { display: inline; }
+
 /* ══════════════════════════════════════════
    MOBILE  (<768px)
 ══════════════════════════════════════════ */
 @media (max-width: 767px) {
+  .mag-hint--desktop { display: none; }
+  .mag-hint--mobile  { display: inline; }
   /* Covers grid: 2 columns, tighter */
   .covers-grid {
     grid-template-columns: 1fr 1fr;
