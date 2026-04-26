@@ -31,10 +31,10 @@ const PullQ = ({ children }) => (
 )
 
 const L = ({ children, photo }) => (
-  <div style={{ width: '50%', height: '100%', flexShrink: 0, background: photo ? 'transparent' : WH, padding: photo ? 0 : '24px 14px 16px 22px', borderRight: '1px solid #e8e8e8', display: 'flex', flexDirection: 'column', overflow: 'hidden', position: 'relative' }}>{children}</div>
+  <div className={photo ? '' : 'mag-text-col'} style={{ width: '50%', height: '100%', flexShrink: 0, background: photo ? 'transparent' : WH, padding: photo ? 0 : '24px 14px 16px 22px', borderRight: '1px solid #e8e8e8', display: 'flex', flexDirection: 'column', overflow: 'hidden', position: 'relative' }}>{children}</div>
 )
 const R = ({ children, photo }) => (
-  <div style={{ width: '50%', height: '100%', flexShrink: 0, background: photo ? 'transparent' : WH2, padding: photo ? 0 : '24px 20px 16px 14px', display: 'flex', flexDirection: 'column', overflow: 'hidden', position: 'relative' }}>{children}</div>
+  <div className={photo ? '' : 'mag-text-col'} style={{ width: '50%', height: '100%', flexShrink: 0, background: photo ? 'transparent' : WH2, padding: photo ? 0 : '24px 20px 16px 14px', display: 'flex', flexDirection: 'column', overflow: 'hidden', position: 'relative' }}>{children}</div>
 )
 
 /* ── Spread 1 — Opening ──────────────────────────────────── */

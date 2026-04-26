@@ -158,18 +158,18 @@ export default function MagazineInterior({ cover, onClose, playPageTurn }) {
                 onMouseLeave={handlePageMouseLeave}
                 style={{ cursor: phase === 'open' ? 'pointer' : 'default' }}
               >
-                <div className="mag-page-content" style={{ clipPath: baseClip }}>
+                <div className="mag-page-content" style={{ clipPath: baseClip, backfaceVisibility: 'hidden' }}>
                   {pages[displayIdx]}
                 </div>
 
                 {exitDir && (
-                  <div className={`mag-page-content page-flip-exit-${exitDir}`} style={{ position: 'absolute', inset: 0, zIndex: 6 }}>
+                  <div className={`mag-page-content page-flip-exit-${exitDir}`} style={{ position: 'absolute', inset: 0, zIndex: 6, backfaceVisibility: 'hidden' }}>
                     {pages[displayIdx]}
                   </div>
                 )}
 
                 {flipAnim && (
-                  <div className={`mag-page-content page-flip-${flipAnim}`} style={{ position: 'absolute', inset: 0, zIndex: 5 }}>
+                  <div className={`mag-page-content page-flip-${flipAnim}`} style={{ position: 'absolute', inset: 0, zIndex: 5, backfaceVisibility: 'hidden' }}>
                     {pages[displayIdx]}
                   </div>
                 )}

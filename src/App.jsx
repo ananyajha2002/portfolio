@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react'
 import './App.css'
 import MagazineCard     from './components/MagazineCard'
 import MagazineInterior from './components/MagazineInterior'
-import MuteButton       from './components/MuteButton'
+import VinylPlayer      from './components/VinylPlayer'
 import useAudio         from './hooks/useAudio'
 import { makeContactPage } from './components/ContactSpread'
 import PersonalSection     from './components/PersonalSection'
@@ -141,8 +141,8 @@ export default function App() {
 
   return (
     <>
-      {/* ── Mute button — always visible after entry ── */}
-      <MuteButton muted={muted} onToggle={toggleMute} />
+      {/* ── Vinyl player — spins when music is on ── */}
+      <VinylPlayer muted={muted} onToggle={toggleMute} />
 
       {/* ── Homepage: marble table with magazine grid ── */}
       <div className="magazine-scene">

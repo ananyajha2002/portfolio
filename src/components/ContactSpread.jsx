@@ -5,12 +5,12 @@
  */
 export function makeContactPage({ dark = '#111111', light = '#800020', issueName = '' }) {
   const L = ({ children }) => (
-    <div style={{ width: '50%', height: '100%', flexShrink: 0, background: dark, padding: '24px 14px 16px 22px', borderRight: `1px solid #2a2a2a`, display: 'flex', flexDirection: 'column', overflow: 'hidden', position: 'relative' }}>
+    <div className="mag-text-col" style={{ width: '50%', height: '100%', flexShrink: 0, background: dark, padding: '24px 14px 16px 22px', borderRight: `1px solid #2a2a2a`, display: 'flex', flexDirection: 'column', overflow: 'hidden', position: 'relative' }}>
       {children}
     </div>
   )
   const R = ({ children }) => (
-    <div style={{ width: '50%', height: '100%', flexShrink: 0, background: '#ffffff', padding: '24px 20px 16px 14px', display: 'flex', flexDirection: 'column', overflow: 'hidden', position: 'relative' }}>
+    <div className="mag-text-col" style={{ width: '50%', height: '100%', flexShrink: 0, background: '#ffffff', padding: '24px 20px 16px 14px', display: 'flex', flexDirection: 'column', overflow: 'hidden', position: 'relative' }}>
       {children}
     </div>
   )
