@@ -195,7 +195,7 @@ export const CareerPage6 = (
         <K color={BL}>Business and Creative Lead · Mar 2018–Present</K>
       </div>
       <RoleH>Mundrika Collection</RoleH>
-      <B>Mundrika is my mother's saree label, named after my grandmother. The saree is India's oldest garment, worn across every region and every generation. Fewer women drape one each year. People buy stitched alternatives or skip it entirely. My mother built Mundrika to bring it back. She sells what she has always loved to wear.</B>
+      <B>Mundrika is my mother's saree label, named after my grandmother. The saree is India's oldest garment, woven into every region and every generation at every occasion that ever meant something, and yet the art of draping one is quietly fading. Most women today reach for stitched alternatives or skip it altogether, and my mother built Mundrika because she could not watch that happen. She has always been a saree wearer, and she built a business around selling what she has always loved to wear.</B>
       <B>The foundation came earlier. At sixteen, my first paid job was the retail floor at Love Shop Pray in Jumeirah. Mundrika followed, and with it came everything: marketing, shoots, bespoke orders, licensing, captions, and exhibitions across Dubai.</B>
       <B>My mother is an exhibitor by trade. I run the business side she never had to think about and represent the brand at pop-ups across the city.</B>
       <div style={{ flex: 1 }} />
