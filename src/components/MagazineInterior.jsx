@@ -242,8 +242,10 @@ export default function MagazineInterior({ cover, onClose, playPageTurn }) {
           maxWidth: 'calc(100vw - 40px)', boxSizing: 'border-box',
           whiteSpace: 'nowrap',
         }}>
-          <span className="mag-hint--desktop">swipe · tap edges · Esc to close</span>
-          <span className="mag-hint--mobile">swipe · tap edges · scroll to read</span>
+          {window.innerWidth <= 767
+            ? 'swipe · tap edges · scroll to read'
+            : 'swipe · tap edges · Esc to close'
+          }
         </div>
       )}
     </div>
