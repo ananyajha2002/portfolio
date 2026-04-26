@@ -77,9 +77,11 @@ export const SkillsPage1 = (
 export const SkillsPage2 = (
   <div style={{ display: 'flex', height: '100%', overflow: 'hidden' }}>
     <L>
-      <K>Capabilities and Tools</K>
-      <div style={{ height: '3px', background: BL, margin: '-24px -14px 10px -22px' }} />
-      <div style={{ fontFamily: "'VogueTTF', serif", fontSize: 'clamp(18px, 5.5cqw, 30px)', color: TX, lineHeight: 0.88, letterSpacing: '0.02em', marginBottom: '10px', marginTop: '8px' }}>THE TOOLKIT.</div>
+      <div style={{ position: 'absolute', top: 0, left: 0, right: 0, height: '3px', background: BL }} />
+      <div style={{ marginTop: '10px' }}>
+        <K>Capabilities and Tools</K>
+      </div>
+      <div style={{ fontFamily: "'VogueTTF', serif", fontSize: 'clamp(18px, 5.5cqw, 30px)', color: TX, lineHeight: 0.88, letterSpacing: '0.02em', marginBottom: '10px' }}>THE TOOLKIT.</div>
       <Rule />
       <SkillGroup title="Operations" skills={['Marketplace Ops', 'Inventory Management', 'SOPs', 'Seller Onboarding', 'Logistics']} />
       <SkillGroup title="Tech and Automation" skills={['Shopify', 'n8n', 'Zapier', 'Shopify Flow', 'ManyChat', 'Power Automate']} />

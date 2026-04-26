@@ -173,6 +173,11 @@ export default function PersonalSection() {
           ))}
         </div>
       </div>
+
+      {/* ── Sign-off ── */}
+      <div style={{ textAlign: 'center', marginTop: '48px', paddingBottom: '12px' }}>
+        <p style={{ fontFamily: "'Caveat', cursive", fontSize: 'clamp(28px, 6vw, 42px)', color: '#111111', lineHeight: 1.1, letterSpacing: '0.01em' }}>yours truly, ananya</p>
+      </div>
     </div>
   )
 }

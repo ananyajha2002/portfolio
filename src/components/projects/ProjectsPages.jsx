@@ -200,11 +200,11 @@ export const ProjectsPage5 = (
     <R>
       <div style={{ position: 'absolute', top: 0, left: 0, right: 0, height: '3px', background: BL }} />
       <div style={{ marginTop: '10px' }}>
-        <K color={BL}>Retail Operations · Endless Dubai · March 2025</K>
+        <K color={BL}>Retail Operations · Endless Dubai · March 2026</K>
       </div>
       <div style={{ fontFamily: "'VogueTTF', serif", fontSize: 'clamp(24px, 7.5cqw, 42px)', color: TX, lineHeight: 0.85, letterSpacing: '0.01em', marginBottom: '8px', marginTop: '4px' }}>IRL.<br />IN FULL.</div>
       <Rule />
-      <B>When Endless took its first physical space in March 2025, I ran the operational side end-to-end. Stock transfer from warehouse to pop-up floor, inventory tracking through the transition, seller coordination, and on-floor team logistics during trading hours.</B>
+      <B>When Endless took its first physical space in March 2026, I ran the operational side end-to-end. Stock transfer from warehouse to pop-up floor, inventory tracking through the transition, seller coordination, and on-floor team logistics during trading hours.</B>
       <B>The goal was to translate the online experience into a physical one without losing momentum on orders running in parallel. Both had to work at the same time.</B>
       <B>In-person sales drove meaningful revenue for the month, making the case that circular fashion works beyond the screen.</B>
       <div style={{ display: 'flex', flexWrap: 'wrap', margin: '6px 0' }}>

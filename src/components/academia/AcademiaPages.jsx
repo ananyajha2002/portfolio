@@ -148,10 +148,12 @@ export const AcademiaPage3 = (
     <R photo>
       <img src="/assets/gamma-phi-beta.JPEG" alt="Gamma Phi Beta graduating class" style={{ width: '100%', height: '100%', objectFit: 'cover', objectPosition: 'center top', display: 'block' }} />
       <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(to bottom, transparent 60%, rgba(0,0,0,0.65) 100%)', pointerEvents: 'none' }} />
-      <div style={{ position: 'absolute', bottom: 0, left: 0, right: 0, padding: '14px 16px' }}>
-        <p style={{ fontFamily: "'EB Garamond', serif", fontStyle: 'italic', fontSize: '10px', color: 'rgba(255,255,255,0.85)', letterSpacing: '0.06em', lineHeight: 1.4 }}>Gamma Phi Beta · Class of 2024</p>
+      <div style={{ position: 'absolute', bottom: 0, left: 0, right: 0, padding: '10px 14px' }}>
+        <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-end' }}>
+          <p style={{ fontFamily: "'EB Garamond', serif", fontStyle: 'italic', fontSize: '10px', color: 'rgba(255,255,255,0.85)', letterSpacing: '0.06em', lineHeight: 1.4 }}>Gamma Phi Beta · Class of 2024</p>
+          <p style={{ fontFamily: "'EB Garamond', serif", fontSize: '9px', letterSpacing: '0.12em', color: 'rgba(255,255,255,0.6)', whiteSpace: 'nowrap', marginLeft: '8px' }}>ACADEMIA · 6 / 8</p>
+        </div>
       </div>
-      <div style={{ position: 'absolute', bottom: '18px', right: '18px', fontFamily: "'EB Garamond', serif", fontSize: '9px', letterSpacing: '0.12em', color: 'rgba(255,255,255,0.6)' }}>ACADEMIA · 6 / 8</div>
     </R>
   </div>
 )
@@ -163,17 +165,21 @@ export const AcademiaPage4 = (
     <L photo>
       <img src="/assets/daa-grad.JPG" alt="Dubai American Academy graduation" style={{ width: '100%', height: '100%', objectFit: 'cover', objectPosition: 'center top', display: 'block' }} />
       <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(to bottom, transparent 40%, rgba(0,0,0,0.88) 100%)', pointerEvents: 'none' }} />
-      <div style={{ position: 'absolute', bottom: 0, left: 0, right: 0, padding: '18px 16px' }}>
+      <div style={{ position: 'absolute', bottom: 0, left: 0, right: 0, padding: '10px 14px' }}>
         <p style={{ fontFamily: "'VogueTTF', serif", fontSize: 'clamp(20px, 6cqw, 30px)', color: '#ffffff', lineHeight: 0.9, letterSpacing: '0.02em', marginBottom: '6px' }}>THE IB YEARS.</p>
         <p style={{ fontFamily: "'EB Garamond', serif", fontSize: '9px', letterSpacing: '0.14em', textTransform: 'uppercase', color: 'rgba(255,255,255,0.75)' }}>Dubai, UAE · 2018–2020</p>
-        <p style={{ fontFamily: "'EB Garamond', serif", fontStyle: 'italic', fontSize: '10px', color: 'rgba(255,255,255,0.8)', lineHeight: 1.4, marginTop: '4px' }}>GEMS Dubai American Academy · IB Diploma</p>
+        <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-end', marginTop: '4px' }}>
+          <p style={{ fontFamily: "'EB Garamond', serif", fontStyle: 'italic', fontSize: '10px', color: 'rgba(255,255,255,0.8)', lineHeight: 1.4 }}>Dubai American Academy · IB Diploma</p>
+          <p style={{ fontFamily: "'EB Garamond', serif", fontSize: '9px', letterSpacing: '0.12em', color: 'rgba(255,255,255,0.6)', whiteSpace: 'nowrap', marginLeft: '8px' }}>ACADEMIA · 7 / 8</p>
+        </div>
       </div>
-      <div style={{ position: 'absolute', bottom: '18px', right: '18px', fontFamily: "'EB Garamond', serif", fontSize: '9px', letterSpacing: '0.12em', color: 'rgba(255,255,255,0.6)' }}>ACADEMIA · 7 / 8</div>
     </L>
     {/* Right: school experience */}
     <R>
-      <div style={{ height: '4px', background: BL, margin: '-24px -20px 12px -14px' }} />
-      <K color={BL}>Dubai · 2005–2020</K>
+      <div style={{ position: 'absolute', top: 0, left: 0, right: 0, height: '4px', background: BL }} />
+      <div style={{ marginTop: '10px' }}>
+        <K color={BL}>Dubai · 2005–2020</K>
+      </div>
       <H size="clamp(18px, 5.5cqw, 28px)">THE SCHOOL<br />YEARS.</H>
       <Rule />
       <B>Three schools in Dubai over fifteen years: The Indian High School from KG1 through Grade 7, Emirates International School Jumeirah through Grade 10, and GEMS Dubai American Academy for the IB Diploma in Grades 11 and 12.</B>

@@ -181,11 +181,12 @@ export const CareerPage6 = (
     <L photo>
       <img src="/assets/mundrika.JPG" alt="Mundrika Collection" style={{ width: '100%', height: '100%', objectFit: 'cover', objectPosition: 'center top', display: 'block' }} />
       <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(to bottom, transparent 50%, rgba(0,0,0,0.82) 100%)', pointerEvents: 'none' }} />
-      <div style={{ position: 'absolute', bottom: 0, left: 0, right: 0, padding: '18px 16px' }}>
-        <p style={{ fontFamily: "'VogueTTF', serif", fontSize: 'clamp(22px, 6cqw, 34px)', color: '#ffffff', lineHeight: 0.9, letterSpacing: '0.02em', marginBottom: '6px' }}>MUNDRIKA<br />COLLECTION.</p>
-        <p style={{ fontFamily: "'EB Garamond', serif", fontSize: '9px', letterSpacing: '0.14em', textTransform: 'uppercase', color: 'rgba(255,255,255,0.75)' }}>Dubai · Family · 2018–Present</p>
+      <div style={{ position: 'absolute', bottom: 0, left: 0, right: 0, padding: '10px 14px' }}>
+        <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-end' }}>
+          <p style={{ fontFamily: "'VogueTTF', serif", fontSize: 'clamp(22px, 6cqw, 34px)', color: '#ffffff', lineHeight: 0.9, letterSpacing: '0.02em' }}>MUNDRIKA<br />COLLECTION.</p>
+          <p style={{ fontFamily: "'EB Garamond', serif", fontSize: '9px', letterSpacing: '0.12em', color: 'rgba(255,255,255,0.6)', whiteSpace: 'nowrap', marginLeft: '8px' }}>CAREER · 9 / 10</p>
+        </div>
       </div>
-      <div style={{ position: 'absolute', bottom: '18px', right: '18px', fontFamily: "'EB Garamond', serif", fontSize: '9px', letterSpacing: '0.12em', color: 'rgba(255,255,255,0.6)' }}>CAREER · 9 / 10</div>
     </L>
     <R>
       <div style={{ position: 'absolute', top: 0, left: 0, right: 0, height: '3px', background: BL }} />
