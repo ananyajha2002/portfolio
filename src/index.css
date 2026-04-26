@@ -749,9 +749,11 @@ h1 { hyphens: none; word-break: keep-all; }
   /* Chevrons */
   .mag-nav-arrow { font-size: 44px; }
 
-  /* ── Issue 3: Smaller text in magazine interior ── */
-  /* Each page column is ~179px wide on a 390px phone — scale text accordingly */
-  .mag-page-area h1 {
+  /* ── Smaller text in magazine interior ── */
+  /* Each page column is ~179px wide on a 390px phone */
+  /* Target h1 AND any div/span using VogueTTF (some headlines use div not h1) */
+  .mag-page-area h1,
+  .mag-page-area [style*="VogueTTF"] {
     font-size: clamp(12px, 4.5vw, 18px) !important;
     line-height: 0.9 !important;
   }
@@ -759,11 +761,16 @@ h1 { hyphens: none; word-break: keep-all; }
     font-size: 9px !important;
     line-height: 1.3 !important;
   }
-  .mag-page-area p[style*="italic"] {
+  .mag-page-area p[style*="font-style: italic"] {
     font-size: 10px !important;
   }
   .mag-text-col {
     padding: 12px 8px !important;
+  }
+
+  /* Prevent vinyl button from covering last polaroid row */
+  .personal-section {
+    padding-bottom: 90px;
   }
 
   /* ── Polaroids — 3 per row, last row centred, natural tilts ── */

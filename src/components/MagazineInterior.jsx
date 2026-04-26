@@ -126,7 +126,7 @@ export default function MagazineInterior({ cover, onClose, playPageTurn }) {
       >
         <div className={`mag-flipper ${phase === 'open' || phase === 'closing' ? 'mag-flipper--flipped' : ''}`}>
 
-          <div className="mag-face mag-face--front" aria-hidden={phase === 'open'}>
+          <div className="mag-face mag-face--front" aria-hidden={phase === 'open'} style={{ opacity: isOpen ? 0 : 1, transition: 'opacity 0s' }}>
             <img
               src={cover.photo}
               alt=""
