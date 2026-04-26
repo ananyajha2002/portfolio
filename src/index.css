@@ -756,12 +756,13 @@ h1 { hyphens: none; word-break: keep-all; }
 
   /* ── Issue 5: Polaroids — 3-column grid, no scatter ── */
   .polaroids-row {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 8px;
-    padding: 0;
-    overflow: visible;
-    justify-content: unset;
+    display: grid !important;
+    grid-template-columns: repeat(3, 1fr) !important;
+    flex-wrap: unset !important;
+    gap: 8px !important;
+    padding: 0 !important;
+    overflow: visible !important;
+    justify-content: unset !important;
   }
   .polaroids-row .polaroid-card:nth-child(n) {
     margin-top: 0 !important;
@@ -769,12 +770,12 @@ h1 { hyphens: none; word-break: keep-all; }
     transform: none !important;
   }
   .polaroid-card {
-    width: 100%;
-    aspect-ratio: 2 / 3;
+    width: 100% !important;
+    aspect-ratio: 2 / 3 !important;
   }
   .polaroid-card:hover {
     transform: none !important;
-    box-shadow: none;
+    box-shadow: none !important;
   }
   /* Smaller back text so it fits inside the card */
   .polaroid-back-text {
