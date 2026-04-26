@@ -754,19 +754,22 @@ h1 { hyphens: none; word-break: keep-all; }
   /* Target h1 AND any div/span using VogueTTF (some headlines use div not h1) */
   .mag-page-area h1,
   .mag-page-area [style*="VogueTTF"] {
-    font-size: 8px !important;
+    font-size: 10px !important;
     line-height: 0.9 !important;
   }
   .mag-page-area p {
-    font-size: 6px !important;
-    line-height: 1.2 !important;
+    font-size: 7.5px !important;
+    line-height: 1.25 !important;
     margin-bottom: 3px !important;
   }
   .mag-page-area p[style*="font-style: italic"] {
-    font-size: 6.5px !important;
+    font-size: 8px !important;
   }
+  /* Text columns scroll on mobile — content is too long to fit in 247px height */
   .mag-text-col {
-    padding: 6px 5px !important;
+    padding: 8px 6px !important;
+    overflow-y: auto !important;
+    -webkit-overflow-scrolling: touch !important;
   }
 
   /* Prevent vinyl button from covering last polaroid row */
