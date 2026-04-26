@@ -176,7 +176,8 @@ export default function PersonalSection() {
 
       {/* ── Sign-off ── */}
       <div style={{ textAlign: 'center', marginTop: '48px', paddingBottom: '12px' }}>
-        <p style={{ fontFamily: "'LaSeduction', cursive", fontSize: 'clamp(20px, 4vw, 32px)', color: '#111111', lineHeight: 1.2, letterSpacing: '0.02em' }}>Yours truly,<br />Ananya</p>
+        <p style={{ fontFamily: "'EB Garamond', serif", fontSize: 'clamp(10px, 1.8vw, 13px)', letterSpacing: '0.22em', textTransform: 'uppercase', color: '#111111', marginBottom: '4px' }}>Yours truly,</p>
+        <p style={{ fontFamily: "'LaSeduction', cursive", fontSize: 'clamp(28px, 5vw, 40px)', color: '#111111', lineHeight: 1, letterSpacing: '0.02em' }}>Ananya</p>
       </div>
     </div>
   )
