@@ -722,19 +722,11 @@ h1 { hyphens: none; word-break: keep-all; }
     padding: 40px 20px 60px;
   }
 
-  /* ── Issue 2: Magazine fills entire screen edge to edge ── */
+  /* Magazine: 92vw with breathing room on sides */
   .mag-book--open {
-    width: 100vw !important;
-    height: 100dvh !important;
-    border-radius: 0;
-    filter: none;
+    width: 92vw;
+    height: calc(92vw * 620 / 900);
   }
-  /* Hide page-stack pseudo-elements that bleed outside bounds */
-  .mag-book--open::before,
-  .mag-book--open::after {
-    display: none;
-  }
-  /* Chrome labels reposition for full-screen layout */
   .mag-back-btn    { font-size: 11px; top: -22px; }
   .mag-issue-label { font-size: 9px;  top: -20px; }
 
