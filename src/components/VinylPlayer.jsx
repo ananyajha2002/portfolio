@@ -4,6 +4,7 @@ export default function VinylPlayer({ muted, onToggle }) {
       onClick={onToggle}
       aria-label={muted ? 'Unmute music' : 'Mute music'}
       title={muted ? 'Click to play' : 'Click to mute'}
+      className="vinyl-player-btn"
       style={{
         position: 'fixed',
         top: '16px',

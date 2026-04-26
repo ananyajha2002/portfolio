@@ -722,10 +722,23 @@ h1 { hyphens: none; word-break: keep-all; }
     padding: 40px 20px 60px;
   }
 
+  /* Vinyl: move to bottom-right on mobile so it doesn't overlap header */
+  .vinyl-player-btn {
+    top: auto !important;
+    bottom: 24px !important;
+    right: 16px !important;
+  }
+
   /* Magazine: 92vw with breathing room on sides */
   .mag-book--open {
     width: 92vw;
     height: calc(92vw * 620 / 900);
+  }
+  /* Remove filter on mobile — CSS filter flattens 3D context on iOS Safari,
+     breaking backface-visibility and causing mirrored text bleed-through */
+  .mag-book {
+    filter: none !important;
+    box-shadow: 0 12px 32px rgba(0,0,0,0.55), 0 2px 8px rgba(0,0,0,0.35);
   }
   .mag-back-btn    { font-size: 11px; top: -22px; }
   .mag-issue-label { font-size: 9px;  top: -20px; }
@@ -737,21 +750,20 @@ h1 { hyphens: none; word-break: keep-all; }
   .mag-nav-arrow { font-size: 44px; }
 
   /* ── Issue 3: Smaller text in magazine interior ── */
+  /* Each page column is ~179px wide on a 390px phone — scale text accordingly */
   .mag-page-area h1 {
-    font-size: clamp(20px, 7.5vw, 34px) !important;
-    line-height: 1 !important;
+    font-size: clamp(12px, 4.5vw, 18px) !important;
+    line-height: 0.9 !important;
   }
   .mag-page-area p {
-    font-size: 11px !important;
+    font-size: 9px !important;
     line-height: 1.3 !important;
   }
-  /* Pull quotes (italic paragraphs) slightly larger */
   .mag-page-area p[style*="italic"] {
-    font-size: 13px !important;
+    font-size: 10px !important;
   }
-  /* Reduce internal padding on text columns */
   .mag-text-col {
-    padding: 16px 10px !important;
+    padding: 12px 8px !important;
   }
 
   /* ── Issue 5: Polaroids — 3-column grid, no scatter ── */
