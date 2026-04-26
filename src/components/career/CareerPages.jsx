@@ -195,9 +195,9 @@ export const CareerPage6 = (
         <K color={BL}>Business and Creative Lead · Mar 2018–Present</K>
       </div>
       <RoleH>Mundrika Collection</RoleH>
-      <B>Mundrika is my mother's. Saris, lehengas, shalwar kameez, ready-to-wear and bespoke Indian textiles she's spent decades perfecting. I started working with her at sixteen, and seven years on, I'm still working with her now.</B>
-      <B>I run the marketing and the storefront, model the collections for shoots, work with tailors on bespoke orders, handle the licensing paperwork no one else wants to deal with, and write the captions. My mother is an exhibitor by trade, and I represent the brand at exhibitions and pop-ups across Dubai.</B>
-      <B>It was through draping a sari for the camera that I understood why my mother spent years perfecting the way it falls. Before all of this, also at sixteen, I worked the retail floor at Love Shop Pray in Jumeirah, my first paid job. The thread runs further back than my CV does.</B>
+      <B>Mundrika is my mother's Indian couture label, named after my grandmother. She has spent decades perfecting it. I started working with her at sixteen, and seven years on, I am still here.</B>
+      <B>The foundation came earlier. At sixteen, my first paid job was the retail floor at Love Shop Pray in Jumeirah. Mundrika followed, and with it came everything: marketing, shoots, bespoke orders, licensing, captions, and exhibitions across Dubai.</B>
+      <B>My mother is an exhibitor by trade. I run the business side she never had to think about and represent the brand at pop-ups across the city.</B>
       <div style={{ flex: 1 }} />
       <div style={{ borderLeft: `2px solid ${BL}`, paddingLeft: '10px', marginBottom: '8px' }}>
         <p style={{ fontFamily: "'EB Garamond', serif", fontStyle: 'italic', fontSize: '11px', color: MU, lineHeight: 1.4 }}>"mundrika taught me business before any classroom did."</p>
