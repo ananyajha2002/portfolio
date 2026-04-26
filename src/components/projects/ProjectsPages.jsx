@@ -136,7 +136,8 @@ export const ProjectsPage3 = (
       <Num n={5} total={14} />
     </L>
     <R>
-      <div style={{ height: '4px', background: BL, margin: '-24px -20px 12px -14px' }} />
+      <div style={{ position: 'absolute', top: 0, left: 0, right: 0, height: '4px', background: BL }} />
+      <div style={{ marginTop: '10px' }} />
       <RoleH>Weekly KPI Reports</RoleH>
       <B>Automated weekly business review pulling Shopify, Klaviyo, Meta Ads, and fulfillment data, delivered every Monday before stand-up. No manual compilation required.</B>
       <div style={{ display: 'flex', flexWrap: 'wrap', marginBottom: '4px' }}>
@@ -227,11 +228,13 @@ export const ProjectsPage6 = (
     <L photo>
       <img src="/assets/bike-delivery.jpg" alt="Endless 2-hour delivery" style={{ width: '100%', height: '100%', objectFit: 'cover', objectPosition: 'center top', display: 'block' }} />
       <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(to bottom, transparent 45%, rgba(0,0,0,0.78) 100%)', pointerEvents: 'none' }} />
-      <div style={{ position: 'absolute', bottom: 0, left: 0, right: 0, padding: '18px 16px' }}>
+      <div style={{ position: 'absolute', bottom: 0, left: 0, right: 0, padding: '10px 14px' }}>
         <p style={{ fontFamily: "'VogueTTF', serif", fontSize: 'clamp(20px, 6cqw, 32px)', color: '#ffffff', lineHeight: 0.9, letterSpacing: '0.02em', marginBottom: '6px' }}>DELIVERED<br />IN 2 HOURS.</p>
-        <p style={{ fontFamily: "'EB Garamond', serif", fontSize: '9px', letterSpacing: '0.14em', textTransform: 'uppercase', color: 'rgba(255,255,255,0.75)' }}>Brand Design · Endless Dubai</p>
+        <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-end' }}>
+          <p style={{ fontFamily: "'EB Garamond', serif", fontSize: '9px', letterSpacing: '0.14em', textTransform: 'uppercase', color: 'rgba(255,255,255,0.75)' }}>Brand Design · Endless Dubai</p>
+          <p style={{ fontFamily: "'EB Garamond', serif", fontSize: '9px', letterSpacing: '0.12em', color: 'rgba(255,255,255,0.65)', whiteSpace: 'nowrap', marginLeft: '8px' }}>PROJECTS · 11 / 14</p>
+        </div>
       </div>
-      <div style={{ position: 'absolute', bottom: '18px', right: '18px', fontFamily: "'EB Garamond', serif", fontSize: '9px', letterSpacing: '0.12em', color: 'rgba(255,255,255,0.65)' }}>PROJECTS · 11 / 14</div>
     </L>
     <R>
       <div style={{ position: 'absolute', top: 0, left: 0, right: 0, height: '3px', background: BL }} />
