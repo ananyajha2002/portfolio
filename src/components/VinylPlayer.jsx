@@ -37,7 +37,7 @@ export default function VinylPlayer({ muted, onToggle, onNext, onPrev }) {
       }}
       className="vinyl-tooltip"
       >
-        turn it up. these are the ones.
+        increase your volume to hear the songs I'd use to introduce myself
       </div>
 
       {/* Vinyl disc — click to mute/unmute */}
