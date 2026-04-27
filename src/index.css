@@ -707,6 +707,12 @@ h1 { hyphens: none; word-break: keep-all; }
   to   { transform: rotate(360deg); }
 }
 
+/* Vinyl tooltip on hover */
+.vinyl-player-btn:hover .vinyl-tooltip {
+  opacity: 1 !important;
+  transform: translateY(0) !important;
+}
+
 /* Hint pill: show correct version per device */
 .mag-hint--mobile  { display: none; }
 .mag-hint--desktop { display: inline; }

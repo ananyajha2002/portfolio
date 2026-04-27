@@ -13,6 +13,33 @@ export default function VinylPlayer({ muted, onToggle, onNext, onPrev }) {
         gap: '6px',
       }}
     >
+      {/* Tooltip */}
+      <div style={{
+        position: 'absolute',
+        bottom: 'calc(100% + 10px)',
+        right: 0,
+        background: 'rgba(20,20,20,0.92)',
+        backdropFilter: 'blur(8px)',
+        WebkitBackdropFilter: 'blur(8px)',
+        border: '1px solid rgba(255,255,255,0.12)',
+        borderRadius: '6px',
+        padding: '8px 12px',
+        whiteSpace: 'nowrap',
+        fontFamily: "'EB Garamond', serif",
+        fontStyle: 'italic',
+        fontSize: '12px',
+        color: 'rgba(255,255,255,0.85)',
+        letterSpacing: '0.04em',
+        pointerEvents: 'none',
+        opacity: 0,
+        transform: 'translateY(4px)',
+        transition: 'opacity 0.2s ease, transform 0.2s ease',
+      }}
+      className="vinyl-tooltip"
+      >
+        turn it up. these are the ones.
+      </div>
+
       {/* Vinyl disc — click to mute/unmute */}
       <button
         onClick={onToggle}
