@@ -59,7 +59,7 @@ const POLAROIDS = [
     type: 'image',
     src: '/assets/indian clothing.JPG',
     objectPosition: 'center top',
-    caption: 'Indian Fashion',
+    caption: 'Indian Heritage',
     rotate: '2.5deg',
     back: 'dressing up in indian clothing is a whole other kind of elegance. the jewellery, the drape, the occasion. nothing compares.',
   },
