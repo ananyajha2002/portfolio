@@ -55,7 +55,7 @@ export const SkillsPage1 = (
       <Rule />
       <B>Operations strategy, marketing analytics, automation engineering, and data storytelling, built across five cities and three industries and counting.</B>
       <B>Every tool here has been used in production. Every certification was earned through coursework, not just a badge.</B>
-      <B>The real USP is not the list. It is the speed. Put something new in front of her and she will have a working grasp of it before the week is out. The self-taught half is not a gap in the CV — it is proof that she does not need to be handed a playbook to deliver results. She picks up, pivots, and builds from wherever she lands.</B>
+      <B>The real USP is not the list. It is the speed. Put something new in front of her and she will have a working grasp of it before the week is out. The self-taught half is not a gap in the CV. It is proof that she does not need to be handed a playbook to deliver results. She picks up, pivots, and builds from wherever she lands.</B>
       <div style={{ flex: 1 }} />
       <div style={{ borderLeft: `2px solid ${BL}`, paddingLeft: '10px', marginBottom: '10px' }}>
         <p style={{ fontFamily: "'EB Garamond', serif", fontStyle: 'italic', fontSize: '12px', color: MU, lineHeight: 1.4 }}>"certified, self-taught and still learning"</p>
