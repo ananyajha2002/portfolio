@@ -320,14 +320,14 @@ export default function OnRotation() {
     return () => window.removeEventListener('keydown', handler)
   }, [focused])
 
-  /* Light oak vertical-slat wall — matches reference */
+  /* Dark chocolate vertical-slat wall */
   const woodWall = {
     background: [
       'repeating-linear-gradient(90deg,',
-      '  #1c0e06 0px, #1c0e06 3px,',
-      '  #dbbe82 3px, #e4cc8e 8px,',
-      '  #ccac72 8px, #ba9660 20px,',
-      '  #b08c58 20px, #1c0e06 23px',
+      '  #180904 0px, #180904 3px,',
+      '  #6a3c1e 3px, #724220 8px,',
+      '  #5c3216 8px, #4c2a0e 20px,',
+      '  #42240c 20px, #180904 23px',
       ')',
     ].join(''),
   }
