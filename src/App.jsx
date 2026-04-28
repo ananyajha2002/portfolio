@@ -149,29 +149,32 @@ export default function App() {
       <div className="magazine-scene">
         <div className="marble-overlay" />
 
-        <div className="homepage-wrapper">
-          {/* Header */}
-          <div className="homepage-header">
-            <p className="homepage-subtitle">
-              everything you need to know, professionally.
-            </p>
+        {/* Column wrapper — keeps homepage-wrapper centred, lets OnRotation go full-width below */}
+        <div style={{ width: '100%', display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
+          <div className="homepage-wrapper">
+            {/* Header */}
+            <div className="homepage-header">
+              <p className="homepage-subtitle">
+                everything you need to know, professionally.
+              </p>
+            </div>
+
+            {/* Magazine grid */}
+            <div className="covers-grid">
+              {COVERS.map((cover) => (
+                <MagazineCard
+                  key={cover.id}
+                  cover={cover}
+                  onOpen={() => handleOpen(cover)}
+                />
+              ))}
+            </div>
+
+            {/* Personal about me */}
+            <PersonalSection />
           </div>
 
-          {/* Magazine grid */}
-          <div className="covers-grid">
-            {COVERS.map((cover) => (
-              <MagazineCard
-                key={cover.id}
-                cover={cover}
-                onOpen={() => handleOpen(cover)}
-              />
-            ))}
-          </div>
-
-          {/* Personal about me */}
-          <PersonalSection />
-
-          {/* On Rotation — TV section */}
+          {/* On Rotation — full-width wood wall, stacks below in column flow */}
           <OnRotation />
         </div>
       </div>
