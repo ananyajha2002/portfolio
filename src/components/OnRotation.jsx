@@ -378,13 +378,22 @@ export default function OnRotation() {
         </div>
       </section>
 
-      {/* Sign-off — transparent so marble shows through */}
-      <section data-screen-label="Signature" style={{ position: 'relative', width: '100%', padding: '56px 32px 112px', textAlign: 'center', background: 'transparent', boxSizing: 'border-box' }}>
-        <div style={{ fontFamily: '"JetBrains Mono", monospace', fontSize: 11, letterSpacing: '.32em', textTransform: 'uppercase', color: '#3a342c' }}>
-          Yours truly,
-        </div>
-        <div style={{ marginTop: 8, fontFamily: '"Pinyon Script", "Allura", "Great Vibes", cursive', fontSize: 64, color: '#1a1714', lineHeight: 1 }}>
-          Ananya
+      {/* Sign-off — LinkedIn banner as full-bleed background */}
+      <section data-screen-label="Signature" style={{
+        position: 'relative', width: '100%', padding: '72px 32px 96px', textAlign: 'center',
+        backgroundImage: "url('/assets/linkedin banner.jpeg')",
+        backgroundSize: 'cover', backgroundPosition: 'center',
+        boxSizing: 'border-box',
+      }}>
+        {/* Subtle dark overlay so text always reads clearly */}
+        <div style={{ position: 'absolute', inset: 0, background: 'rgba(0,0,0,0.32)', pointerEvents: 'none' }} />
+        <div style={{ position: 'relative', zIndex: 1 }}>
+          <div style={{ fontFamily: '"JetBrains Mono", monospace', fontSize: 11, letterSpacing: '.32em', textTransform: 'uppercase', color: 'rgba(255,255,255,0.85)', textShadow: '0 1px 4px rgba(0,0,0,0.5)' }}>
+            Yours truly,
+          </div>
+          <div style={{ marginTop: 8, fontFamily: '"Pinyon Script", "Allura", "Great Vibes", cursive', fontSize: 72, color: '#ffffff', lineHeight: 1, textShadow: '0 2px 12px rgba(0,0,0,0.4)' }}>
+            Ananya
+          </div>
         </div>
       </section>
     </>
