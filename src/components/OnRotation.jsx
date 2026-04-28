@@ -320,16 +320,21 @@ export default function OnRotation() {
     return () => window.removeEventListener('keydown', handler)
   }, [focused])
 
-  /* Cool grey slat wall — matches marble undertones */
+  /* Wide warm-brown wood panel wall */
   const woodWall = {
-    background: [
-      'repeating-linear-gradient(90deg,',
-      '  #c0c2c6 0px, #c0c2c6 3px,',
-      '  #eef0f3 3px, #f3f4f7 8px,',
-      '  #e4e6ea 8px, #d6d8dd 20px,',
-      '  #caced4 20px, #c0c2c6 23px',
-      ')',
-    ].join(''),
+    background: `
+      repeating-linear-gradient(90deg,
+        rgba(0,0,0,0.28) 0px, rgba(0,0,0,0.28) 2px,
+        transparent 2px, transparent 200px
+      ),
+      repeating-linear-gradient(0deg,
+        rgba(0,0,0,0.055) 0px, rgba(0,0,0,0.055) 1px,
+        transparent 1px, transparent 7px,
+        rgba(255,255,255,0.025) 7px, rgba(255,255,255,0.025) 8px,
+        transparent 8px, transparent 20px
+      ),
+      linear-gradient(165deg, #9a6840 0%, #7e5230 25%, #6a4222 55%, #58361a 100%)
+    `,
   }
 
   return (
@@ -339,11 +344,11 @@ export default function OnRotation() {
         data-screen-label="On Rotation"
         style={{ ...woodWall, padding: isMobile ? '28px 12px 44px' : '36px 32px 68px', width: '100%', boxSizing: 'border-box' }}
       >
-        <div style={{ textAlign: 'center', marginBottom: isMobile ? 18 : 26, color: '#2a2a2a' }}>
-          <h2 style={{ fontFamily: '"Playfair Display", serif', fontStyle: 'italic', fontSize: 'clamp(28px, 6vw, 52px)', fontWeight: 700, margin: '0 0 4px', letterSpacing: '-.01em', color: '#1a1a1a' }}>
+        <div style={{ textAlign: 'center', marginBottom: isMobile ? 18 : 26, color: '#f0e8dc' }}>
+          <h2 style={{ fontFamily: '"Playfair Display", serif', fontStyle: 'italic', fontSize: 'clamp(28px, 6vw, 52px)', fontWeight: 700, margin: '0 0 4px', letterSpacing: '-.01em', color: '#f0e8dc' }}>
             On Rotation
           </h2>
-          <div style={{ fontFamily: '"EB Garamond", serif', fontStyle: 'italic', fontSize: isMobile ? 13 : 16, opacity: .85, color: '#1a1a1a', display: 'flex', alignItems: 'center', justifyContent: 'center', gap: 12 }}>
+          <div style={{ fontFamily: '"EB Garamond", serif', fontStyle: 'italic', fontSize: isMobile ? 13 : 16, opacity: .75, color: '#f0e8dc', display: 'flex', alignItems: 'center', justifyContent: 'center', gap: 12 }}>
             Use the remote, or your arrow keys.
           </div>
         </div>
