@@ -325,7 +325,7 @@ export default function OnRotation() {
       <section
         ref={sectionRef}
         data-screen-label="On Rotation"
-        style={{ padding: isMobile ? '28px 12px 44px' : '36px 32px 68px', width: '100%', boxSizing: 'border-box' }}
+        style={{ padding: isMobile ? '28px 12px 0' : '36px 32px 0', width: '100%', boxSizing: 'border-box' }}
       >
         <div style={{ textAlign: 'center', marginBottom: isMobile ? 18 : 26 }}>
           <h2 style={{ fontFamily: '"Playfair Display", serif', fontStyle: 'italic', fontSize: 'clamp(28px, 6vw, 52px)', fontWeight: 700, margin: '0 0 4px', letterSpacing: '-.01em', color: '#111111' }}>
