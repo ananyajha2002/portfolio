@@ -55,9 +55,9 @@ function MovieTicket({ title, year, channel, total, compact }) {
     return () => clearInterval(id)
   }, [])
 
-  const stamp     = { fontFamily: '"Helvetica Neue", Arial, sans-serif', fontWeight: 700, fontSize: compact ? 6 : 9, letterSpacing: '0.32em', textTransform: 'uppercase', color: '#7a4a2a' }
+  const stamp     = { fontFamily: '"Helvetica Neue", Arial, sans-serif', fontWeight: 700, fontSize: compact ? 6 : 9, letterSpacing: '0.32em', textTransform: 'uppercase', color: '#5a5a6e' }
   const statLabel = { ...stamp, fontSize: compact ? 5 : 8, letterSpacing: '0.28em', marginBottom: 2, display: 'block' }
-  const statValue = { fontFamily: '"VT323", monospace', fontSize: compact ? 16 : 22, color: '#1a1714', letterSpacing: '0.04em', display: 'block' }
+  const statValue = { fontFamily: '"VT323", monospace', fontSize: compact ? 16 : 22, color: '#1a1a2a', letterSpacing: '0.04em', display: 'block' }
 
   const paperTexture = {
     position: 'absolute', inset: 0, pointerEvents: 'none', borderRadius: 'inherit',
@@ -77,22 +77,22 @@ function MovieTicket({ title, year, channel, total, compact }) {
     }}>
       {/* Main stub */}
       <div style={{
-        position: 'relative', background: '#f5e6c8',
+        position: 'relative', background: '#eeeff4',
         padding: compact ? '12px 12px 12px 14px' : '22px 28px 22px 32px',
-        minWidth: compact ? 0 : 320, color: '#1a1714',
+        minWidth: compact ? 0 : 320, color: '#1a1a2a',
         borderRadius: '4px 0 0 4px',
         WebkitMaskImage: 'radial-gradient(circle at right center, transparent 9px, #000 10px)',
         maskImage: 'radial-gradient(circle at right center, transparent 9px, #000 10px)',
       }}>
         <div style={paperTexture} />
-        <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'baseline', borderBottom: '1px dashed rgba(26,23,20,0.4)', paddingBottom: compact ? 6 : 10, marginBottom: compact ? 7 : 12 }}>
+        <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'baseline', borderBottom: '1px dashed rgba(80,80,120,0.3)', paddingBottom: compact ? 6 : 10, marginBottom: compact ? 7 : 12 }}>
           <span style={stamp}>Admit One</span>
           <span style={stamp}>Cinéma A.J.</span>
           <span style={stamp}>No. {ticketNo}</span>
         </div>
-        <div style={{ fontFamily: '"Bebas Neue", "Oswald", Impact, sans-serif', fontSize: compact ? 20 : 36, fontWeight: 900, lineHeight: 0.95, letterSpacing: '0.04em', textTransform: 'uppercase', color: '#1a1714', marginBottom: compact ? 2 : 4 }}>{title}</div>
-        <div style={{ fontFamily: '"EB Garamond", serif', fontStyle: 'italic', fontSize: compact ? 10 : 15, color: '#5a3f28', marginBottom: compact ? 7 : 14 }}>({year}) · Feature</div>
-        <div style={{ display: 'grid', gridTemplateColumns: compact ? 'repeat(2, auto)' : 'repeat(4, auto)', gap: compact ? 8 : 12, borderTop: '1px dashed rgba(26,23,20,0.4)', paddingTop: compact ? 6 : 10 }}>
+        <div style={{ fontFamily: '"Bebas Neue", "Oswald", Impact, sans-serif', fontSize: compact ? 20 : 36, fontWeight: 900, lineHeight: 0.95, letterSpacing: '0.04em', textTransform: 'uppercase', color: '#1a1a2a', marginBottom: compact ? 2 : 4 }}>{title}</div>
+        <div style={{ fontFamily: '"EB Garamond", serif', fontStyle: 'italic', fontSize: compact ? 10 : 15, color: '#5a5a6e', marginBottom: compact ? 7 : 14 }}>({year}) · Feature</div>
+        <div style={{ display: 'grid', gridTemplateColumns: compact ? 'repeat(2, auto)' : 'repeat(4, auto)', gap: compact ? 8 : 12, borderTop: '1px dashed rgba(80,80,120,0.3)', paddingTop: compact ? 6 : 10 }}>
           {[
             { label: 'Channel', value: `${String(channel).padStart(2,'0')}/${String(total).padStart(2,'0')}` },
             { label: 'Row',     value: seatLetter },
@@ -108,11 +108,11 @@ function MovieTicket({ title, year, channel, total, compact }) {
       </div>
 
       {/* Perforation */}
-      <div style={{ width: 0, borderLeft: '1.5px dashed rgba(26,23,20,0.4)', margin: '4px 0', flexShrink: 0 }} />
+      <div style={{ width: 0, borderLeft: '1.5px dashed rgba(80,80,120,0.3)', margin: '4px 0', flexShrink: 0 }} />
 
       {/* Tear-off stub */}
       <div style={{
-        position: 'relative', background: '#f5e6c8',
+        position: 'relative', background: '#e8eaf0',
         padding: compact ? '12px 8px' : '22px 18px',
         minWidth: compact ? 40 : 84,
         display: 'flex', flexDirection: 'column', justifyContent: 'space-between', alignItems: 'center',
@@ -122,8 +122,8 @@ function MovieTicket({ title, year, channel, total, compact }) {
       }}>
         <div style={paperTexture} />
         <div style={{ ...stamp, fontSize: compact ? 5 : 7, letterSpacing: '0.28em', textAlign: 'center' }}>On Rotation</div>
-        <div style={{ fontFamily: '"Bebas Neue", Impact, sans-serif', fontWeight: 900, fontSize: compact ? 14 : 22, letterSpacing: '0.06em', color: '#1a1714', transform: 'rotate(-90deg)', whiteSpace: 'nowrap' }}>Stub</div>
-        <div style={{ fontFamily: '"VT323", monospace', fontSize: compact ? 10 : 14, color: '#1a1714' }}>{ticketNo}</div>
+        <div style={{ fontFamily: '"Bebas Neue", Impact, sans-serif', fontWeight: 900, fontSize: compact ? 14 : 22, letterSpacing: '0.06em', color: '#1a1a2a', transform: 'rotate(-90deg)', whiteSpace: 'nowrap' }}>Stub</div>
+        <div style={{ fontFamily: '"VT323", monospace', fontSize: compact ? 10 : 14, color: '#1a1a2a' }}>{ticketNo}</div>
       </div>
     </div>
   )
@@ -357,10 +357,10 @@ export default function OnRotation() {
               aspectRatio: '16/9', background: '#000', overflow: 'hidden',
               boxShadow: [
                 'inset 0 0 60px rgba(0,0,0,.9)',
-                '0 0 28px 12px rgba(20,60,255,0.85)',
-                '0 0 70px 35px rgba(15,45,230,0.55)',
-                '0 0 130px 65px rgba(10,30,200,0.28)',
-                '0 18px 48px rgba(0,0,0,.4)',
+                '0 0 22px 10px rgba(30,70,255,0.22)',
+                '0 0 60px 30px rgba(20,55,230,0.13)',
+                '0 0 110px 55px rgba(10,40,210,0.07)',
+                '0 18px 48px rgba(0,0,0,.35)',
               ].join(', '),
             }}>
               {on && !trans && (
