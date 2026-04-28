@@ -331,22 +331,8 @@ export default function OnRotation() {
           <h2 style={{ fontFamily: '"Playfair Display", serif', fontStyle: 'italic', fontSize: 'clamp(28px, 6vw, 52px)', fontWeight: 700, margin: '0 0 4px', letterSpacing: '-.01em', color: '#111111' }}>
             On Rotation
           </h2>
-          <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: isMobile ? 12 : 20, marginTop: 6 }}>
-            <button
-              onClick={() => handle('left')}
-              onMouseEnter={e => { e.currentTarget.style.background = 'rgba(17,17,17,0.09)' }}
-              onMouseLeave={e => { e.currentTarget.style.background = 'transparent' }}
-              style={{ background: 'transparent', border: '1px solid rgba(17,17,17,0.28)', borderRadius: '50%', width: isMobile ? 32 : 42, height: isMobile ? 32 : 42, cursor: 'pointer', display: 'flex', alignItems: 'center', justifyContent: 'center', color: '#111111', fontSize: isMobile ? 13 : 16, flexShrink: 0, transition: 'background 0.18s' }}
-            >◀</button>
-            <div style={{ fontFamily: '"EB Garamond", serif', fontStyle: 'italic', fontSize: isMobile ? 15 : 20, opacity: 0.7, color: '#111111', whiteSpace: 'nowrap' }}>
-              Use the remote, or your arrow keys.
-            </div>
-            <button
-              onClick={() => handle('right')}
-              onMouseEnter={e => { e.currentTarget.style.background = 'rgba(17,17,17,0.09)' }}
-              onMouseLeave={e => { e.currentTarget.style.background = 'transparent' }}
-              style={{ background: 'transparent', border: '1px solid rgba(17,17,17,0.28)', borderRadius: '50%', width: isMobile ? 32 : 42, height: isMobile ? 32 : 42, cursor: 'pointer', display: 'flex', alignItems: 'center', justifyContent: 'center', color: '#111111', fontSize: isMobile ? 13 : 16, flexShrink: 0, transition: 'background 0.18s' }}
-            >▶</button>
+          <div style={{ fontFamily: '"EB Garamond", serif', fontStyle: 'italic', fontSize: isMobile ? 14 : 17, opacity: 0.65, color: '#111111', marginTop: 4 }}>
+            Use the remote, or your arrow keys, to switch through channels.
           </div>
         </div>
 
