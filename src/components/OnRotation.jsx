@@ -378,20 +378,25 @@ export default function OnRotation() {
         </div>
       </section>
 
-      {/* Sign-off — LinkedIn banner as full-bleed background */}
+      {/* Sign-off — LinkedIn banner background */}
       <section data-screen-label="Signature" style={{
-        position: 'relative', width: '100%', padding: '72px 32px 96px', textAlign: 'center',
+        position: 'relative', width: '100%', textAlign: 'center', boxSizing: 'border-box',
+        /* Mobile: contain so full banner shows; Desktop: cover for full bleed */
         backgroundImage: "url('/assets/linkedin banner.jpeg')",
-        backgroundSize: 'cover', backgroundPosition: 'center',
-        boxSizing: 'border-box',
+        backgroundSize: isMobile ? 'contain' : 'cover',
+        backgroundRepeat: 'no-repeat',
+        backgroundPosition: 'center',
+        /* Mobile height tracks banner aspect ratio (~4:1) so image fills perfectly */
+        minHeight: isMobile ? '25vw' : 'auto',
+        padding: isMobile ? '0' : '72px 32px 96px',
+        display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center',
       }}>
-        {/* Subtle dark overlay so text always reads clearly */}
-        <div style={{ position: 'absolute', inset: 0, background: 'rgba(0,0,0,0.32)', pointerEvents: 'none' }} />
-        <div style={{ position: 'relative', zIndex: 1 }}>
-          <div style={{ fontFamily: '"JetBrains Mono", monospace', fontSize: 11, letterSpacing: '.32em', textTransform: 'uppercase', color: 'rgba(255,255,255,0.85)', textShadow: '0 1px 4px rgba(0,0,0,0.5)' }}>
+        <div style={{ position: 'absolute', inset: 0, background: 'rgba(0,0,0,0.35)', pointerEvents: 'none' }} />
+        <div style={{ position: 'relative', zIndex: 1, padding: isMobile ? '8px 0' : '0' }}>
+          <div style={{ fontFamily: '"JetBrains Mono", monospace', fontSize: isMobile ? '1.8vw' : 11, letterSpacing: '.32em', textTransform: 'uppercase', color: 'rgba(255,255,255,0.9)', textShadow: '0 1px 4px rgba(0,0,0,0.6)' }}>
             Yours truly,
           </div>
-          <div style={{ marginTop: 8, fontFamily: '"Pinyon Script", "Allura", "Great Vibes", cursive', fontSize: 72, color: '#ffffff', lineHeight: 1, textShadow: '0 2px 12px rgba(0,0,0,0.4)' }}>
+          <div style={{ marginTop: isMobile ? '1vw' : 8, fontFamily: '"Pinyon Script", "Allura", "Great Vibes", cursive', fontSize: isMobile ? '8vw' : 72, color: '#ffffff', lineHeight: 1, textShadow: '0 2px 12px rgba(0,0,0,0.5)' }}>
             Ananya
           </div>
         </div>
