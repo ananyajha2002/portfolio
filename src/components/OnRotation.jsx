@@ -320,14 +320,14 @@ export default function OnRotation() {
     return () => window.removeEventListener('keydown', handler)
   }, [focused])
 
-  /* Light grey slat wall — tones with marble */
+  /* Cool grey slat wall — matches marble undertones */
   const woodWall = {
     background: [
       'repeating-linear-gradient(90deg,',
-      '  #b8b8b8 0px, #b8b8b8 3px,',
-      '  #f0f0ee 3px, #f5f5f3 8px,',
-      '  #e8e8e6 8px, #dcdcda 20px,',
-      '  #d4d4d2 20px, #b8b8b8 23px',
+      '  #c0c2c6 0px, #c0c2c6 3px,',
+      '  #eef0f3 3px, #f3f4f7 8px,',
+      '  #e4e6ea 8px, #d6d8dd 20px,',
+      '  #caced4 20px, #c0c2c6 23px',
       ')',
     ].join(''),
   }
@@ -355,7 +355,13 @@ export default function OnRotation() {
             <div style={{
               position: 'relative', border: '6px solid #050505', borderRadius: 6,
               aspectRatio: '16/9', background: '#000', overflow: 'hidden',
-              boxShadow: 'inset 0 0 60px rgba(0,0,0,.9), 0 18px 48px rgba(0,0,0,.6), 0 4px 8px rgba(0,0,0,.3)',
+              boxShadow: [
+                'inset 0 0 60px rgba(0,0,0,.9)',
+                '0 0 28px 12px rgba(20,60,255,0.85)',
+                '0 0 70px 35px rgba(15,45,230,0.55)',
+                '0 0 130px 65px rgba(10,30,200,0.28)',
+                '0 18px 48px rgba(0,0,0,.4)',
+              ].join(', '),
             }}>
               {on && !trans && (
                 <div key={`${current.title}-${idx}`} style={{ position: 'absolute', inset: 0 }}>
