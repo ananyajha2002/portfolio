@@ -2,7 +2,7 @@ import { useState, useEffect, useRef } from 'react'
 
 /* ── Movie data ───────────────────────────────────────── */
 const MOVIES = [
-  { title: 'The Intern',                      year: 2015, palette: ['#d8c19a','#3a2e22','#7a5d3e'],  poster: '/assets/the intern.jpg',                        posterPosition: 'center 60%' },
+  { title: 'The Intern',                      year: 2015, palette: ['#d8c19a','#3a2e22','#7a5d3e'],  poster: '/assets/the intern.jpg',                        posterPosition: 'center 20%' },
   { title: '17 Again',                        year: 2009, palette: ['#c4d4e8','#1a2a3a','#e8c4a0'],  poster: '/assets/17 again.jpg',                          posterPosition: 'center 70%' },
   { title: 'Catch Me If You Can',             year: 2002, palette: ['#e8d4a0','#1a1a2e','#c43030'],  poster: '/assets/catch me if u can.jpg',                  posterPosition: 'center 70%' },
   { title: 'Chak De India',                   year: 2007, palette: ['#e8a020','#1a3a1a','#ffffff'],  poster: '/assets/chak de india.jpg',                      posterPosition: 'center 70%' },
