@@ -150,17 +150,17 @@ function RemBtn({ style, onClick, children }) {
 
 /* ── Remote ───────────────────────────────────────────── */
 function Remote({ onAction, on, idx, compact }) {
-  const bw = compact ? 22 : 36
-  const bh = compact ? 18 : 30
-  const bf = compact ? 9  : 13
-  const gh = compact ? 16 : 26
-  const gf = compact ? 6  : 10
-  const tw = compact ? 17 : 26
-  const th = compact ? 14 : 24
-  const tf = compact ? 7  : 11
-  const dpadSize = compact ? 68 : 108
-  const okSize   = compact ? 24 : 40
-  const pwSize   = compact ? 22 : 36
+  const bw = compact ? 15 : 36
+  const bh = compact ? 12 : 30
+  const bf = compact ? 7  : 13
+  const gh = compact ? 11 : 26
+  const gf = compact ? 4  : 10
+  const tw = compact ? 12 : 26
+  const th = compact ? 10 : 24
+  const tf = compact ? 5  : 11
+  const dpadSize = compact ? 46 : 108
+  const okSize   = compact ? 16 : 40
+  const pwSize   = compact ? 16 : 36
 
   const dark = {
     background: 'linear-gradient(180deg, #3a3a3a 0%, #1a1a1a 100%)',
@@ -182,12 +182,12 @@ function Remote({ onAction, on, idx, compact }) {
 
   return (
     <div style={{
-      width: compact ? 108 : 170, flexShrink: 0,
+      width: compact ? 76 : 170, flexShrink: 0,
       background: 'linear-gradient(180deg, #2a2a2a 0%, #0d0d0d 100%)',
-      borderRadius: compact ? 12 : 18,
-      padding: compact ? 9 : 14,
+      borderRadius: compact ? 8 : 18,
+      padding: compact ? 6 : 14,
       boxShadow: 'inset 0 2px 0 rgba(255,255,255,0.08), 0 24px 48px rgba(0,0,0,0.7), 0 8px 16px rgba(0,0,0,0.5)',
-      display: 'flex', flexDirection: 'column', gap: compact ? 5 : 8,
+      display: 'flex', flexDirection: 'column', gap: compact ? 3 : 8,
     }}>
       <div style={{ fontFamily: '"JetBrains Mono", monospace', fontSize: compact ? 5 : 7, letterSpacing: '0.4em', color: '#5a5a5a', textAlign: 'center', textTransform: 'uppercase' }}>Remote</div>
 
