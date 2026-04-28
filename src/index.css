@@ -731,7 +731,7 @@ h1 { hyphens: none; word-break: keep-all; }
   }
 
   .homepage-wrapper {
-    padding: 40px 20px 60px;
+    padding: 40px 20px 0;
   }
 
   /* Vinyl: move to bottom-right on mobile so it doesn't overlap header */
@@ -786,7 +786,7 @@ h1 { hyphens: none; word-break: keep-all; }
 
   /* Prevent vinyl button from covering last polaroid row */
   .personal-section {
-    padding-bottom: 90px;
+    padding-bottom: 20px;
   }
 
   /* ── Polaroids — 3 per row, last row centred, natural tilts ── */

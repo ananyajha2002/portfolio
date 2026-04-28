@@ -339,7 +339,7 @@ export default function OnRotation() {
         {/* TV + remote row — always side-by-side */}
         <div style={{ display: 'flex', gap: isMobile ? 10 : 28, justifyContent: 'center', alignItems: 'flex-start', maxWidth: 960, margin: '0 auto' }}>
           {/* Left: TV + soundbar + ticket */}
-          <div style={{ flex: 1, minWidth: 0, maxWidth: 720, overflow: 'hidden' }}>
+          <div style={{ flex: 1, minWidth: 0, maxWidth: 720 }}>
             <div style={{
               position: 'relative', border: '6px solid #050505', borderRadius: 6,
               aspectRatio: '16/9', background: '#000', overflow: 'hidden',
