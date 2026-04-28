@@ -343,7 +343,7 @@ export default function OnRotation() {
           <h2 style={{ fontFamily: '"Playfair Display", serif', fontStyle: 'italic', fontSize: 'clamp(28px, 6vw, 52px)', fontWeight: 700, margin: '0 0 4px', letterSpacing: '-.01em', color: '#1a1a1a' }}>
             On Rotation
           </h2>
-          <div style={{ fontFamily: '"EB Garamond", serif', fontStyle: 'italic', fontSize: isMobile ? 13 : 16, opacity: .65, color: '#2a2a2a', display: 'flex', alignItems: 'center', justifyContent: 'center', gap: 12 }}>
+          <div style={{ fontFamily: '"EB Garamond", serif', fontStyle: 'italic', fontSize: isMobile ? 13 : 16, opacity: .85, color: '#1a1a1a', display: 'flex', alignItems: 'center', justifyContent: 'center', gap: 12 }}>
             Use the remote, or your arrow keys.
           </div>
         </div>
