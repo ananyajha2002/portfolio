@@ -13,7 +13,7 @@ const MOVIES = [
   { title: 'The Perks of Being a Wallflower', year: 2012, palette: ['#1a2a4a','#c4d4e8','#e8c4a0'],  poster: '/assets/perks of being a wallflower.webp',       posterPosition: 'center 60%' },
   { title: 'Philadelphia',                    year: 1993, palette: ['#1a1a1a','#c4c4c4','#3a3a3a'],  poster: '/assets/philadelphia.jpg',                       posterPosition: 'center 50%' },
   { title: 'The Social Network',              year: 2010, palette: ['#0a0a1a','#3a5a8a','#c4d4e8'],  poster: '/assets/the social network.jpg',                 posterPosition: 'center 50%' },
-  { title: 'Up',                              year: 2009, palette: ['#87ceeb','#e8c43a','#c43030'],  poster: '/assets/up.jpg',                                 posterPosition: 'center 40%' },
+  { title: 'Up',                              year: 2009, palette: ['#87ceeb','#e8c43a','#c43030'],  poster: '/assets/up.jpg',                                 posterPosition: 'center 10%' },
   { title: 'Wonder',                          year: 2017, palette: ['#87ceeb','#c4e8f0','#1a3a4a'],  poster: '/assets/wonder.jpg',                             posterPosition: 'center 60%' },
 ]
 
