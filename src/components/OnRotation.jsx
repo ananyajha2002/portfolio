@@ -355,13 +355,7 @@ export default function OnRotation() {
             <div style={{
               position: 'relative', border: '6px solid #050505', borderRadius: 6,
               aspectRatio: '16/9', background: '#000', overflow: 'hidden',
-              boxShadow: [
-                'inset 0 0 60px rgba(0,0,0,.9)',
-                '0 0 22px 10px rgba(30,70,255,0.22)',
-                '0 0 60px 30px rgba(20,55,230,0.13)',
-                '0 0 110px 55px rgba(10,40,210,0.07)',
-                '0 18px 48px rgba(0,0,0,.35)',
-              ].join(', '),
+              boxShadow: 'inset 0 0 60px rgba(0,0,0,.9), 0 18px 48px rgba(0,0,0,.35)',
             }}>
               {on && !trans && (
                 <div key={`${current.title}-${idx}`} style={{ position: 'absolute', inset: 0 }}>
