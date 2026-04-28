@@ -380,29 +380,15 @@ export default function OnRotation() {
         </div>
       </section>
 
-      {/* Sign-off — LinkedIn banner background */}
-      <section data-screen-label="Signature" style={{
-        position: 'relative', width: '100%', textAlign: 'center', boxSizing: 'border-box',
-        /* Mobile: contain so full banner shows; Desktop: cover for full bleed */
-        backgroundImage: "url('/assets/linkedin banner.jpeg')",
-        backgroundSize: isMobile ? 'contain' : 'cover',
-        backgroundRepeat: 'no-repeat',
-        backgroundPosition: 'center',
-        /* Mobile height tracks banner aspect ratio (~4:1) so image fills perfectly */
-        minHeight: isMobile ? '25vw' : 'auto',
-        padding: isMobile ? '0' : '72px 32px 96px',
-        display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center',
-      }}>
-        <div style={{ position: 'absolute', inset: 0, background: 'rgba(0,0,0,0.35)', pointerEvents: 'none' }} />
-        <div style={{ position: 'relative', zIndex: 1, padding: isMobile ? '8px 0' : '0' }}>
-          <div style={{ fontFamily: '"JetBrains Mono", monospace', fontSize: isMobile ? '1.8vw' : 11, letterSpacing: '.32em', textTransform: 'uppercase', color: 'rgba(255,255,255,0.9)', textShadow: '0 1px 4px rgba(0,0,0,0.6)' }}>
-            Yours truly,
-          </div>
-          <div style={{ marginTop: isMobile ? '1vw' : 8, fontFamily: '"Pinyon Script", "Allura", "Great Vibes", cursive', fontSize: isMobile ? '8vw' : 72, color: '#ffffff', lineHeight: 1, textShadow: '0 2px 12px rgba(0,0,0,0.5)' }}>
-            Ananya
-          </div>
+      {/* Sign-off — plain marble */}
+      <div style={{ width: '100%', textAlign: 'center', padding: isMobile ? '28px 16px 48px' : '48px 32px 72px', boxSizing: 'border-box' }}>
+        <div style={{ fontFamily: '"JetBrains Mono", monospace', fontSize: isMobile ? 10 : 11, letterSpacing: '.32em', textTransform: 'uppercase', color: 'rgba(17,17,17,0.5)' }}>
+          Yours truly,
         </div>
-      </section>
+        <div style={{ marginTop: isMobile ? 6 : 8, fontFamily: '"Pinyon Script", "Allura", "Great Vibes", cursive', fontSize: isMobile ? 'clamp(48px, 12vw, 72px)' : 88, color: '#111111', lineHeight: 1 }}>
+          Ananya
+        </div>
+      </div>
     </>
   )
 }
