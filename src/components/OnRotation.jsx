@@ -325,100 +325,44 @@ export default function OnRotation() {
       <section
         ref={sectionRef}
         data-screen-label="On Rotation"
-        style={{ position: 'relative', padding: isMobile ? '28px 12px 44px' : '36px 32px 68px', width: '100%', boxSizing: 'border-box', overflow: 'hidden' }}
+        style={{ padding: isMobile ? '28px 12px 44px' : '36px 32px 68px', width: '100%', boxSizing: 'border-box' }}
       >
-        {/* ── Natural light oak plank wall — SVG turbulence for organic grain ── */}
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          aria-hidden="true"
-          style={{ position: 'absolute', inset: 0, width: '100%', height: '100%', zIndex: 0, display: 'block' }}
-          preserveAspectRatio="xMidYMid slice"
-        >
-          <defs>
-            {/* Fine horizontal wood grain — strongly directional */}
-            <filter id="oakGrainWall" x="0%" y="0%" width="100%" height="100%" colorInterpolationFilters="sRGB">
-              <feTurbulence type="fractalNoise" baseFrequency="0.005 0.82" numOctaves="6" seed="11" result="g"/>
-              <feColorMatrix in="g" type="matrix"
-                values="0.32 0 0 0 0.62
-                        0.22 0 0 0 0.48
-                        0.09 0 0 0 0.24
-                        0    0 0 0 1"
-              />
-            </filter>
-            {/* Wide horizontal bands — plank-to-plank colour variation */}
-            <filter id="plankVarWall" x="0%" y="0%" width="100%" height="100%" colorInterpolationFilters="sRGB">
-              <feTurbulence type="fractalNoise" baseFrequency="0.001 0.016" numOctaves="2" seed="5" result="pv"/>
-              <feColorMatrix in="pv" type="matrix"
-                values="0.22 0 0 0 0
-                        0.15 0 0 0 0
-                        0.06 0 0 0 0
-                        0    0 0 0 0.48"
-              />
-            </filter>
-            {/* Plank separator lines — one dark shadow line + one highlight */}
-            <pattern id="plankLinesWall" x="0" y="0" width="1" height="108" patternUnits="userSpaceOnUse">
-              <line x1="0" y1="0"   x2="10000" y2="0"   stroke="rgba(20,10,2,0.42)" strokeWidth="2.5"/>
-              <line x1="0" y1="1.8" x2="10000" y2="1.8" stroke="rgba(230,195,130,0.24)" strokeWidth="1"/>
-            </pattern>
-            {/* Subtle depth vignette — top and bottom edges slightly darker */}
-            <linearGradient id="wallEdgeGrad" x1="0" y1="0" x2="0" y2="1">
-              <stop offset="0%"   stopColor="rgba(0,0,0,0.12)"/>
-              <stop offset="10%"  stopColor="rgba(0,0,0,0)"/>
-              <stop offset="90%"  stopColor="rgba(0,0,0,0)"/>
-              <stop offset="100%" stopColor="rgba(0,0,0,0.16)"/>
-            </linearGradient>
-          </defs>
-          {/* Base warm blonde oak */}
-          <rect width="100%" height="100%" fill="#c9a96e"/>
-          {/* Organic grain layer */}
-          <rect width="100%" height="100%" filter="url(#oakGrainWall)" opacity="0.86"/>
-          {/* Plank-to-plank hue variation */}
-          <rect width="100%" height="100%" filter="url(#plankVarWall)" opacity="0.52"/>
-          {/* Plank separation lines */}
-          <rect width="100%" height="100%" fill="url(#plankLinesWall)"/>
-          {/* Edge depth */}
-          <rect width="100%" height="100%" fill="url(#wallEdgeGrad)"/>
-        </svg>
+        <div style={{ textAlign: 'center', marginBottom: isMobile ? 18 : 26 }}>
+          <h2 style={{ fontFamily: '"Playfair Display", serif', fontStyle: 'italic', fontSize: 'clamp(28px, 6vw, 52px)', fontWeight: 700, margin: '0 0 4px', letterSpacing: '-.01em', color: '#111111' }}>
+            On Rotation
+          </h2>
+          <div style={{ fontFamily: '"EB Garamond", serif', fontStyle: 'italic', fontSize: isMobile ? 13 : 16, opacity: 0.65, color: '#111111', display: 'flex', alignItems: 'center', justifyContent: 'center', gap: 12 }}>
+            Use the remote, or your arrow keys.
+          </div>
+        </div>
 
-        {/* ── Content sits above SVG ── */}
-        <div style={{ position: 'relative', zIndex: 1 }}>
-          <div style={{ textAlign: 'center', marginBottom: isMobile ? 18 : 26 }}>
-            <h2 style={{ fontFamily: '"Playfair Display", serif', fontStyle: 'italic', fontSize: 'clamp(28px, 6vw, 52px)', fontWeight: 700, margin: '0 0 4px', letterSpacing: '-.01em', color: '#2a1500' }}>
-              On Rotation
-            </h2>
-            <div style={{ fontFamily: '"EB Garamond", serif', fontStyle: 'italic', fontSize: isMobile ? 13 : 16, opacity: 0.7, color: '#2a1500', display: 'flex', alignItems: 'center', justifyContent: 'center', gap: 12 }}>
-              Use the remote, or your arrow keys.
+        {/* TV + remote row — always side-by-side */}
+        <div style={{ display: 'flex', gap: isMobile ? 10 : 28, justifyContent: 'center', alignItems: 'flex-start', maxWidth: 960, margin: '0 auto' }}>
+          {/* Left: TV + soundbar + ticket */}
+          <div style={{ flex: 1, minWidth: 0, maxWidth: 720, overflow: 'hidden' }}>
+            <div style={{
+              position: 'relative', border: '6px solid #050505', borderRadius: 6,
+              aspectRatio: '16/9', background: '#000', overflow: 'hidden',
+              boxShadow: 'inset 0 0 60px rgba(0,0,0,.9), 0 0 32px 12px rgba(248,244,234,0.52), 0 0 70px 24px rgba(248,244,234,0.20), 0 18px 48px rgba(0,0,0,.30)',
+            }}>
+              {on && !trans && (
+                <div key={`${current.title}-${idx}`} style={{ position: 'absolute', inset: 0 }}>
+                  <PosterArt data={current} index={idx} />
+                </div>
+              )}
+              <div style={{ position: 'absolute', inset: 0, pointerEvents: 'none', background: 'repeating-linear-gradient(0deg, transparent 0 2px, rgba(0,0,0,.08) 2px 3px)', opacity: 0.55 }} />
+              {(trans || !on) && (
+                <div style={{ position: 'absolute', inset: 0, background: 'radial-gradient(ellipse at 50% 50%, rgba(200,200,200,0.18) 0%, rgba(80,80,80,0.07) 60%, transparent 100%)', mixBlendMode: 'screen', animation: 'onRotStatic 0.22s ease-out' }} />
+              )}
+              {!on && <div style={{ position: 'absolute', inset: 0, background: '#000', opacity: 0.96 }} />}
+              <div style={{ position: 'absolute', bottom: 7, right: 7, width: 5, height: 5, borderRadius: '50%', background: on ? '#3aff7a' : '#1a3a1a', boxShadow: on ? '0 0 8px #3aff7a' : 'none', transition: 'all 0.4s' }} />
             </div>
+            <div style={{ height: 14, background: '#1a1714', borderRadius: 2, width: '70%', margin: '10px auto 0', boxShadow: 'inset 0 1px 0 rgba(255,255,255,0.05), 0 3px 8px rgba(0,0,0,0.5)' }} />
+            <MovieTicket title={current.title} year={current.year} channel={idx + 1} total={MOVIES.length} compact={isMobile} />
           </div>
 
-          {/* TV + remote row — always side-by-side */}
-          <div style={{ display: 'flex', gap: isMobile ? 10 : 28, justifyContent: 'center', alignItems: 'flex-start', maxWidth: 960, margin: '0 auto' }}>
-            {/* Left: TV + soundbar + ticket */}
-            <div style={{ flex: 1, minWidth: 0, maxWidth: 720, overflow: 'hidden' }}>
-              <div style={{
-                position: 'relative', border: '6px solid #050505', borderRadius: 6,
-                aspectRatio: '16/9', background: '#000', overflow: 'hidden',
-                boxShadow: 'inset 0 0 60px rgba(0,0,0,.9), 0 18px 48px rgba(0,0,0,.35)',
-              }}>
-                {on && !trans && (
-                  <div key={`${current.title}-${idx}`} style={{ position: 'absolute', inset: 0 }}>
-                    <PosterArt data={current} index={idx} />
-                  </div>
-                )}
-                <div style={{ position: 'absolute', inset: 0, pointerEvents: 'none', background: 'repeating-linear-gradient(0deg, transparent 0 2px, rgba(0,0,0,.08) 2px 3px)', opacity: 0.55 }} />
-                {(trans || !on) && (
-                  <div style={{ position: 'absolute', inset: 0, background: 'radial-gradient(ellipse at 50% 50%, rgba(200,200,200,0.18) 0%, rgba(80,80,80,0.07) 60%, transparent 100%)', mixBlendMode: 'screen', animation: 'onRotStatic 0.22s ease-out' }} />
-                )}
-                {!on && <div style={{ position: 'absolute', inset: 0, background: '#000', opacity: 0.96 }} />}
-                <div style={{ position: 'absolute', bottom: 7, right: 7, width: 5, height: 5, borderRadius: '50%', background: on ? '#3aff7a' : '#1a3a1a', boxShadow: on ? '0 0 8px #3aff7a' : 'none', transition: 'all 0.4s' }} />
-              </div>
-              <div style={{ height: 14, background: '#1a1714', borderRadius: 2, width: '70%', margin: '10px auto 0', boxShadow: 'inset 0 1px 0 rgba(255,255,255,0.05), 0 3px 8px rgba(0,0,0,0.5)' }} />
-              <MovieTicket title={current.title} year={current.year} channel={idx + 1} total={MOVIES.length} compact={isMobile} />
-            </div>
-
-            {/* Right: remote */}
-            <Remote onAction={handle} on={on} idx={idx} compact={isMobile} />
-          </div>
+          {/* Right: remote */}
+          <Remote onAction={handle} on={on} idx={idx} compact={isMobile} />
         </div>
       </section>
 
