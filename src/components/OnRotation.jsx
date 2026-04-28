@@ -368,7 +368,7 @@ export default function OnRotation() {
 
       {/* Sign-off — plain marble */}
       <div style={{ width: '100%', textAlign: 'center', padding: isMobile ? '28px 16px 48px' : '48px 32px 72px', boxSizing: 'border-box' }}>
-        <div style={{ fontFamily: '"JetBrains Mono", monospace', fontSize: isMobile ? 10 : 11, letterSpacing: '.32em', textTransform: 'uppercase', color: 'rgba(17,17,17,0.5)' }}>
+        <div style={{ fontFamily: '"JetBrains Mono", monospace', fontSize: isMobile ? 10 : 11, letterSpacing: '.32em', textTransform: 'uppercase', color: 'rgba(17,17,17,0.85)' }}>
           Yours truly,
         </div>
         <div style={{ marginTop: isMobile ? 6 : 8, fontFamily: '"Pinyon Script", "Allura", "Great Vibes", cursive', fontSize: isMobile ? 'clamp(48px, 12vw, 72px)' : 88, color: '#111111', lineHeight: 1 }}>
