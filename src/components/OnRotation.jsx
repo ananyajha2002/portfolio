@@ -345,12 +345,6 @@ export default function OnRotation() {
           </h2>
           <div style={{ fontFamily: '"EB Garamond", serif', fontStyle: 'italic', fontSize: isMobile ? 13 : 16, opacity: .75, color: '#e8d8b8', display: 'flex', alignItems: 'center', justifyContent: 'center', gap: 12 }}>
             Use the remote, or your arrow keys.
-            {focused && (
-              <span style={{ display: 'inline-flex', alignItems: 'center', gap: 5 }}>
-                <span style={{ width: 7, height: 7, borderRadius: '50%', background: '#3aff7a', display: 'inline-block', animation: 'onRotPulse 1.5s ease-in-out infinite' }} />
-                <span style={{ fontFamily: '"JetBrains Mono", monospace', fontSize: 11, letterSpacing: '0.15em', fontStyle: 'normal' }}>Listening</span>
-              </span>
-            )}
           </div>
         </div>
 
