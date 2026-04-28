@@ -6,6 +6,7 @@ import VinylPlayer      from './components/VinylPlayer'
 import useAudio         from './hooks/useAudio'
 import { makeContactPage } from './components/ContactSpread'
 import PersonalSection     from './components/PersonalSection'
+import OnRotation          from './components/OnRotation'
 import {
   CareerPage1, CareerPage2, CareerPage3,
   CareerPage4, CareerPage6,
@@ -169,6 +170,9 @@ export default function App() {
 
           {/* Personal about me */}
           <PersonalSection />
+
+          {/* On Rotation — TV section */}
+          <OnRotation />
         </div>
       </div>
 
