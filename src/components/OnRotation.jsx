@@ -320,14 +320,14 @@ export default function OnRotation() {
     return () => window.removeEventListener('keydown', handler)
   }, [focused])
 
-  /* Dark chocolate vertical-slat wall */
+  /* Light grey slat wall — tones with marble */
   const woodWall = {
     background: [
       'repeating-linear-gradient(90deg,',
-      '  #180904 0px, #180904 3px,',
-      '  #6a3c1e 3px, #724220 8px,',
-      '  #5c3216 8px, #4c2a0e 20px,',
-      '  #42240c 20px, #180904 23px',
+      '  #b8b8b8 0px, #b8b8b8 3px,',
+      '  #f0f0ee 3px, #f5f5f3 8px,',
+      '  #e8e8e6 8px, #dcdcda 20px,',
+      '  #d4d4d2 20px, #b8b8b8 23px',
       ')',
     ].join(''),
   }
@@ -339,11 +339,11 @@ export default function OnRotation() {
         data-screen-label="On Rotation"
         style={{ ...woodWall, padding: isMobile ? '28px 12px 44px' : '36px 32px 68px', width: '100%', boxSizing: 'border-box' }}
       >
-        <div style={{ textAlign: 'center', marginBottom: isMobile ? 18 : 26, color: '#e8d8b8' }}>
-          <h2 style={{ fontFamily: '"Playfair Display", serif', fontStyle: 'italic', fontSize: 'clamp(28px, 6vw, 52px)', fontWeight: 700, margin: '0 0 4px', letterSpacing: '-.01em', color: '#e8d8b8' }}>
+        <div style={{ textAlign: 'center', marginBottom: isMobile ? 18 : 26, color: '#2a2a2a' }}>
+          <h2 style={{ fontFamily: '"Playfair Display", serif', fontStyle: 'italic', fontSize: 'clamp(28px, 6vw, 52px)', fontWeight: 700, margin: '0 0 4px', letterSpacing: '-.01em', color: '#1a1a1a' }}>
             On Rotation
           </h2>
-          <div style={{ fontFamily: '"EB Garamond", serif', fontStyle: 'italic', fontSize: isMobile ? 13 : 16, opacity: .75, color: '#e8d8b8', display: 'flex', alignItems: 'center', justifyContent: 'center', gap: 12 }}>
+          <div style={{ fontFamily: '"EB Garamond", serif', fontStyle: 'italic', fontSize: isMobile ? 13 : 16, opacity: .65, color: '#2a2a2a', display: 'flex', alignItems: 'center', justifyContent: 'center', gap: 12 }}>
             Use the remote, or your arrow keys.
           </div>
         </div>
