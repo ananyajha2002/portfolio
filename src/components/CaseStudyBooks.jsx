@@ -301,7 +301,7 @@ export default function CaseStudyBooks() {
         <div style={{ width: '48px', height: '1px', background: BL, margin: '14px auto 0' }} />
       </div>
 
-      <div style={{ display: 'flex', gap: '0', justifyContent: 'center', alignItems: 'flex-start', flexWrap: 'wrap' }}>
+      <div style={{ display: 'flex', gap: '16px', justifyContent: 'center', alignItems: 'flex-start', flexWrap: 'wrap' }}>
         <ConciergeNotebook />
         <VaultNotebook />
         <MetaNotebook />
