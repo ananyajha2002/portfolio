@@ -315,15 +315,15 @@ export const ProjectsPage8 = (
       </div>
       <div style={{ fontFamily: "'VogueTTF', serif", fontSize: 'clamp(22px, 6.5cqw, 36px)', color: TX, lineHeight: 0.85, letterSpacing: '0.01em', marginBottom: '8px', marginTop: '4px' }}>THE<br />SYSTEM.</div>
       <Rule />
-      <B>Concierge is ~400 items out of 3,000+ on the site, but it does a disproportionate share of the commercial heavy lifting. It's the collection for 2-hour and same-day delivery. It's what a girl in Dubai shops at 6pm for an event at 9pm.</B>
-      <B>It had grown organically. The visible problem was a 100+ tab Excel spreadsheet — one tab per client, nothing connected to photography, pricing, or approval. Finding what you needed took longer than the review itself.</B>
-      <B>So I built a mobile app for the ops team. Open it and see all your concierge clients on one screen. Tap a client, you see their items as photos. Tap an item, edit anything — price, brand, condition, packaging. Approve, reject, push live. Internal notes. Status rolls up automatically. Works on whatever phone you already have. No training needed.</B>
-      <div style={{ display: 'flex', flexWrap: 'wrap', margin: '6px 0' }}>
-        {['Mobile App', 'Internal Tooling', 'iOS', 'Intake Workflow', 'Curation Logic', 'Inventory'].map(s => <Pill key={s}>{s}</Pill>)}
-      </div>
+      <B>I knew the ops at Endless would be challenging when I joined. What I didn't realise until a few months in was how much of our commercial story sits inside one specific service: concierge.</B>
+      <B>Concierge is our premium intake tier. We pick up from sellers, photograph everything, decide what makes it live, and price it. Around 400 items out of 3,000+ on the site. Small surface area doing a lot of the commercial heavy lifting.</B>
+      <B>But it had grown organically. The visible problem was a 100+ tab Excel spreadsheet. One tab per client. Nothing connected to the photography, pricing, or approval workflow. Finding what you needed took longer than the review itself.</B>
+      <B>The deeper one was curation. Endless has a real point of view on what fits the platform. We don't take fast fashion, and not every piece is going to find its buyer. We needed to make those calls at intake, not after the fact.</B>
+      <B>So I started building one. A mobile app for the ops team. The thing I cared most about: anyone on the team could pick it up and use it. Drivers, interns, the next person we hire. The tools should not punish them for not being technical.</B>
+      <B>You open the app and see all your concierge clients on one screen. Tap a client, you see their items as photos. Tap an item, edit anything. Approve, reject, push live. Status rolls up automatically. Works on whatever phone you already have. No training needed.</B>
       <div style={{ flex: 1 }} />
       <div style={{ borderLeft: `2px solid ${BL}`, paddingLeft: '10px', marginBottom: '8px' }}>
-        <p style={{ fontFamily: "'EB Garamond', serif", fontStyle: 'italic', fontSize: '11px', color: MU, lineHeight: 1.45 }}>"The tools should not punish the team for not being technical."</p>
+        <p style={{ fontFamily: "'EB Garamond', serif", fontStyle: 'italic', fontSize: '11px', color: MU, lineHeight: 1.45 }}>"The most commercially important workflows in a young business are often the ones nobody formally owns. That moment came around month six for me."</p>
       </div>
       <Num n={16} total={16} />
     </R>
