@@ -301,38 +301,12 @@ export const ProjectsPage7 = (
 export const ProjectsPage8 = (
   <div style={{ display: 'flex', height: '100%', overflow: 'hidden' }}>
     <L photo>
-      {/* Recreates the app's own login screen aesthetic */}
-      <div style={{ width: '100%', height: '100%', background: 'linear-gradient(160deg, #111111 0%, #1c000a 55%, #0d0d0d 100%)', display: 'flex', flexDirection: 'column', padding: '18px 16px', boxSizing: 'border-box', borderRight: '1px solid #2a0010' }}>
-        <div style={{ marginBottom: '20px' }}>
-          <p style={{ fontFamily: "'JetBrains Mono', monospace", fontSize: '7px', letterSpacing: '0.22em', color: 'rgba(255,255,255,0.25)', marginBottom: '3px' }}>eo</p>
-          <p style={{ fontFamily: "'JetBrains Mono', monospace", fontSize: '6px', letterSpacing: '0.2em', textTransform: 'uppercase', color: BL }}>INTERNAL — OPS ONLY</p>
-        </div>
-        <div style={{ flex: 1, display: 'flex', flexDirection: 'column', justifyContent: 'center' }}>
-          <p style={{ fontFamily: "'EB Garamond', serif", fontStyle: 'italic', fontSize: '12px', color: 'rgba(255,255,255,0.4)', letterSpacing: '0.06em', marginBottom: '2px' }}>endless</p>
-          <p style={{ fontFamily: "'VogueTTF', serif", fontSize: 'clamp(22px, 6.5cqw, 34px)', color: '#ffffff', lineHeight: 0.88, letterSpacing: '0.02em' }}>CONCIERGE</p>
-          <p style={{ fontFamily: "'VogueTTF', serif", fontSize: 'clamp(22px, 6.5cqw, 34px)', color: BL, lineHeight: 0.88, letterSpacing: '0.02em', marginBottom: '10px' }}>SYSTEM</p>
-          <p style={{ fontFamily: "'EB Garamond', serif", fontSize: '9px', color: 'rgba(255,255,255,0.38)', lineHeight: 1.55, marginBottom: '18px' }}>Pickup, photograph, price, and curate every concierge piece in one place.</p>
-          <div style={{ border: '1px solid rgba(255,255,255,0.12)', padding: '5px 8px', marginBottom: '4px', display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
-            <span style={{ fontFamily: "'EB Garamond', serif", fontSize: '9px', color: 'rgba(255,255,255,0.3)' }}>Email</span>
-            <span style={{ fontFamily: "'EB Garamond', serif", fontSize: '9px', color: 'rgba(255,255,255,0.18)' }}>you@endless.ae</span>
-          </div>
-          <div style={{ border: '1px solid rgba(255,255,255,0.12)', padding: '5px 8px', marginBottom: '14px', display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
-            <span style={{ fontFamily: "'EB Garamond', serif", fontSize: '9px', color: 'rgba(255,255,255,0.3)' }}>Passcode</span>
-            <span style={{ fontFamily: "'EB Garamond', serif", fontSize: '9px', color: 'rgba(255,255,255,0.18)', letterSpacing: '0.2em' }}>••••</span>
-          </div>
-          <div style={{ background: '#ffffff', padding: '7px 10px', textAlign: 'center', marginBottom: '5px' }}>
-            <span style={{ fontFamily: "'JetBrains Mono', monospace", fontSize: '7.5px', letterSpacing: '0.22em', color: '#111111' }}>ENTER CONCIERGE →</span>
-          </div>
-          <div style={{ border: '1px solid rgba(255,255,255,0.18)', padding: '6px 10px', textAlign: 'center' }}>
-            <span style={{ fontFamily: "'JetBrains Mono', monospace", fontSize: '7.5px', letterSpacing: '0.18em', color: 'rgba(255,255,255,0.5)' }}>USE FACE ID</span>
-          </div>
-        </div>
-        <div style={{ display: 'flex', justifyContent: 'space-between', marginTop: '16px' }}>
-          <span style={{ fontFamily: "'JetBrains Mono', monospace", fontSize: '6px', letterSpacing: '0.1em', color: 'rgba(255,255,255,0.22)' }}>V 2.6 · DUBAI</span>
-          <span style={{ fontFamily: "'JetBrains Mono', monospace", fontSize: '6px', letterSpacing: '0.1em', color: 'rgba(255,255,255,0.22)' }}>NEED ACCESS?</span>
-        </div>
-        <p style={{ fontFamily: "'EB Garamond', serif", fontSize: '9px', letterSpacing: '0.12em', color: 'rgba(255,255,255,0.25)', paddingTop: '6px' }}>PROJECTS · 15 / 16</p>
+      <img src="/assets/endless.jpeg" alt="Endless Concierge System" style={{ width: '100%', height: '100%', objectFit: 'cover', objectPosition: 'center center', display: 'block' }} />
+      <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(to bottom, rgba(0,0,0,0.08) 50%, rgba(0,0,0,0.55) 100%)', pointerEvents: 'none' }} />
+      <div style={{ position: 'absolute', top: '14px', left: '14px', background: DK, padding: '5px 12px' }}>
+        <p style={{ fontFamily: "'VogueTTF', serif", fontSize: '11px', color: '#ffffff', letterSpacing: '0.18em' }}>CONCIERGE SYSTEM</p>
       </div>
+      <div style={{ position: 'absolute', bottom: '18px', left: '18px', fontFamily: "'EB Garamond', serif", fontSize: '9px', letterSpacing: '0.12em', color: 'rgba(255,255,255,0.65)' }}>PROJECTS · 15 / 16</div>
     </L>
     <R>
       <div style={{ position: 'absolute', top: 0, left: 0, right: 0, height: '3px', background: BL }} />
