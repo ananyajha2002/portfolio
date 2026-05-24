@@ -123,7 +123,7 @@ function ConciergeNotebook() {
   const [open, setOpen] = useState(false)
   return (
     <>
-      <Shell w="400px" h="283px" rings={16} onClick={() => setOpen(true)} left={<ConciergeLeftSm />} right={<ConciergeRightSm />} />
+      <Shell w="400px" h="320px" rings={16} onClick={() => setOpen(true)} left={<ConciergeLeftSm />} right={<ConciergeRightSm />} />
       {open && <Modal onClose={() => setOpen(false)}><Shell w="min(86vw, 840px)" h="min(85vh, 594px)" rings={30} left={<ConciergeLeftLg />} right={<ConciergeRightLg />} /></Modal>}
     </>
   )
@@ -183,7 +183,7 @@ function VaultNotebook() {
   const [open, setOpen] = useState(false)
   return (
     <>
-      <Shell w="400px" h="283px" rings={16} onClick={() => setOpen(true)} left={<VaultLeftSm />} right={<VaultRight />} />
+      <Shell w="400px" h="320px" rings={16} onClick={() => setOpen(true)} left={<VaultLeftSm />} right={<VaultRight />} />
       {open && <Modal onClose={() => setOpen(false)}><Shell w="min(86vw, 840px)" h="min(85vh, 594px)" rings={30} left={<VaultLeftLg />} right={<VaultRight />} /></Modal>}
     </>
   )
@@ -210,13 +210,13 @@ function MetaLeftSm() {
     <p style={{ fontFamily: "'EB Garamond', serif", fontSize: '8px', letterSpacing: '0.2em', textTransform: 'uppercase', color: BL, marginBottom: '8px' }}>Performance Marketing · 2025</p>
     <div style={{ fontFamily: "'VogueTTF', serif", fontSize: '22px', color: '#111', lineHeight: 0.9, marginBottom: '8px' }}>100K<br />CLICKS.</div>
     <div style={{ borderTop: '1px solid #e8e8e8', margin: '8px 0' }} />
-    <p style={{ fontFamily: "'EB Garamond', serif", fontSize: '11px', color: '#333', lineHeight: 1.6, marginBottom: '8px' }}>AED 10,000+ monthly budget. No prior experience, no agency. Taught myself Meta Ads Manager and ran it all.</p>
+    <p style={{ fontFamily: "'EB Garamond', serif", fontSize: '11px', color: '#333', lineHeight: 1.6, marginBottom: '8px' }}>Endless went through multiple agencies. The best-performing period was when I had complete creative control: highest ROAS, highest conversions.</p>
     <div style={{ display: 'flex', flexWrap: 'wrap', marginBottom: '6px' }}>
       {metaPills.map(s => <Pill key={s}>{s}</Pill>)}
     </div>
     <div style={{ flex: 1 }} />
     <div style={{ borderLeft: `2px solid ${BL}`, paddingLeft: '8px' }}>
-      <p style={{ fontFamily: "'EB Garamond', serif", fontStyle: 'italic', fontSize: '10px', color: MU, lineHeight: 1.5 }}>"Learned it, ran it, reported it. No template, no agency, no excuses."</p>
+      <p style={{ fontFamily: "'EB Garamond', serif", fontStyle: 'italic', fontSize: '10px', color: MU, lineHeight: 1.5 }}>"Best results came from full creative control, not from an agency brief."</p>
     </div>
   </>
 }
@@ -226,14 +226,14 @@ function MetaLeftLg() {
     <p style={{ fontFamily: "'EB Garamond', serif", fontSize: '10px', letterSpacing: '0.2em', textTransform: 'uppercase', color: BL, marginBottom: '12px' }}>Performance Marketing · 2025</p>
     <div style={{ fontFamily: "'VogueTTF', serif", fontSize: '36px', color: '#111', lineHeight: 0.9, marginBottom: '12px' }}>100K<br />CLICKS.</div>
     <div style={{ borderTop: '1px solid #e8e8e8', margin: '12px 0' }} />
-    <p style={{ fontFamily: "'EB Garamond', serif", fontSize: '14px', color: '#333', lineHeight: 1.65, marginBottom: '10px' }}>No prior experience. No agency. AED 10,000+ monthly budget managed from scratch. Taught myself Meta Ads Manager, built all the creatives.</p>
-    <p style={{ fontFamily: "'EB Garamond', serif", fontSize: '14px', color: '#333', lineHeight: 1.65, marginBottom: '14px' }}>17 direct conversions from retargeting warm audiences who had already engaged with the brand on Instagram.</p>
+    <p style={{ fontFamily: "'EB Garamond', serif", fontSize: '14px', color: '#333', lineHeight: 1.65, marginBottom: '10px' }}>Endless worked with multiple external agencies before I took over. When I ran campaigns with full creative control (my concepts, my targeting, my optimisation), the results outperformed every agency period.</p>
+    <p style={{ fontFamily: "'EB Garamond', serif", fontSize: '14px', color: '#333', lineHeight: 1.65, marginBottom: '14px' }}>AED 10,000+ monthly budget managed from scratch. 100K+ website clicks, 17 direct conversions, highest ROAS of any campaign period at Endless.</p>
     <div style={{ display: 'flex', flexWrap: 'wrap', marginBottom: '12px' }}>
       {metaPills.map(s => <PillLg key={s}>{s}</PillLg>)}
     </div>
     <div style={{ flex: 1 }} />
     <div style={{ borderLeft: `2px solid ${BL}`, paddingLeft: '12px' }}>
-      <p style={{ fontFamily: "'EB Garamond', serif", fontStyle: 'italic', fontSize: '13px', color: MU, lineHeight: 1.55 }}>"Learned it, ran it, reported it. No template, no agency, no excuses."</p>
+      <p style={{ fontFamily: "'EB Garamond', serif", fontStyle: 'italic', fontSize: '13px', color: MU, lineHeight: 1.55 }}>"Best results came from full creative control, not from an agency brief."</p>
     </div>
   </>
 }
@@ -242,7 +242,7 @@ function MetaNotebook() {
   const [open, setOpen] = useState(false)
   return (
     <>
-      <Shell w="400px" h="283px" rings={16} onClick={() => setOpen(true)} left={<MetaLeftSm />} right={<MetaRight />} />
+      <Shell w="400px" h="320px" rings={16} onClick={() => setOpen(true)} left={<MetaLeftSm />} right={<MetaRight />} />
       {open && <Modal onClose={() => setOpen(false)}><Shell w="min(86vw, 840px)" h="min(85vh, 594px)" rings={30} left={<MetaLeftLg />} right={<MetaRight lg />} /></Modal>}
     </>
   )
