@@ -97,10 +97,20 @@ function ConciergeLeftLg() {
 }
 
 function ConciergeRightSm() {
+  const [loaded, setLoaded] = useState(false)
   return (
-    <div style={{ width: '100%', height: '100%', background: '#111', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', gap: '8px' }}>
-      <p style={{ fontFamily: "'VogueTTF', serif", fontSize: '13px', color: 'rgba(255,255,255,0.12)', letterSpacing: '0.1em', textAlign: 'center' }}>ENDLESS<br />CONCIERGE</p>
-      <p style={{ fontFamily: "'EB Garamond', serif", fontStyle: 'italic', fontSize: '9px', color: 'rgba(255,255,255,0.22)', letterSpacing: '0.04em' }}>click to open live app</p>
+    <div style={{ width: '100%', height: '100%', background: '#1C1C18', position: 'relative' }}>
+      {!loaded && (
+        <div style={{ position: 'absolute', inset: 0, display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+          <p style={{ fontFamily: "'VogueTTF', serif", fontSize: '9px', color: 'rgba(255,255,255,0.2)', letterSpacing: '0.16em' }}>LOADING</p>
+        </div>
+      )}
+      <iframe
+        src="/assets/CONCIERGE/Concierge.html"
+        title="Endless Concierge preview"
+        onLoad={() => setLoaded(true)}
+        style={{ width: '100%', height: '100%', border: 'none', display: 'block', opacity: loaded ? 1 : 0, transition: 'opacity 0.4s', pointerEvents: 'none' }}
+      />
     </div>
   )
 }
