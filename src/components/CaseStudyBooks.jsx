@@ -111,19 +111,12 @@ function ConciergeLeftLg() {
 }
 
 function ConciergeRightSm() {
-  const [loaded, setLoaded] = useState(false)
   return (
-    <div style={{ width: '100%', height: '100%', background: '#1C1C18', position: 'relative' }}>
-      {!loaded && (
-        <div style={{ position: 'absolute', inset: 0, display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-          <p style={{ fontFamily: "'VogueTTF', serif", fontSize: '9px', color: 'rgba(255,255,255,0.2)', letterSpacing: '0.16em' }}>LOADING</p>
-        </div>
-      )}
-      <iframe
-        src="/assets/CONCIERGE/Concierge.html"
-        title="Endless Concierge preview"
-        onLoad={() => setLoaded(true)}
-        style={{ width: '200%', height: '200%', border: 'none', display: 'block', opacity: loaded ? 1 : 0, transition: 'opacity 0.4s', pointerEvents: 'none', transform: 'scale(0.5)', transformOrigin: 'top left' }}
+    <div style={{ width: '100%', height: '100%', background: '#1C1C18', overflow: 'hidden' }}>
+      <img
+        src="/assets/concierge-cover.png"
+        alt="Endless Concierge app"
+        style={{ width: '100%', height: '100%', objectFit: 'cover', objectPosition: 'center top', display: 'block' }}
       />
     </div>
   )
