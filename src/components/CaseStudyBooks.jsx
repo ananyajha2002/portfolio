@@ -116,7 +116,7 @@ function ConciergeRightSm() {
       <img
         src="/assets/concierge-cover.png"
         alt="Endless Concierge app"
-        style={{ width: '100%', height: '100%', objectFit: 'cover', objectPosition: 'center top', display: 'block' }}
+        style={{ width: '100%', height: '100%', objectFit: 'contain', objectPosition: 'center', display: 'block' }}
       />
     </div>
   )
@@ -278,7 +278,7 @@ function MetaNotebook() {
 /* ══ SECTION ═════════════════════════════════════════════════════════ */
 export default function CaseStudyBooks() {
   return (
-    <div style={{ width: '100%', padding: '64px 20px 40px', boxSizing: 'border-box' }}>
+    <div style={{ width: '100%', padding: '64px 20px 0px', boxSizing: 'border-box' }}>
       <div style={{ textAlign: 'center', marginBottom: '48px' }}>
         <div style={{ fontFamily: '"Playfair Display", serif', fontStyle: 'italic', fontWeight: 700, fontSize: 'clamp(26px, 4vw, 46px)', color: '#111111', letterSpacing: '-0.01em' }}>My Favourite Projects So Far.</div>
         <div style={{ width: '48px', height: '1px', background: BL, margin: '14px auto 0' }} />

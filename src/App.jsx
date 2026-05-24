@@ -180,7 +180,7 @@ export default function App() {
           <CaseStudyBooks />
 
           {/* Personal section — back in wrapper */}
-          <div className="homepage-wrapper" style={{ paddingTop: '20px' }}>
+          <div className="homepage-wrapper" style={{ paddingTop: '0px' }}>
             <PersonalSection />
           </div>
 
