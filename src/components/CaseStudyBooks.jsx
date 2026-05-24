@@ -194,13 +194,23 @@ const metaPills = ['Meta Ads Manager', 'Instagram', 'Facebook', 'Retargeting', '
 
 function MetaRight({ lg }) {
   return (
-    <div style={{ width: '100%', height: '100%', background: '#0d0d0d', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', padding: lg ? '36px 24px' : '20px', boxSizing: 'border-box' }}>
-      {[{ num: '100K+', label: 'website clicks' }, { num: '17', label: 'direct conversions' }, { num: 'AED 0', label: 'agency fees' }].map(({ num, label }, i) => (
-        <div key={i} style={{ textAlign: 'center', padding: `${lg ? 16 : 10}px 0`, borderBottom: i < 2 ? '1px solid rgba(255,255,255,0.07)' : 'none', width: '100%' }}>
-          <div style={{ fontFamily: "'VogueTTF', serif", fontSize: lg ? '48px' : '30px', color: '#f8f5ef', lineHeight: 0.88 }}>{num}</div>
-          <div style={{ fontFamily: "'EB Garamond', serif", fontStyle: 'italic', fontSize: lg ? '12px' : '10px', color: 'rgba(255,255,255,0.3)', marginTop: '4px' }}>{label}</div>
+    <div style={{ width: '100%', height: '100%', position: 'relative', background: '#000', overflow: 'hidden' }}>
+      <video
+        autoPlay muted loop playsInline
+        style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }}
+      >
+        <source src="/assets/cool%20girls%20shop%20at%20endless.MP4" type="video/mp4" />
+      </video>
+      {lg && (
+        <div style={{ position: 'absolute', bottom: 0, left: 0, right: 0, background: 'rgba(0,0,0,0.72)', padding: '12px 16px', display: 'flex', justifyContent: 'space-around' }}>
+          {[{ num: '100K+', label: 'clicks' }, { num: '17', label: 'conversions' }, { num: 'AED 0', label: 'agency fees' }].map(({ num, label }, i) => (
+            <div key={i} style={{ textAlign: 'center' }}>
+              <div style={{ fontFamily: "'VogueTTF', serif", fontSize: '22px', color: '#f8f5ef', lineHeight: 0.88 }}>{num}</div>
+              <div style={{ fontFamily: "'EB Garamond', serif", fontStyle: 'italic', fontSize: '10px', color: 'rgba(255,255,255,0.5)', marginTop: '3px' }}>{label}</div>
+            </div>
+          ))}
         </div>
-      ))}
+      )}
     </div>
   )
 }
