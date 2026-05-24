@@ -14,19 +14,8 @@ const PillLg = ({ children }) => (
   <span style={{ display: 'inline-block', padding: '3px 10px', border: '1px solid #ddd', fontFamily: "'EB Garamond', serif", fontSize: '12px', letterSpacing: '0.06em', color: MU, marginRight: '5px', marginBottom: '5px' }}>{children}</span>
 )
 
-/* ── Spiral spine ─────────────────────────────────────────────────── */
-function Spiral({ rings = 16 }) {
-  return (
-    <div style={{ width: '20px', height: '100%', background: '#222', display: 'flex', flexDirection: 'column', justifyContent: 'space-evenly', alignItems: 'center', padding: '10px 0', boxSizing: 'border-box', flexShrink: 0 }}>
-      {Array.from({ length: rings }).map((_, i) => (
-        <div key={i} style={{ width: '13px', height: '8px', border: '1.5px solid #777', borderRadius: '999px', background: '#1a1a1a', flexShrink: 0 }} />
-      ))}
-    </div>
-  )
-}
-
 /* ── Notebook shell ───────────────────────────────────────────────── */
-function Shell({ w, h, rings, left, right, onClick }) {
+function Shell({ w, h, left, right, onClick }) {
   const [hovered, setHovered] = useState(false)
   const interactive = !!onClick
   return (
@@ -36,19 +25,35 @@ function Shell({ w, h, rings, left, right, onClick }) {
       onMouseLeave={() => interactive && setHovered(false)}
       style={{
         width: w, height: h, flexShrink: 0, display: 'flex',
-        border: '3px solid #1a1a1a', boxSizing: 'border-box', overflow: 'hidden',
+        border: '4px solid #111', boxSizing: 'border-box', overflow: 'hidden',
         cursor: interactive ? 'pointer' : 'default',
         boxShadow: hovered ? '0 28px 64px rgba(0,0,0,0.32)' : '0 16px 50px rgba(0,0,0,0.22)',
         transform: hovered ? 'rotate(-2deg) translateY(-8px)' : 'rotate(0deg) translateY(0px)',
         transition: 'transform 0.35s cubic-bezier(0.34,1.56,0.64,1), box-shadow 0.3s ease',
       }}
     >
-      <div style={{ flex: 1, background: '#fdfcf9', padding: '16px 14px 14px', boxSizing: 'border-box', display: 'flex', flexDirection: 'column', overflow: 'hidden', position: 'relative' }}>
+      {/* Left page */}
+      <div style={{
+        flex: 1, background: '#fdfcf9',
+        padding: '16px 14px 14px', boxSizing: 'border-box',
+        display: 'flex', flexDirection: 'column', overflow: 'hidden', position: 'relative',
+        boxShadow: 'inset -6px 0 12px rgba(0,0,0,0.07)',
+      }}>
         <div style={{ position: 'absolute', top: 0, left: 0, right: 0, height: '3px', background: BL }} />
         {left}
       </div>
-      <Spiral rings={rings} />
-      <div style={{ flex: 1, overflow: 'hidden', position: 'relative' }}>
+
+      {/* Centre gutter — simulates book spine */}
+      <div style={{
+        width: '10px', flexShrink: 0,
+        background: 'linear-gradient(to right, rgba(0,0,0,0.13), rgba(0,0,0,0.04) 40%, rgba(0,0,0,0.04) 60%, rgba(0,0,0,0.13))',
+      }} />
+
+      {/* Right page */}
+      <div style={{
+        flex: 1, overflow: 'hidden', position: 'relative',
+        boxShadow: 'inset 6px 0 12px rgba(0,0,0,0.07)',
+      }}>
         {right}
       </div>
     </div>
@@ -87,8 +92,9 @@ function ConciergeLeftSm() {
       {conciergePills.map(s => <Pill key={s}>{s}</Pill>)}
     </div>
     <div style={{ flex: 1 }} />
-    <div style={{ borderLeft: `2px solid ${BL}`, paddingLeft: '8px' }}>
-      <p style={{ fontFamily: "'EB Garamond', serif", fontStyle: 'italic', fontSize: '10px', color: MU, lineHeight: 1.5 }}>"100 tabs to 1 app. Built and shipped in-house."</p>
+    <div style={{ background: '#111', padding: '7px 10px' }}>
+      <p style={{ fontFamily: "'VogueTTF', serif", fontSize: '10px', color: '#fff', letterSpacing: '0.05em', marginBottom: '3px' }}>~15 HRS SAVED / WEEK</p>
+      <p style={{ fontFamily: "'EB Garamond', serif", fontStyle: 'italic', fontSize: '9px', color: 'rgba(255,255,255,0.65)', margin: 0 }}>ops team, after rollout</p>
     </div>
   </>
 }
@@ -99,13 +105,14 @@ function ConciergeLeftLg() {
     <div style={{ fontFamily: "'VogueTTF', serif", fontSize: '32px', color: '#111', lineHeight: 0.9, marginBottom: '12px' }}>THE<br />CONCIERGE<br />SYSTEM.</div>
     <div style={{ borderTop: '1px solid #e8e8e8', margin: '12px 0' }} />
     <p style={{ fontFamily: "'EB Garamond', serif", fontSize: '14px', color: '#333', lineHeight: 1.65, marginBottom: '10px' }}>The ops team was managing 400+ consignment items across a 100-tab Excel sheet. One tab per client, nothing connected to photos, pricing, or approvals.</p>
-    <p style={{ fontFamily: "'EB Garamond', serif", fontSize: '14px', color: '#333', lineHeight: 1.65, marginBottom: '14px' }}>I scoped and built a mobile app from scratch. Tap a client, see their items as photos, approve or reject, push live. Zero training needed.</p>
+    <p style={{ fontFamily: "'EB Garamond', serif", fontSize: '14px', color: '#333', lineHeight: 1.65, marginBottom: '14px' }}>I scoped and built a mobile app from scratch. Tap a client, see their items as photos, approve or reject, push live. Zero training needed. The team got back roughly 15 hours a week.</p>
     <div style={{ display: 'flex', flexWrap: 'wrap', marginBottom: '12px' }}>
       {conciergePills.map(s => <PillLg key={s}>{s}</PillLg>)}
     </div>
     <div style={{ flex: 1 }} />
-    <div style={{ borderLeft: `2px solid ${BL}`, paddingLeft: '12px' }}>
-      <p style={{ fontFamily: "'EB Garamond', serif", fontStyle: 'italic', fontSize: '13px', color: MU, lineHeight: 1.55 }}>"100 tabs to 1 app. Built and shipped in-house."</p>
+    <div style={{ background: '#111', padding: '10px 14px' }}>
+      <p style={{ fontFamily: "'VogueTTF', serif", fontSize: '11px', color: '#fff', letterSpacing: '0.05em', marginBottom: '3px' }}>~15 HRS SAVED · PER WEEK</p>
+      <p style={{ fontFamily: "'EB Garamond', serif", fontStyle: 'italic', fontSize: '10px', color: 'rgba(255,255,255,0.65)', margin: 0 }}>ops team, after rollout</p>
     </div>
   </>
 }
@@ -140,8 +147,8 @@ function ConciergeNotebook() {
   const [open, setOpen] = useState(false)
   return (
     <>
-      <Shell w="400px" h="320px" rings={16} onClick={() => setOpen(true)} left={<ConciergeLeftSm />} right={<ConciergeRightSm />} />
-      {open && <Modal onClose={() => setOpen(false)}><Shell w="min(86vw, 840px)" h="min(85vh, 594px)" rings={30} left={<ConciergeLeftLg />} right={<ConciergeRightLg />} /></Modal>}
+      <Shell w="400px" h="320px" onClick={() => setOpen(true)} left={<ConciergeLeftSm />} right={<ConciergeRightSm />} />
+      {open && <Modal onClose={() => setOpen(false)}><Shell w="min(86vw, 840px)" h="min(85vh, 594px)" left={<ConciergeLeftLg />} right={<ConciergeRightLg />} /></Modal>}
     </>
   )
 }
@@ -200,8 +207,8 @@ function VaultNotebook() {
   const [open, setOpen] = useState(false)
   return (
     <>
-      <Shell w="400px" h="320px" rings={16} onClick={() => setOpen(true)} left={<VaultLeftSm />} right={<VaultRight />} />
-      {open && <Modal onClose={() => setOpen(false)}><Shell w="min(86vw, 840px)" h="min(85vh, 594px)" rings={30} left={<VaultLeftLg />} right={<VaultRight />} /></Modal>}
+      <Shell w="400px" h="320px" onClick={() => setOpen(true)} left={<VaultLeftSm />} right={<VaultRight />} />
+      {open && <Modal onClose={() => setOpen(false)}><Shell w="min(86vw, 840px)" h="min(85vh, 594px)" left={<VaultLeftLg />} right={<VaultRight />} /></Modal>}
     </>
   )
 }
@@ -269,8 +276,8 @@ function MetaNotebook() {
   const [open, setOpen] = useState(false)
   return (
     <>
-      <Shell w="400px" h="320px" rings={16} onClick={() => setOpen(true)} left={<MetaLeftSm />} right={<MetaRight />} />
-      {open && <Modal onClose={() => setOpen(false)}><Shell w="min(86vw, 840px)" h="min(85vh, 594px)" rings={30} left={<MetaLeftLg />} right={<MetaRight lg />} /></Modal>}
+      <Shell w="400px" h="320px" onClick={() => setOpen(true)} left={<MetaLeftSm />} right={<MetaRight />} />
+      {open && <Modal onClose={() => setOpen(false)}><Shell w="min(86vw, 840px)" h="min(85vh, 594px)" left={<MetaLeftLg />} right={<MetaRight lg />} /></Modal>}
     </>
   )
 }
