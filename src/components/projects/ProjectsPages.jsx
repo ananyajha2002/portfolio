@@ -157,12 +157,15 @@ export const ProjectsPage3 = (
 export const ProjectsPage4 = (
   <div style={{ display: 'flex', height: '100%', overflow: 'hidden' }}>
     <L photo>
-      <img src="/assets/vault-launch.gif" alt="The Vault" style={{ width: '100%', height: '100%', objectFit: 'cover', objectPosition: 'center center', display: 'block' }} />
-      <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(to right, rgba(0,0,0,0.1), rgba(0,0,0,0.4) 100%)', pointerEvents: 'none' }} />
-      <div style={{ position: 'absolute', top: '14px', left: '14px', background: DK, padding: '5px 12px' }}>
-        <p style={{ fontFamily: "'VogueTTF', serif", fontSize: '11px', color: '#ffffff', letterSpacing: '0.18em' }}>THE VAULT</p>
-      </div>
-      <div style={{ position: 'absolute', bottom: '18px', left: '18px', fontFamily: "'EB Garamond', serif", fontSize: '9px', letterSpacing: '0.12em', color: 'rgba(255,255,255,0.65)' }}>PROJECTS · 7 / 16</div>
+      <a href="https://www.linkedin.com/posts/ananyajha23_some-months-test-you-march-was-one-of-them-share-7445392792819900416-7S1A/" target="_blank" rel="noopener noreferrer" style={{ display: 'block', width: '100%', height: '100%', position: 'relative' }}>
+        <img src="/assets/vault-launch.gif" alt="The Vault" style={{ width: '100%', height: '100%', objectFit: 'cover', objectPosition: 'center center', display: 'block' }} />
+        <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(to right, rgba(0,0,0,0.1), rgba(0,0,0,0.4) 100%)', pointerEvents: 'none' }} />
+        <div style={{ position: 'absolute', top: '14px', left: '14px', background: DK, padding: '5px 12px' }}>
+          <p style={{ fontFamily: "'VogueTTF', serif", fontSize: '11px', color: '#ffffff', letterSpacing: '0.18em' }}>THE VAULT</p>
+        </div>
+        <div style={{ position: 'absolute', bottom: '18px', left: '18px', fontFamily: "'EB Garamond', serif", fontSize: '9px', letterSpacing: '0.12em', color: 'rgba(255,255,255,0.65)' }}>PROJECTS · 7 / 16</div>
+        <div style={{ position: 'absolute', bottom: '18px', right: '14px', fontFamily: "'EB Garamond', serif", fontStyle: 'italic', fontSize: '8px', letterSpacing: '0.1em', color: 'rgba(255,255,255,0.5)' }}>View on LinkedIn →</div>
+      </a>
     </L>
     <R>
       <div style={{ position: 'absolute', top: 0, left: 0, right: 0, height: '3px', background: BL }} />
