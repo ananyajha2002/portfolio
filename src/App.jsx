@@ -115,7 +115,7 @@ function SplashScreen({ onEnter }) {
         </p>
 
         {/* Intro description */}
-        <p style={{ fontFamily: "'EB Garamond', serif", fontStyle: 'italic', fontSize: 'clamp(13px, 1.8vw, 17px)', color: 'rgba(248,245,239,0.55)', lineHeight: 1.65, letterSpacing: '0.02em', maxWidth: '480px', margin: '0 auto 32px' }}>
+        <p style={{ fontFamily: "'EB Garamond', serif", fontStyle: 'italic', fontSize: 'clamp(13px, 1.8vw, 17px)', color: 'rgba(248,245,239,0.88)', lineHeight: 1.65, letterSpacing: '0.02em', maxWidth: '480px', margin: '0 auto 32px' }}>
           Hi! I built this portfolio from scratch to introduce myself properly. Four magazines for the professional work: my career, my time at university, everything I've built at my job at Endless and beyond, and the skills I've picked up along the way. Followed by my personal interests through polaroids of things I love, and a TV playing my favourite films at the end. Because favourite movies are always the easiest way to really get to know someone.
         </p>
 
