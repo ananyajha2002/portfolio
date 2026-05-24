@@ -27,8 +27,22 @@ function Spiral({ rings = 16 }) {
 
 /* ── Notebook shell ───────────────────────────────────────────────── */
 function Shell({ w, h, rings, left, right, onClick }) {
+  const [hovered, setHovered] = useState(false)
+  const interactive = !!onClick
   return (
-    <div onClick={onClick} style={{ width: w, height: h, flexShrink: 0, display: 'flex', border: '3px solid #1a1a1a', boxSizing: 'border-box', overflow: 'hidden', boxShadow: '0 16px 50px rgba(0,0,0,0.22)', cursor: onClick ? 'pointer' : 'default' }}>
+    <div
+      onClick={onClick}
+      onMouseEnter={() => interactive && setHovered(true)}
+      onMouseLeave={() => interactive && setHovered(false)}
+      style={{
+        width: w, height: h, flexShrink: 0, display: 'flex',
+        border: '3px solid #1a1a1a', boxSizing: 'border-box', overflow: 'hidden',
+        cursor: interactive ? 'pointer' : 'default',
+        boxShadow: hovered ? '0 28px 64px rgba(0,0,0,0.32)' : '0 16px 50px rgba(0,0,0,0.22)',
+        transform: hovered ? 'rotate(-2deg) translateY(-8px)' : 'rotate(0deg) translateY(0px)',
+        transition: 'transform 0.35s cubic-bezier(0.34,1.56,0.64,1), box-shadow 0.3s ease',
+      }}
+    >
       <div style={{ flex: 1, background: '#fdfcf9', padding: '16px 14px 14px', boxSizing: 'border-box', display: 'flex', flexDirection: 'column', overflow: 'hidden', position: 'relative' }}>
         <div style={{ position: 'absolute', top: 0, left: 0, right: 0, height: '3px', background: BL }} />
         {left}
@@ -271,13 +285,13 @@ function MetaNotebook() {
 /* ══ SECTION ═════════════════════════════════════════════════════════ */
 export default function CaseStudyBooks() {
   return (
-    <div style={{ width: '100%', padding: '64px 20px 80px', boxSizing: 'border-box' }}>
+    <div style={{ width: '100%', padding: '64px 20px 40px', boxSizing: 'border-box' }}>
       <div style={{ textAlign: 'center', marginBottom: '48px' }}>
         <div style={{ fontFamily: '"Playfair Display", serif', fontStyle: 'italic', fontWeight: 700, fontSize: 'clamp(26px, 4vw, 46px)', color: '#111111', letterSpacing: '-0.01em' }}>My Favourite Projects So Far.</div>
         <div style={{ width: '48px', height: '1px', background: BL, margin: '14px auto 0' }} />
       </div>
 
-      <div style={{ display: 'flex', gap: '24px', justifyContent: 'center', alignItems: 'flex-start', flexWrap: 'wrap' }}>
+      <div style={{ display: 'flex', gap: '12px', justifyContent: 'center', alignItems: 'flex-start', flexWrap: 'wrap' }}>
         <ConciergeNotebook />
         <VaultNotebook />
         <MetaNotebook />
