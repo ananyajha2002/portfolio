@@ -63,7 +63,7 @@ export const ProjectsPage1 = (
       <div style={{ position: 'absolute', top: '14px', right: '14px', background: DK, padding: '4px 10px' }}>
         <p style={{ fontFamily: "'VogueTTF', serif", fontSize: '10px', color: '#ffffff', letterSpacing: '0.12em' }}>PROJECTS</p>
       </div>
-      <div style={{ position: 'absolute', bottom: '18px', right: '18px', fontFamily: "'EB Garamond', serif", fontSize: '9px', letterSpacing: '0.12em', color: 'rgba(255,255,255,0.7)' }}>PROJECTS · 2 / 16</div>
+      <div style={{ position: 'absolute', bottom: '18px', right: '18px', fontFamily: "'EB Garamond', serif", fontSize: '9px', letterSpacing: '0.12em', color: 'rgba(255,255,255,0.7)' }}>PROJECTS · 2 / 18</div>
     </R>
   </div>
 )
@@ -89,7 +89,7 @@ export const ProjectsPage2 = (
         {['ManyChat', 'WhatsApp API', 'Instagram'].map(s => <Pill key={s}>{s}</Pill>)}
       </div>
       <div style={{ flex: 1 }} />
-      <Num n={3} total={18} />
+      <Num n={11} total={18} />
     </L>
     <R>
       <div style={{ height: '3px', background: BL, margin: '-24px -20px 12px -14px' }} />
@@ -107,7 +107,7 @@ export const ProjectsPage2 = (
       <div style={{ borderLeft: `2px solid ${BL}`, paddingLeft: '10px', marginBottom: '8px' }}>
         <p style={{ fontFamily: "'EB Garamond', serif", fontStyle: 'italic', fontSize: '11px', color: MU, lineHeight: 1.4 }}>"the stack is the spine of how Endless runs."</p>
       </div>
-      <Num n={4} total={18} />
+      <Num n={12} total={18} />
     </R>
   </div>
 )
@@ -133,7 +133,7 @@ export const ProjectsPage3 = (
         {['Microsoft Clarity', 'Google Analytics'].map(s => <Pill key={s}>{s}</Pill>)}
       </div>
       <div style={{ flex: 1 }} />
-      <Num n={5} total={18} />
+      <Num n={13} total={18} />
     </L>
     <R>
       <div style={{ position: 'absolute', top: 0, left: 0, right: 0, height: '4px', background: BL }} />
@@ -148,7 +148,7 @@ export const ProjectsPage3 = (
         <p style={{ fontFamily: "'VogueTTF', serif", fontSize: 'clamp(20px, 6cqw, 30px)', color: '#ffffff', lineHeight: 0.88, letterSpacing: '0.01em', marginBottom: '6px' }}>3+ DAYS<br />TO SAME-DAY.</p>
         <p style={{ fontFamily: "'EB Garamond', serif", fontStyle: 'italic', fontSize: '11px', color: 'rgba(255,255,255,0.55)', lineHeight: 1.4 }}>same-day visibility into everything that matters</p>
       </div>
-      <p style={{ fontFamily: "'EB Garamond', serif", fontSize: '9px', letterSpacing: '0.12em', color: MU, textAlign: 'right', paddingTop: '6px' }}>PROJECTS · 6 / 16</p>
+      <p style={{ fontFamily: "'EB Garamond', serif", fontSize: '9px', letterSpacing: '0.12em', color: MU, textAlign: 'right', paddingTop: '6px' }}>PROJECTS · 14 / 18</p>
     </R>
   </div>
 )
@@ -163,7 +163,7 @@ export const ProjectsPage4 = (
         <div style={{ position: 'absolute', top: '14px', left: '14px', background: DK, padding: '5px 12px' }}>
           <p style={{ fontFamily: "'VogueTTF', serif", fontSize: '11px', color: '#ffffff', letterSpacing: '0.18em' }}>THE VAULT</p>
         </div>
-        <div style={{ position: 'absolute', bottom: '18px', left: '18px', fontFamily: "'EB Garamond', serif", fontSize: '9px', letterSpacing: '0.12em', color: 'rgba(255,255,255,0.65)' }}>PROJECTS · 7 / 18</div>
+        <div style={{ position: 'absolute', bottom: '18px', left: '18px', fontFamily: "'EB Garamond', serif", fontSize: '9px', letterSpacing: '0.12em', color: 'rgba(255,255,255,0.65)' }}>PROJECTS · 3 / 18</div>
         <div style={{ position: 'absolute', bottom: '18px', right: '14px', fontFamily: "'EB Garamond', serif", fontStyle: 'italic', fontSize: '8px', letterSpacing: '0.1em', color: 'rgba(255,255,255,0.5)' }}>View on LinkedIn →</div>
       </a>
     </L>
@@ -185,7 +185,7 @@ export const ProjectsPage4 = (
       <div style={{ borderTop: `1px solid ${BL}`, borderBottom: `1px solid ${BL}`, padding: '10px 0', marginBottom: '8px' }}>
         <p style={{ fontFamily: "'EB Garamond', serif", fontStyle: 'italic', fontSize: '11px', color: MU, lineHeight: 1.5 }}>Comment 'Access' on the launch post, password lands in your DMs automatically. Built that myself too.</p>
       </div>
-      <Num n={8} total={18} />
+      <Num n={4} total={18} />
     </R>
   </div>
 )
@@ -199,7 +199,7 @@ export const ProjectsPage5 = (
       <div style={{ position: 'absolute', top: '14px', left: '14px', background: DK, padding: '5px 12px' }}>
         <p style={{ fontFamily: "'VogueTTF', serif", fontSize: '11px', color: '#ffffff', letterSpacing: '0.18em' }}>MARCH POP-UP</p>
       </div>
-      <div style={{ position: 'absolute', bottom: '18px', left: '18px', fontFamily: "'EB Garamond', serif", fontSize: '9px', letterSpacing: '0.12em', color: 'rgba(255,255,255,0.65)' }}>PROJECTS · 9 / 16</div>
+      <div style={{ position: 'absolute', bottom: '18px', left: '18px', fontFamily: "'EB Garamond', serif", fontSize: '9px', letterSpacing: '0.12em', color: 'rgba(255,255,255,0.65)' }}>PROJECTS · 15 / 18</div>
     </L>
     <R>
       <div style={{ position: 'absolute', top: 0, left: 0, right: 0, height: '3px', background: BL }} />
@@ -220,7 +220,7 @@ export const ProjectsPage5 = (
       <div style={{ borderTop: `1.5px solid ${BL}`, padding: '10px 0' }}>
         <p style={{ fontFamily: "'VogueTTF', serif", fontSize: 'clamp(16px, 4.5cqw, 22px)', color: TX, lineHeight: 0.9, letterSpacing: '0.01em' }}>ONLINE AND<br />OFFLINE.<br />BOTH AT ONCE.</p>
       </div>
-      <Num n={10} total={18} />
+      <Num n={16} total={18} />
     </R>
   </div>
 )
@@ -235,7 +235,7 @@ export const ProjectsPage6 = (
         <p style={{ fontFamily: "'VogueTTF', serif", fontSize: 'clamp(20px, 6cqw, 32px)', color: '#ffffff', lineHeight: 0.9, letterSpacing: '0.02em', marginBottom: '6px' }}>DELIVERED<br />IN 2 HOURS.</p>
         <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-end' }}>
           <p style={{ fontFamily: "'EB Garamond', serif", fontSize: '9px', letterSpacing: '0.14em', textTransform: 'uppercase', color: 'rgba(255,255,255,0.75)' }}>Brand Design · Endless Dubai</p>
-          <p style={{ fontFamily: "'EB Garamond', serif", fontSize: '9px', letterSpacing: '0.12em', color: 'rgba(255,255,255,0.65)', whiteSpace: 'nowrap', marginLeft: '8px' }}>PROJECTS · 11 / 16</p>
+          <p style={{ fontFamily: "'EB Garamond', serif", fontSize: '9px', letterSpacing: '0.12em', color: 'rgba(255,255,255,0.65)', whiteSpace: 'nowrap', marginLeft: '8px' }}>PROJECTS · 17 / 18</p>
         </div>
       </div>
     </L>
@@ -255,7 +255,7 @@ export const ProjectsPage6 = (
         ))}
       </div>
       <div style={{ flex: 1 }} />
-      <Num n={12} total={18} />
+      <Num n={18} total={18} />
     </R>
   </div>
 )
@@ -279,7 +279,7 @@ export const ProjectsPage7 = (
         ))}
       </div>
       <div style={{ flex: 1 }} />
-      <Num n={13} total={18} />
+      <Num n={5} total={18} />
     </L>
     <R>
       <div style={{ height: '3px', background: BL, margin: '-24px -20px 12px -14px' }} />
@@ -294,7 +294,7 @@ export const ProjectsPage7 = (
       </div>
       <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', paddingTop: '6px', marginTop: 'auto' }}>
         <p style={{ fontFamily: "'EB Garamond', serif", fontStyle: 'italic', fontSize: '9px', color: BL, letterSpacing: '0.1em' }}>Get in Touch →</p>
-        <p style={{ fontFamily: "'EB Garamond', serif", fontSize: '9px', letterSpacing: '0.12em', color: MU }}>PROJECTS · 14 / 16</p>
+        <p style={{ fontFamily: "'EB Garamond', serif", fontSize: '9px', letterSpacing: '0.12em', color: MU }}>PROJECTS · 6 / 18</p>
       </div>
     </R>
   </div>
@@ -310,7 +310,7 @@ export const ProjectsPage8 = (
         <div style={{ position: 'absolute', top: '14px', left: '14px', background: DK, padding: '5px 12px' }}>
           <p style={{ fontFamily: "'VogueTTF', serif", fontSize: '11px', color: '#ffffff', letterSpacing: '0.18em' }}>CONCIERGE SYSTEM</p>
         </div>
-        <div style={{ position: 'absolute', bottom: '18px', left: '18px', fontFamily: "'EB Garamond', serif", fontSize: '9px', letterSpacing: '0.12em', color: 'rgba(255,255,255,0.65)' }}>PROJECTS · 15 / 18</div>
+        <div style={{ position: 'absolute', bottom: '18px', left: '18px', fontFamily: "'EB Garamond', serif", fontSize: '9px', letterSpacing: '0.12em', color: 'rgba(255,255,255,0.65)' }}>PROJECTS · 7 / 18</div>
         <div style={{ position: 'absolute', bottom: '18px', right: '14px', fontFamily: "'EB Garamond', serif", fontStyle: 'italic', fontSize: '8px', letterSpacing: '0.1em', color: 'rgba(255,255,255,0.5)' }}>View on LinkedIn →</div>
       </a>
     </L>
@@ -331,7 +331,7 @@ export const ProjectsPage8 = (
       <div style={{ borderLeft: `2px solid ${BL}`, paddingLeft: '10px', marginBottom: '8px' }}>
         <p style={{ fontFamily: "'EB Garamond', serif", fontStyle: 'italic', fontSize: '11px', color: MU, lineHeight: 1.45 }}>"The most commercially important workflows in a young business are often the ones nobody formally owns. That moment came around month six for me."</p>
       </div>
-      <Num n={16} total={18} />
+      <Num n={8} total={18} />
     </R>
   </div>
 )
@@ -357,7 +357,7 @@ export const ProjectsPage9 = (
       <div style={{ borderLeft: `2px solid ${BL}`, paddingLeft: '10px', marginBottom: '8px' }}>
         <p style={{ fontFamily: "'EB Garamond', serif", fontStyle: 'italic', fontSize: '11px', color: MU, lineHeight: 1.45 }}>"The site should feel as considered as the sarees. That meant building it properly, not templating it."</p>
       </div>
-      <Num n={17} total={18} />
+      <Num n={9} total={18} />
     </R>
     <L photo>
       <img src="/assets/mundrika.JPG" alt="Mundrika Collection" style={{ width: '100%', height: '100%', objectFit: 'cover', objectPosition: 'center top', display: 'block' }} />
@@ -365,7 +365,7 @@ export const ProjectsPage9 = (
       <div style={{ position: 'absolute', top: '14px', right: '14px', background: DK, padding: '5px 12px' }}>
         <p style={{ fontFamily: "'VogueTTF', serif", fontSize: '11px', color: '#ffffff', letterSpacing: '0.18em' }}>MUNDRIKA</p>
       </div>
-      <div style={{ position: 'absolute', bottom: '18px', right: '18px', fontFamily: "'EB Garamond', serif", fontSize: '9px', letterSpacing: '0.12em', color: 'rgba(255,255,255,0.65)' }}>PROJECTS · 18 / 18</div>
+      <div style={{ position: 'absolute', bottom: '18px', right: '18px', fontFamily: "'EB Garamond', serif", fontSize: '9px', letterSpacing: '0.12em', color: 'rgba(255,255,255,0.65)' }}>PROJECTS · 10 / 18</div>
     </L>
   </div>
 )
