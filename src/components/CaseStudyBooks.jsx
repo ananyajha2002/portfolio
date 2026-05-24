@@ -7,11 +7,31 @@ const Pill = ({ children }) => (
   <span style={{ display: 'inline-block', padding: '2px 7px', border: '1px solid #ddd', fontFamily: "'EB Garamond', serif", fontSize: '10px', letterSpacing: '0.06em', color: MU, marginRight: '4px', marginBottom: '4px' }}>{children}</span>
 )
 
-function Spiral({ color = '#888' }) {
+/* ── Spiral binding — vertical, runs down the centre spine ───────────── */
+function Spiral() {
   return (
-    <div style={{ display: 'flex', justifyContent: 'space-around', alignItems: 'center', width: '100%', padding: '0 10px', boxSizing: 'border-box' }}>
-      {Array.from({ length: 20 }).map((_, i) => (
-        <div key={i} style={{ width: '10px', height: '15px', border: `2px solid ${color}`, borderRadius: '999px', flexShrink: 0 }} />
+    <div style={{
+      width: '22px',
+      height: '100%',
+      background: '#2a2a2a',
+      display: 'flex',
+      flexDirection: 'column',
+      justifyContent: 'space-around',
+      alignItems: 'center',
+      padding: '10px 0',
+      boxSizing: 'border-box',
+      flexShrink: 0,
+      zIndex: 2,
+    }}>
+      {Array.from({ length: 18 }).map((_, i) => (
+        <div key={i} style={{
+          width: '14px',
+          height: '9px',
+          border: '2px solid #888',
+          borderRadius: '999px',
+          background: '#1a1a1a',
+          flexShrink: 0,
+        }} />
       ))}
     </div>
   )
@@ -26,26 +46,24 @@ function OpenNotebook({ id, leftContent, rightContent }) {
       maxWidth: '420px',
       height: '440px',
       display: 'flex',
-      flexDirection: 'column',
-      boxShadow: '0 16px 48px rgba(0,0,0,0.22)',
-      background: '#fff',
+      flexDirection: 'row',
+      boxShadow: '0 16px 48px rgba(0,0,0,0.28)',
+      border: '3px solid #1a1a1a',
+      boxSizing: 'border-box',
+      overflow: 'hidden',
     }}>
-      {/* Spiral strip */}
-      <div style={{ height: '22px', background: '#eeebe3', display: 'flex', alignItems: 'center', borderBottom: '1px solid #ddd', flexShrink: 0 }}>
-        <Spiral />
+      {/* Left page */}
+      <div style={{ flex: 1, background: '#fdfcf9', padding: '18px 14px 16px', boxSizing: 'border-box', display: 'flex', flexDirection: 'column', overflow: 'hidden', position: 'relative' }}>
+        <div style={{ position: 'absolute', top: 0, left: 0, right: 0, height: '3px', background: BL }} />
+        {leftContent}
       </div>
 
-      {/* Two pages */}
-      <div style={{ display: 'flex', flex: 1, minHeight: 0 }}>
-        {/* Left page */}
-        <div style={{ width: '50%', background: '#fdfcf9', padding: '18px 14px 16px', boxSizing: 'border-box', display: 'flex', flexDirection: 'column', overflow: 'hidden', borderRight: '1px solid #e8e8e8', position: 'relative' }}>
-          <div style={{ position: 'absolute', top: 0, left: 0, right: 0, height: '3px', background: BL }} />
-          {leftContent}
-        </div>
-        {/* Right page */}
-        <div style={{ flex: 1, overflow: 'hidden', position: 'relative' }}>
-          {rightContent}
-        </div>
+      {/* Spiral spine — centre */}
+      <Spiral />
+
+      {/* Right page */}
+      <div style={{ flex: 1, overflow: 'hidden', position: 'relative' }}>
+        {rightContent}
       </div>
     </div>
   )
