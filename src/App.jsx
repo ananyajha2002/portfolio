@@ -177,12 +177,12 @@ export default function App() {
               ))}
             </div>
 
-            {/* Case study open books */}
-            <CaseStudyBooks />
-
             {/* Personal about me */}
             <PersonalSection />
           </div>
+
+          {/* Case study books — centred on marble between personal and TV */}
+          <CaseStudyBooks />
 
           {/* On Rotation — full-width wood wall, stacks below in column flow */}
           <OnRotation />
