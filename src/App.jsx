@@ -158,15 +158,13 @@ export default function App() {
 
         {/* Column wrapper — keeps homepage-wrapper centred, lets OnRotation go full-width below */}
         <div style={{ width: '100%', display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
+          {/* Magazines */}
           <div className="homepage-wrapper">
-            {/* Header */}
             <div className="homepage-header">
               <p className="homepage-subtitle">
                 everything you need to know, professionally.
               </p>
             </div>
-
-            {/* Magazine grid */}
             <div className="covers-grid">
               {COVERS.map((cover) => (
                 <MagazineCard
@@ -176,15 +174,17 @@ export default function App() {
                 />
               ))}
             </div>
+          </div>
 
-            {/* Case study books — above personal section */}
-            <CaseStudyBooks />
+          {/* Case study notebooks — full viewport width, outside the max-width wrapper */}
+          <CaseStudyBooks />
 
-            {/* Personal about me */}
+          {/* Personal section — back in wrapper */}
+          <div className="homepage-wrapper" style={{ paddingTop: '20px' }}>
             <PersonalSection />
           </div>
 
-          {/* On Rotation — full-width wood wall, stacks below in column flow */}
+          {/* On Rotation — full-width wood wall */}
           <OnRotation />
         </div>
       </div>
