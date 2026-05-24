@@ -113,14 +113,34 @@ function ConciergeLeftLg() {
   </>
 }
 
+const tryItBtnStyle = (fontSize, padding) => ({
+  position: 'absolute', bottom: '12px', left: '50%', transform: 'translateX(-50%)',
+  background: 'rgba(10,8,6,0.88)', backdropFilter: 'blur(6px)',
+  border: '1px solid rgba(255,255,255,0.22)',
+  color: '#fff', textDecoration: 'none',
+  fontFamily: "'EB Garamond', serif", fontStyle: 'italic',
+  fontSize, letterSpacing: '0.08em', padding,
+  whiteSpace: 'nowrap', borderRadius: '2px',
+  display: 'block',
+})
+
 function ConciergeRightSm() {
   return (
-    <div style={{ width: '100%', height: '100%', background: '#1C1C18', overflow: 'hidden' }}>
+    <div style={{ width: '100%', height: '100%', background: '#1C1C18', overflow: 'hidden', position: 'relative' }}>
       <img
         src="/assets/concierge-cover.png"
         alt="Endless Concierge app"
         style={{ width: '100%', height: '100%', objectFit: 'cover', objectPosition: 'center top', display: 'block' }}
       />
+      <a
+        href="/assets/CONCIERGE/Concierge.html"
+        target="_blank"
+        rel="noopener noreferrer"
+        onClick={e => e.stopPropagation()}
+        style={tryItBtnStyle('10px', '5px 12px')}
+      >
+        try it live →
+      </a>
     </div>
   )
 }
@@ -132,12 +152,21 @@ function ConciergeRightLg() {
 
   if (isMobile) {
     return (
-      <div style={{ width: '100%', height: '100%', background: '#1C1C18', overflow: 'hidden' }}>
+      <div style={{ width: '100%', height: '100%', background: '#1C1C18', overflow: 'hidden', position: 'relative' }}>
         <img
           src="/assets/concierge-cover.png"
           alt="Endless Concierge app"
           style={{ width: '100%', height: '100%', objectFit: 'cover', objectPosition: 'center top', display: 'block' }}
         />
+        <a
+          href="/assets/CONCIERGE/Concierge.html"
+          target="_blank"
+          rel="noopener noreferrer"
+          onClick={e => e.stopPropagation()}
+          style={tryItBtnStyle('13px', '9px 22px')}
+        >
+          try it live →
+        </a>
       </div>
     )
   }
