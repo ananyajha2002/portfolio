@@ -58,7 +58,7 @@ function Shell({ w, h, left, right, onClick }) {
       <div style={{
         position: 'absolute', top: 0, bottom: 0,
         left: 'calc(50% - 20px)', width: '64px',
-        background: 'linear-gradient(to right, transparent 0%, rgba(0,0,0,0.18) 30%, rgba(0,0,0,0.45) 50%, rgba(0,0,0,0.18) 70%, transparent 100%)',
+        background: 'linear-gradient(to right, transparent 0%, rgba(0,0,0,0.08) 30%, rgba(0,0,0,0.25) 50%, rgba(0,0,0,0.08) 70%, transparent 100%)',
         pointerEvents: 'none', zIndex: 10,
       }} />
     </div>
