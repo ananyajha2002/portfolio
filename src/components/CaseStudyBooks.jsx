@@ -112,8 +112,8 @@ function ConciergeRightLg() {
     <div onMouseEnter={() => setHovered(true)} onMouseLeave={() => setHovered(false)} style={{ width: '100%', height: '100%', background: '#1C1C18', position: 'relative' }}>
       {!loaded && <div style={{ position: 'absolute', inset: 0, display: 'flex', alignItems: 'center', justifyContent: 'center' }}><p style={{ fontFamily: "'VogueTTF', serif", fontSize: '9px', color: 'rgba(255,255,255,0.2)', letterSpacing: '0.16em' }}>LOADING</p></div>}
       <iframe src="/assets/CONCIERGE/Concierge.html" title="Endless Concierge" onLoad={() => setLoaded(true)} style={{ width: '100%', height: '100%', border: 'none', display: 'block', opacity: loaded ? 1 : 0, transition: 'opacity 0.4s' }} />
-      <div style={{ position: 'absolute', bottom: '12px', left: '50%', transform: 'translateX(-50%)', background: 'rgba(0,0,0,0.78)', padding: '6px 12px', opacity: hovered ? 1 : 0, transition: 'opacity 0.2s', pointerEvents: 'none', whiteSpace: 'nowrap' }}>
-        <p style={{ fontFamily: "'EB Garamond', serif", fontStyle: 'italic', fontSize: '10px', color: 'rgba(255,255,255,0.8)', margin: 0 }}>any email + any password works, it is a live demo</p>
+      <div style={{ position: 'absolute', bottom: '14px', left: '50%', transform: 'translateX(-50%)', background: 'rgba(0,0,0,0.92)', padding: '10px 18px', opacity: hovered ? 1 : 0, transition: 'opacity 0.2s', pointerEvents: 'none', whiteSpace: 'nowrap' }}>
+        <p style={{ fontFamily: "'EB Garamond', serif", fontStyle: 'italic', fontSize: '14px', color: '#fff', margin: 0, letterSpacing: '0.02em' }}>any email + any password works, it is a live demo</p>
       </div>
     </div>
   )
