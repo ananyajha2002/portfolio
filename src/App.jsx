@@ -20,6 +20,7 @@ import {
   ProjectsPage3, ProjectsPage4,
   ProjectsPage5, ProjectsPage6,
   ProjectsPage7, ProjectsPage8,
+  ProjectsPage9,
 } from './components/projects/ProjectsPages'
 import {
   SkillsPage1, SkillsPage2,
@@ -57,7 +58,7 @@ const COVERS = [
     issue: 'THE BUILD ISSUE',
     quote: 'what I built when\nthere was no manual',
     quotePosition: 'bottom-left',
-    interiorPages: [ProjectsPage1, ProjectsPage2, ProjectsPage3, ProjectsPage4, ProjectsPage5, ProjectsPage6, ProjectsPage7, ProjectsPage8],
+    interiorPages: [ProjectsPage1, ProjectsPage2, ProjectsPage3, ProjectsPage4, ProjectsPage5, ProjectsPage6, ProjectsPage7, ProjectsPage8, ProjectsPage9],
   },
   {
     id: 'skills',

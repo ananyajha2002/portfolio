@@ -55,7 +55,7 @@ export const ProjectsPage1 = (
         <p style={{ fontFamily: "'EB Garamond', serif", fontStyle: 'italic', fontSize: '12px', color: MU, lineHeight: 1.4 }}>"I built what the market was already asking for."</p>
       </div>
       <p style={{ fontFamily: "'EB Garamond', serif", fontSize: '9px', letterSpacing: '0.16em', textTransform: 'uppercase', color: MU }}>Ananya Jha · Operations and Innovation</p>
-      <Num n={1} total={16} />
+      <Num n={1} total={18} />
     </L>
     <R photo>
       <img src="/assets/projects-cover.jpeg" alt="Projects" style={{ width: '100%', height: '100%', objectFit: 'cover', objectPosition: 'center center', display: 'block' }} />
@@ -89,7 +89,7 @@ export const ProjectsPage2 = (
         {['ManyChat', 'WhatsApp API', 'Instagram'].map(s => <Pill key={s}>{s}</Pill>)}
       </div>
       <div style={{ flex: 1 }} />
-      <Num n={3} total={16} />
+      <Num n={3} total={18} />
     </L>
     <R>
       <div style={{ height: '3px', background: BL, margin: '-24px -20px 12px -14px' }} />
@@ -107,7 +107,7 @@ export const ProjectsPage2 = (
       <div style={{ borderLeft: `2px solid ${BL}`, paddingLeft: '10px', marginBottom: '8px' }}>
         <p style={{ fontFamily: "'EB Garamond', serif", fontStyle: 'italic', fontSize: '11px', color: MU, lineHeight: 1.4 }}>"the stack is the spine of how Endless runs."</p>
       </div>
-      <Num n={4} total={16} />
+      <Num n={4} total={18} />
     </R>
   </div>
 )
@@ -133,7 +133,7 @@ export const ProjectsPage3 = (
         {['Microsoft Clarity', 'Google Analytics'].map(s => <Pill key={s}>{s}</Pill>)}
       </div>
       <div style={{ flex: 1 }} />
-      <Num n={5} total={16} />
+      <Num n={5} total={18} />
     </L>
     <R>
       <div style={{ position: 'absolute', top: 0, left: 0, right: 0, height: '4px', background: BL }} />
@@ -163,7 +163,7 @@ export const ProjectsPage4 = (
         <div style={{ position: 'absolute', top: '14px', left: '14px', background: DK, padding: '5px 12px' }}>
           <p style={{ fontFamily: "'VogueTTF', serif", fontSize: '11px', color: '#ffffff', letterSpacing: '0.18em' }}>THE VAULT</p>
         </div>
-        <div style={{ position: 'absolute', bottom: '18px', left: '18px', fontFamily: "'EB Garamond', serif", fontSize: '9px', letterSpacing: '0.12em', color: 'rgba(255,255,255,0.65)' }}>PROJECTS · 7 / 16</div>
+        <div style={{ position: 'absolute', bottom: '18px', left: '18px', fontFamily: "'EB Garamond', serif", fontSize: '9px', letterSpacing: '0.12em', color: 'rgba(255,255,255,0.65)' }}>PROJECTS · 7 / 18</div>
         <div style={{ position: 'absolute', bottom: '18px', right: '14px', fontFamily: "'EB Garamond', serif", fontStyle: 'italic', fontSize: '8px', letterSpacing: '0.1em', color: 'rgba(255,255,255,0.5)' }}>View on LinkedIn →</div>
       </a>
     </L>
@@ -185,7 +185,7 @@ export const ProjectsPage4 = (
       <div style={{ borderTop: `1px solid ${BL}`, borderBottom: `1px solid ${BL}`, padding: '10px 0', marginBottom: '8px' }}>
         <p style={{ fontFamily: "'EB Garamond', serif", fontStyle: 'italic', fontSize: '11px', color: MU, lineHeight: 1.5 }}>Comment 'Access' on the launch post, password lands in your DMs automatically. Built that myself too.</p>
       </div>
-      <Num n={8} total={16} />
+      <Num n={8} total={18} />
     </R>
   </div>
 )
@@ -220,7 +220,7 @@ export const ProjectsPage5 = (
       <div style={{ borderTop: `1.5px solid ${BL}`, padding: '10px 0' }}>
         <p style={{ fontFamily: "'VogueTTF', serif", fontSize: 'clamp(16px, 4.5cqw, 22px)', color: TX, lineHeight: 0.9, letterSpacing: '0.01em' }}>ONLINE AND<br />OFFLINE.<br />BOTH AT ONCE.</p>
       </div>
-      <Num n={10} total={16} />
+      <Num n={10} total={18} />
     </R>
   </div>
 )
@@ -255,7 +255,7 @@ export const ProjectsPage6 = (
         ))}
       </div>
       <div style={{ flex: 1 }} />
-      <Num n={12} total={16} />
+      <Num n={12} total={18} />
     </R>
   </div>
 )
@@ -279,7 +279,7 @@ export const ProjectsPage7 = (
         ))}
       </div>
       <div style={{ flex: 1 }} />
-      <Num n={13} total={16} />
+      <Num n={13} total={18} />
     </L>
     <R>
       <div style={{ height: '3px', background: BL, margin: '-24px -20px 12px -14px' }} />
@@ -310,7 +310,7 @@ export const ProjectsPage8 = (
         <div style={{ position: 'absolute', top: '14px', left: '14px', background: DK, padding: '5px 12px' }}>
           <p style={{ fontFamily: "'VogueTTF', serif", fontSize: '11px', color: '#ffffff', letterSpacing: '0.18em' }}>CONCIERGE SYSTEM</p>
         </div>
-        <div style={{ position: 'absolute', bottom: '18px', left: '18px', fontFamily: "'EB Garamond', serif", fontSize: '9px', letterSpacing: '0.12em', color: 'rgba(255,255,255,0.65)' }}>PROJECTS · 15 / 16</div>
+        <div style={{ position: 'absolute', bottom: '18px', left: '18px', fontFamily: "'EB Garamond', serif", fontSize: '9px', letterSpacing: '0.12em', color: 'rgba(255,255,255,0.65)' }}>PROJECTS · 15 / 18</div>
         <div style={{ position: 'absolute', bottom: '18px', right: '14px', fontFamily: "'EB Garamond', serif", fontStyle: 'italic', fontSize: '8px', letterSpacing: '0.1em', color: 'rgba(255,255,255,0.5)' }}>View on LinkedIn →</div>
       </a>
     </L>
@@ -331,7 +331,41 @@ export const ProjectsPage8 = (
       <div style={{ borderLeft: `2px solid ${BL}`, paddingLeft: '10px', marginBottom: '8px' }}>
         <p style={{ fontFamily: "'EB Garamond', serif", fontStyle: 'italic', fontSize: '11px', color: MU, lineHeight: 1.45 }}>"The most commercially important workflows in a young business are often the ones nobody formally owns. That moment came around month six for me."</p>
       </div>
-      <Num n={16} total={16} />
+      <Num n={16} total={18} />
     </R>
+  </div>
+)
+
+/* ── Spread 9 — Mundrika Collection ──────────────────────── */
+export const ProjectsPage9 = (
+  <div style={{ display: 'flex', height: '100%', overflow: 'hidden' }}>
+    <R>
+      <div style={{ position: 'absolute', top: 0, left: 0, right: 0, height: '3px', background: BL }} />
+      <div style={{ marginTop: '10px' }}>
+        <K color={BL}>Personal Build · Dubai · 2025–2026</K>
+      </div>
+      <div style={{ fontFamily: "'VogueTTF', serif", fontSize: 'clamp(22px, 6.5cqw, 36px)', color: TX, lineHeight: 0.85, letterSpacing: '0.01em', marginBottom: '8px', marginTop: '4px' }}>MUNDRIKA<br />COLLECTION.</div>
+      <Rule />
+      <B>My mum runs a heritage saree atelier from Dubai — 100% handloom sarees sourced from artisans across India. The kind of work that deserves a site as considered as the craft itself. She had a Wix site. I couldn't leave it like that.</B>
+      <B>So I built her one from scratch. Next.js App Router, Sanity CMS, deployed to Vercel. The architecture is intentionally simple: Home, a single rolling gallery, individual saree pages, and a visit page — because Mundrika doesn't work in seasonal collections, it works in rolling sourcing, and the site needed to reflect that.</B>
+      <B>The design brief I set myself: Mughal arch, gold-leaf details, maroon palette, Devanagari typography. Every decision had to feel like the product — unhurried, rooted, considered. The copy leans into Hindi and Sanskrit terms rather than Western fashion language, because the sarees deserve their own vocabulary.</B>
+      <B>The CMS means she can update inventory herself without touching code. That was the whole point.</B>
+      <div style={{ display: 'flex', flexWrap: 'wrap', margin: '6px 0' }}>
+        {['Next.js', 'Sanity CMS', 'Vercel', 'App Router', 'Brand Design', 'Typography'].map(s => <Pill key={s}>{s}</Pill>)}
+      </div>
+      <div style={{ flex: 1 }} />
+      <div style={{ borderLeft: `2px solid ${BL}`, paddingLeft: '10px', marginBottom: '8px' }}>
+        <p style={{ fontFamily: "'EB Garamond', serif", fontStyle: 'italic', fontSize: '11px', color: MU, lineHeight: 1.45 }}>"The site should feel as considered as the sarees. That meant building it properly, not templating it."</p>
+      </div>
+      <Num n={17} total={18} />
+    </R>
+    <L photo>
+      <img src="/assets/mundrika.JPG" alt="Mundrika Collection" style={{ width: '100%', height: '100%', objectFit: 'cover', objectPosition: 'center top', display: 'block' }} />
+      <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(to left, rgba(0,0,0,0.05), rgba(0,0,0,0.38) 100%)', pointerEvents: 'none' }} />
+      <div style={{ position: 'absolute', top: '14px', right: '14px', background: DK, padding: '5px 12px' }}>
+        <p style={{ fontFamily: "'VogueTTF', serif", fontSize: '11px', color: '#ffffff', letterSpacing: '0.18em' }}>MUNDRIKA</p>
+      </div>
+      <div style={{ position: 'absolute', bottom: '18px', right: '18px', fontFamily: "'EB Garamond', serif", fontSize: '9px', letterSpacing: '0.12em', color: 'rgba(255,255,255,0.65)' }}>PROJECTS · 18 / 18</div>
+    </L>
   </div>
 )
