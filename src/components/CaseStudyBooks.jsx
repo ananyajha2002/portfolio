@@ -95,6 +95,7 @@ function NotebookCover({ cover, style, onClick }) {
 /* ── Open notebook detail modal ───────────────────────────────────────── */
 function NotebookDetail({ cover, onClose }) {
   const [iframeLoaded, setIframeLoaded] = useState(false)
+  const [rightHovered, setRightHovered] = useState(false)
 
   useEffect(() => {
     const h = e => { if (e.key === 'Escape') onClose() }
@@ -193,8 +194,24 @@ function NotebookDetail({ cover, onClose }) {
             {leftContent}
           </div>
           {/* Right page */}
-          <div style={{ flex: 1, height: '100%', overflow: 'hidden', position: 'relative', background: '#f5f3ef' }}>
+          <div
+            onMouseEnter={() => setRightHovered(true)}
+            onMouseLeave={() => setRightHovered(false)}
+            style={{ flex: 1, height: '100%', overflow: 'hidden', position: 'relative', background: '#f5f3ef' }}
+          >
             {rightContent}
+            {cover.id === 'concierge' && (
+              <div style={{
+                position: 'absolute', bottom: '14px', left: '50%', transform: 'translateX(-50%)',
+                background: 'rgba(0,0,0,0.72)', padding: '7px 14px',
+                opacity: rightHovered ? 1 : 0,
+                transition: 'opacity 0.2s ease',
+                pointerEvents: 'none',
+                whiteSpace: 'nowrap',
+              }}>
+                <p style={{ fontFamily: "'EB Garamond', serif", fontStyle: 'italic', fontSize: '11px', color: 'rgba(255,255,255,0.75)', letterSpacing: '0.04em', margin: 0 }}>any email + any password works — it's a live demo</p>
+              </div>
+            )}
           </div>
         </div>
       </div>
