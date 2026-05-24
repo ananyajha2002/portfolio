@@ -28,7 +28,7 @@ function Shell({ w, h, left, right, onClick }) {
       onMouseLeave={() => interactive && setHovered(false)}
       style={{
         width: w, height: h, flexShrink: 0, display: 'flex',
-        boxSizing: 'border-box', overflow: 'hidden',
+        boxSizing: 'border-box', overflow: 'hidden', position: 'relative',
         cursor: interactive ? 'pointer' : 'default',
         boxShadow: hovered ? '0 28px 64px rgba(0,0,0,0.32)' : '0 16px 50px rgba(0,0,0,0.22)',
         transform: hovered ? 'rotate(-2deg) translateY(-8px)' : 'rotate(0deg) translateY(0px)',
@@ -52,6 +52,14 @@ function Shell({ w, h, left, right, onClick }) {
       }}>
         {right}
       </div>
+
+      {/* Spine shadow — overlay only, no physical gap */}
+      <div style={{
+        position: 'absolute', top: 0, bottom: 0,
+        left: 'calc(50% - 32px)', width: '64px',
+        background: 'linear-gradient(to right, transparent 0%, rgba(0,0,0,0.08) 35%, rgba(0,0,0,0.22) 50%, rgba(0,0,0,0.08) 65%, transparent 100%)',
+        pointerEvents: 'none', zIndex: 10,
+      }} />
     </div>
   )
 }
