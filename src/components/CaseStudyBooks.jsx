@@ -47,11 +47,8 @@ function Shell({ w, h, left, right, onClick }) {
         {left}
       </div>
 
-      {/* Centre gutter — simulates book spine */}
-      <div style={{
-        width: '10px', flexShrink: 0,
-        background: 'linear-gradient(to right, rgba(0,0,0,0.13), rgba(0,0,0,0.04) 40%, rgba(0,0,0,0.04) 60%, rgba(0,0,0,0.13))',
-      }} />
+      {/* Centre gutter — solid spine matching the border */}
+      <div style={{ width: '10px', flexShrink: 0, background: '#111' }} />
 
       {/* Right page */}
       <div style={{
