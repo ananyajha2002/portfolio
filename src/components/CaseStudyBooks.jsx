@@ -4,7 +4,10 @@ const BL = '#800020'
 const MU = '#888888'
 
 /* A4-open ratio = 420mm × 297mm = 1.414 : 1  (landscape)            */
-/* Small  : 400 × 283 px   Modal : 840 × 594 px                      */
+/* Small  : 400 × 320 px   Modal : up to 840 × 594 px                */
+/* Modal height = width / 1.414 — preserves ratio at every viewport  */
+const MODAL_W = 'min(90vw, 840px)'
+const MODAL_H = 'min(calc(90vw / 1.414), 85vh, 594px)'
 
 const Pill = ({ children }) => (
   <span style={{ display: 'inline-block', padding: '2px 8px', border: '1px solid #ddd', fontFamily: "'EB Garamond', serif", fontSize: '10px', letterSpacing: '0.06em', color: MU, marginRight: '4px', marginBottom: '4px' }}>{children}</span>
@@ -36,8 +39,9 @@ function Shell({ w, h, left, right, onClick }) {
       <div style={{
         flex: 1, background: '#fdfcf9',
         padding: '16px 14px 14px', boxSizing: 'border-box',
-        display: 'flex', flexDirection: 'column', overflow: 'hidden', position: 'relative',
+        display: 'flex', flexDirection: 'column', overflowX: 'hidden', overflowY: 'auto', position: 'relative',
         boxShadow: 'inset -6px 0 12px rgba(0,0,0,0.07)',
+        scrollbarWidth: 'none', msOverflowStyle: 'none',
       }}>
         <div style={{ position: 'absolute', top: 0, left: 0, right: 0, height: '3px', background: BL }} />
         {left}
@@ -148,7 +152,7 @@ function ConciergeNotebook() {
   return (
     <>
       <Shell w="400px" h="320px" onClick={() => setOpen(true)} left={<ConciergeLeftSm />} right={<ConciergeRightSm />} />
-      {open && <Modal onClose={() => setOpen(false)}><Shell w="min(86vw, 840px)" h="min(85vh, 594px)" left={<ConciergeLeftLg />} right={<ConciergeRightLg />} /></Modal>}
+      {open && <Modal onClose={() => setOpen(false)}><Shell w={MODAL_W} h={MODAL_H} left={<ConciergeLeftLg />} right={<ConciergeRightLg />} /></Modal>}
     </>
   )
 }
@@ -208,7 +212,7 @@ function VaultNotebook() {
   return (
     <>
       <Shell w="400px" h="320px" onClick={() => setOpen(true)} left={<VaultLeftSm />} right={<VaultRight />} />
-      {open && <Modal onClose={() => setOpen(false)}><Shell w="min(86vw, 840px)" h="min(85vh, 594px)" left={<VaultLeftLg />} right={<VaultRight />} /></Modal>}
+      {open && <Modal onClose={() => setOpen(false)}><Shell w={MODAL_W} h={MODAL_H} left={<VaultLeftLg />} right={<VaultRight />} /></Modal>}
     </>
   )
 }
@@ -277,7 +281,7 @@ function MetaNotebook() {
   return (
     <>
       <Shell w="400px" h="320px" onClick={() => setOpen(true)} left={<MetaLeftSm />} right={<MetaRight />} />
-      {open && <Modal onClose={() => setOpen(false)}><Shell w="min(86vw, 840px)" h="min(85vh, 594px)" left={<MetaLeftLg />} right={<MetaRight lg />} /></Modal>}
+      {open && <Modal onClose={() => setOpen(false)}><Shell w={MODAL_W} h={MODAL_H} left={<MetaLeftLg />} right={<MetaRight lg />} /></Modal>}
     </>
   )
 }
