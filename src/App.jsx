@@ -6,6 +6,7 @@ import VinylPlayer      from './components/VinylPlayer'
 import useAudio         from './hooks/useAudio'
 import { makeContactPage } from './components/ContactSpread'
 import PersonalSection     from './components/PersonalSection'
+import CaseStudyBooks      from './components/CaseStudyBooks'
 import OnRotation          from './components/OnRotation'
 import {
   CareerPage1, CareerPage2, CareerPage3,
@@ -175,6 +176,9 @@ export default function App() {
                 />
               ))}
             </div>
+
+            {/* Case study open books */}
+            <CaseStudyBooks />
 
             {/* Personal about me */}
             <PersonalSection />

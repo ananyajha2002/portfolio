@@ -1,0 +1,278 @@
+/* =========================================================================
+   ENDLESS — Colors & Type
+   Circular fashion platform & female community, UAE
+   ========================================================================= */
+
+/* ---- Fonts ------------------------------------------------------------- */
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,200..800&display=swap");
+
+@font-face {
+  font-family: "Meno Banner";
+  src: url("fonts/MenoBanner-Regular.otf") format("opentype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+:root {
+  /* ===== Brand colors =================================================== */
+  /* Core five, sampled from the supplied brand marks */
+  --endless-noir:       #000000;      /* primary text, logos */
+  --endless-ivory:      #FFFFFF;      /* primary surface */
+  --endless-linen:      #E0E0D8;      /* warm neutral surface */
+  --endless-rosette:    #E04878;      /* signature pink — primary brand accent */
+  --endless-tangerine:  #E05028;      /* warm orange-red — secondary accent */
+
+  /* Derived neutrals (warm, linen-toned) */
+  --endless-linen-50:   #FAFAF5;
+  --endless-linen-100:  #F3F2EC;
+  --endless-linen-200:  #E0E0D8;      /* = linen */
+  --endless-linen-300:  #C9C8BE;
+  --endless-linen-400:  #A8A79C;
+  --endless-linen-500:  #7A7970;
+  --endless-linen-600:  #55554F;
+  --endless-linen-700:  #35352F;
+  --endless-linen-800:  #1C1C18;
+  --endless-linen-900:  #0A0A08;
+
+  /* Rosette tints/shades */
+  --endless-rosette-50:  #FDEEF3;
+  --endless-rosette-100: #F9D4E0;
+  --endless-rosette-200: #F1A6BF;
+  --endless-rosette-300: #EC7DA1;
+  --endless-rosette-400: #E85D8C;
+  --endless-rosette-500: #E04878;     /* = rosette */
+  --endless-rosette-600: #C13765;
+  --endless-rosette-700: #962A4E;
+  --endless-rosette-800: #681D36;
+  --endless-rosette-900: #3A1020;
+
+  /* Tangerine tints/shades */
+  --endless-tangerine-50:  #FCEDE5;
+  --endless-tangerine-100: #F8D2BF;
+  --endless-tangerine-200: #F1A685;
+  --endless-tangerine-300: #EC7F55;
+  --endless-tangerine-400: #E66236;
+  --endless-tangerine-500: #E05028;   /* = tangerine */
+  --endless-tangerine-600: #BD3F1C;
+  --endless-tangerine-700: #8F2E13;
+  --endless-tangerine-800: #621F0B;
+  --endless-tangerine-900: #351005;
+
+  /* ===== Semantic aliases ============================================== */
+  --bg:            var(--endless-ivory);
+  --bg-alt:        var(--endless-linen);
+  --bg-muted:      var(--endless-linen-100);
+  --bg-inverse:    var(--endless-noir);
+
+  --fg:            var(--endless-noir);
+  --fg-muted:      var(--endless-linen-600);
+  --fg-subtle:     var(--endless-linen-500);
+  --fg-inverse:    var(--endless-ivory);
+  --fg-on-accent:  var(--endless-ivory);
+
+  --accent:        var(--endless-rosette);
+  --accent-hover:  var(--endless-rosette-600);
+  --accent-soft:   var(--endless-rosette-50);
+
+  --accent-2:      var(--endless-tangerine);
+  --accent-2-hover:var(--endless-tangerine-600);
+  --accent-2-soft: var(--endless-tangerine-50);
+
+  --border:        var(--endless-linen-300);
+  --border-muted:  var(--endless-linen-200);
+  --border-strong: var(--endless-noir);
+
+  /* Status — warm, restrained. No neon. */
+  --success:       #3F7D5E;
+  --warning:       #C48A2E;
+  --danger:        var(--endless-tangerine-600);
+
+  /* ===== Type families ================================================== */
+  --font-display:  "Meno Banner", "Cormorant Garamond", "Playfair Display", Georgia, serif;
+  --font-sans:     "DM Sans", ui-sans-serif, -apple-system, "Helvetica Neue", Arial, sans-serif;
+  --font-mono:     ui-monospace, "SF Mono", "JetBrains Mono", Menlo, monospace;
+
+  /* ===== Type scale ===================================================== */
+  /* Display uses Meno Banner — the wordmark voice. Lowercase, airy. */
+  --text-display-xl: 112px;  /* hero */
+  --text-display-l:  80px;
+  --text-display-m:  56px;
+  --text-display-s:  40px;
+
+  /* Headings keep Meno for editorial feel; body-size headings in DM Sans */
+  --text-h1: 44px;
+  --text-h2: 32px;
+  --text-h3: 24px;
+  --text-h4: 20px;
+  --text-h5: 17px;
+
+  /* Body */
+  --text-lead:     20px;
+  --text-body:     16px;
+  --text-small:    14px;
+  --text-micro:    12px;
+
+  /* Line-heights */
+  --lh-tight:   1.02;   /* display */
+  --lh-snug:    1.15;   /* headlines */
+  --lh-normal:  1.5;    /* body */
+  --lh-relaxed: 1.65;   /* long-form */
+
+  /* Letter-spacing */
+  --tracking-tight:   -0.02em;
+  --tracking-normal:  0;
+  --tracking-wide:    0.02em;
+  --tracking-eyebrow: 0.16em;   /* all-caps eyebrows */
+
+  /* Weights — DM Sans
+     NOTE: Bold 700 is reserved for CTAs & buttons only, and always uppercase
+     with wide tracking. For body emphasis use Medium 500; for headings in
+     DM Sans use Semibold 600. Never set body copy to 700. */
+  --weight-light:    300;
+  --weight-regular:  400;
+  --weight-medium:   500;
+  --weight-semibold: 600;
+  --weight-bold:     700;   /* CTAs only */
+
+  /* ===== Spacing (4-based) ============================================== */
+  --space-0:  0;
+  --space-1:  4px;
+  --space-2:  8px;
+  --space-3:  12px;
+  --space-4:  16px;
+  --space-5:  20px;
+  --space-6:  24px;
+  --space-8:  32px;
+  --space-10: 40px;
+  --space-12: 48px;
+  --space-16: 64px;
+  --space-20: 80px;
+  --space-24: 96px;
+  --space-32: 128px;
+
+  /* ===== Radii ========================================================== */
+  /* Endless leans architectural: mostly squared corners, gentle softness
+     on cards, and fully-rounded capsule pills for CTAs & tags. */
+  --radius-none:    0;
+  --radius-xs:      2px;
+  --radius-sm:      4px;
+  --radius-md:      8px;
+  --radius-lg:      12px;
+  --radius-xl:      20px;
+  --radius-pill:    999px;
+
+  /* ===== Shadows — soft, warm, low-contrast ============================ */
+  --shadow-xs: 0 1px 2px rgba(20, 18, 14, 0.04);
+  --shadow-sm: 0 2px 6px rgba(20, 18, 14, 0.05);
+  --shadow-md: 0 8px 20px rgba(20, 18, 14, 0.06);
+  --shadow-lg: 0 20px 40px rgba(20, 18, 14, 0.08);
+  --shadow-xl: 0 30px 60px rgba(20, 18, 14, 0.12);
+
+  /* ===== Motion ========================================================= */
+  --ease-out:   cubic-bezier(0.22, 0.61, 0.36, 1);
+  --ease-in-out:cubic-bezier(0.65, 0, 0.35, 1);
+  --ease-gentle:cubic-bezier(0.4, 0, 0.2, 1);
+  --dur-fast:   120ms;
+  --dur-base:   220ms;
+  --dur-slow:   420ms;
+}
+
+/* ===========================================================================
+   Semantic element styles — apply these with classes, not blanket resets.
+   =========================================================================== */
+
+.endless-display-xl,
+.endless-display-l,
+.endless-display-m,
+.endless-display-s {
+  font-family: var(--font-display);
+  font-weight: 400;
+  line-height: var(--lh-tight);
+  letter-spacing: var(--tracking-tight);
+  color: var(--fg);
+  text-transform: lowercase; /* the wordmark is always lowercase */
+}
+.endless-display-xl { font-size: var(--text-display-xl); }
+.endless-display-l  { font-size: var(--text-display-l); }
+.endless-display-m  { font-size: var(--text-display-m); }
+.endless-display-s  { font-size: var(--text-display-s); }
+
+.endless-h1, .endless-h2, .endless-h3 {
+  font-family: var(--font-display);
+  font-weight: 400;
+  line-height: var(--lh-snug);
+  letter-spacing: var(--tracking-tight);
+  color: var(--fg);
+}
+.endless-h1 { font-size: var(--text-h1); }
+.endless-h2 { font-size: var(--text-h2); }
+.endless-h3 { font-size: var(--text-h3); }
+
+.endless-h4, .endless-h5 {
+  font-family: var(--font-sans);
+  font-weight: var(--weight-semibold);
+  line-height: var(--lh-snug);
+  letter-spacing: var(--tracking-normal);
+  color: var(--fg);
+}
+
+/* CTA / button label style — the only place bold 700 belongs. */
+.endless-cta {
+  font-family: var(--font-sans);
+  font-weight: var(--weight-bold);
+  font-size: var(--text-small);
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  line-height: 1;
+}
+.endless-h4 { font-size: var(--text-h4); }
+.endless-h5 { font-size: var(--text-h5); }
+
+.endless-eyebrow {
+  font-family: var(--font-sans);
+  font-size: var(--text-micro);
+  font-weight: var(--weight-medium);
+  letter-spacing: var(--tracking-eyebrow);
+  text-transform: uppercase;
+  color: var(--fg-muted);
+}
+
+.endless-lead {
+  font-family: var(--font-sans);
+  font-size: var(--text-lead);
+  font-weight: var(--weight-regular);
+  line-height: var(--lh-relaxed);
+  color: var(--fg);
+}
+
+.endless-body {
+  font-family: var(--font-sans);
+  font-size: var(--text-body);
+  font-weight: var(--weight-regular);
+  line-height: var(--lh-normal);
+  color: var(--fg);
+}
+
+.endless-small {
+  font-family: var(--font-sans);
+  font-size: var(--text-small);
+  color: var(--fg-muted);
+  line-height: var(--lh-normal);
+}
+
+.endless-micro {
+  font-family: var(--font-sans);
+  font-size: var(--text-micro);
+  color: var(--fg-muted);
+  line-height: var(--lh-normal);
+}
+
+.endless-quote {
+  font-family: var(--font-display);
+  font-size: var(--text-display-s);
+  font-style: italic;
+  line-height: var(--lh-snug);
+  color: var(--fg);
+  text-wrap: pretty;
+}
