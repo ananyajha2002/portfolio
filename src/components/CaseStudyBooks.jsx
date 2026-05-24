@@ -123,7 +123,7 @@ function ConciergeRightSm() {
         src="/assets/CONCIERGE/Concierge.html"
         title="Endless Concierge preview"
         onLoad={() => setLoaded(true)}
-        style={{ width: '100%', height: '100%', border: 'none', display: 'block', opacity: loaded ? 1 : 0, transition: 'opacity 0.4s', pointerEvents: 'none' }}
+        style={{ width: '200%', height: '200%', border: 'none', display: 'block', opacity: loaded ? 1 : 0, transition: 'opacity 0.4s', pointerEvents: 'none', transform: 'scale(0.5)', transformOrigin: 'top left' }}
       />
     </div>
   )

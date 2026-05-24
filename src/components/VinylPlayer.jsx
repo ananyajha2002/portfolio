@@ -46,8 +46,8 @@ export default function VinylPlayer({ muted, onToggle, onNext, onPrev }) {
         aria-label={muted ? 'Unmute music' : 'Mute music'}
         title={muted ? 'Click to play' : 'Click to mute'}
         style={{
-          width: '52px',
-          height: '52px',
+          width: '68px',
+          height: '68px',
           border: 'none',
           background: 'transparent',
           cursor: 'pointer',
@@ -56,8 +56,8 @@ export default function VinylPlayer({ muted, onToggle, onNext, onPrev }) {
         }}
       >
         <svg
-          width="52"
-          height="52"
+          width="68"
+          height="68"
           viewBox="0 0 52 52"
           style={{
             display: 'block',
@@ -95,7 +95,7 @@ export default function VinylPlayer({ muted, onToggle, onNext, onPrev }) {
       </button>
 
       {/* Prev / Next controls */}
-      <div style={{ display: 'flex', gap: '8px', alignItems: 'center' }}>
+      <div style={{ display: 'flex', gap: '10px', alignItems: 'center' }}>
         <button
           onClick={onPrev}
           aria-label="Previous track"
@@ -127,8 +127,8 @@ const skipBtnStyle = {
   borderRadius: '20px',
   color: 'rgba(255,255,255,0.85)',
   fontFamily: "'EB Garamond', serif",
-  fontSize: '13px',
-  padding: '3px 10px',
+  fontSize: '17px',
+  padding: '4px 13px',
   cursor: 'pointer',
   letterSpacing: '0.05em',
   transition: 'background 0.2s',
