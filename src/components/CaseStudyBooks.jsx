@@ -6,15 +6,15 @@ const MU = '#888888'
 /* A4-open ratio = 420mm × 297mm = 1.414 : 1  (landscape)            */
 /* Small  : 400 × 320 px   Modal : up to 840 × 594 px                */
 /* Modal height = width / 1.414 — preserves ratio at every viewport  */
-const MODAL_W = 'min(90vw, 840px)'
-const MODAL_H = 'min(calc(90vw / 1.414), 85vh, 594px)'
+const MODAL_W = 'min(95vw, 840px)'
+const MODAL_H = 'min(calc(95vw / 1.414), 85vh, 594px)'
 
 const Pill = ({ children }) => (
   <span style={{ display: 'inline-block', padding: '2px 8px', border: '1px solid #ddd', fontFamily: "'EB Garamond', serif", fontSize: '10px', letterSpacing: '0.06em', color: MU, marginRight: '4px', marginBottom: '4px' }}>{children}</span>
 )
 
 const PillLg = ({ children }) => (
-  <span style={{ display: 'inline-block', padding: '3px 10px', border: '1px solid #ddd', fontFamily: "'EB Garamond', serif", fontSize: '12px', letterSpacing: '0.06em', color: MU, marginRight: '5px', marginBottom: '5px' }}>{children}</span>
+  <span style={{ display: 'inline-block', padding: '3px 10px', border: '1px solid #ddd', fontFamily: "'EB Garamond', serif", fontSize: 'clamp(10px, 1.3vw, 12px)', letterSpacing: '0.06em', color: MU, marginRight: '5px', marginBottom: '5px' }}>{children}</span>
 )
 
 /* ── Notebook shell ───────────────────────────────────────────────── */
@@ -106,10 +106,10 @@ function ConciergeLeftSm() {
 function ConciergeLeftLg() {
   return <>
     <p style={{ fontFamily: "'EB Garamond', serif", fontSize: '10px', letterSpacing: '0.2em', textTransform: 'uppercase', color: BL, marginBottom: '12px' }}>Internal Tool · Endless · 2026</p>
-    <div style={{ fontFamily: "'VogueTTF', serif", fontSize: '32px', color: '#111', lineHeight: 0.9, marginBottom: '12px' }}>THE<br />CONCIERGE<br />SYSTEM.</div>
+    <div style={{ fontFamily: "'VogueTTF', serif", fontSize: 'clamp(18px, 3.8vw, 32px)', color: '#111', lineHeight: 0.9, marginBottom: '12px' }}>THE<br />CONCIERGE<br />SYSTEM.</div>
     <div style={{ borderTop: '1px solid #e8e8e8', margin: '12px 0' }} />
-    <p style={{ fontFamily: "'EB Garamond', serif", fontSize: '14px', color: '#333', lineHeight: 1.65, marginBottom: '10px' }}>The ops team was managing 400+ consignment items across a 100-tab Excel sheet. One tab per client, nothing connected to photos, pricing, or approvals.</p>
-    <p style={{ fontFamily: "'EB Garamond', serif", fontSize: '14px', color: '#333', lineHeight: 1.65, marginBottom: '14px' }}>I scoped and built a mobile app from scratch. Tap a client, see their items as photos, approve or reject, push live. Zero training needed. The team got back roughly 15 hours a week.</p>
+    <p style={{ fontFamily: "'EB Garamond', serif", fontSize: 'clamp(11px, 1.5vw, 14px)', color: '#333', lineHeight: 1.65, marginBottom: '10px' }}>The ops team was managing 400+ consignment items across a 100-tab Excel sheet. One tab per client, nothing connected to photos, pricing, or approvals.</p>
+    <p style={{ fontFamily: "'EB Garamond', serif", fontSize: 'clamp(11px, 1.5vw, 14px)', color: '#333', lineHeight: 1.65, marginBottom: '14px' }}>I scoped and built a mobile app from scratch. Tap a client, see their items as photos, approve or reject, push live. Zero training needed. The team got back roughly 15 hours a week.</p>
     <div style={{ display: 'flex', flexWrap: 'wrap', marginBottom: '12px' }}>
       {conciergePills.map(s => <PillLg key={s}>{s}</PillLg>)}
     </div>
@@ -127,7 +127,7 @@ function ConciergeRightSm() {
       <img
         src="/assets/concierge-cover.png"
         alt="Endless Concierge app"
-        style={{ width: '100%', height: '100%', objectFit: 'contain', objectPosition: 'center', display: 'block' }}
+        style={{ width: '100%', height: '100%', objectFit: 'cover', objectPosition: 'center top', display: 'block' }}
       />
     </div>
   )
@@ -136,6 +136,20 @@ function ConciergeRightSm() {
 function ConciergeRightLg() {
   const [loaded, setLoaded] = useState(false)
   const [hovered, setHovered] = useState(false)
+  const isMobile = typeof window !== 'undefined' && window.innerWidth <= 767
+
+  if (isMobile) {
+    return (
+      <div style={{ width: '100%', height: '100%', background: '#1C1C18', overflow: 'hidden' }}>
+        <img
+          src="/assets/concierge-cover.png"
+          alt="Endless Concierge app"
+          style={{ width: '100%', height: '100%', objectFit: 'cover', objectPosition: 'center top', display: 'block' }}
+        />
+      </div>
+    )
+  }
+
   return (
     <div onMouseEnter={() => setHovered(true)} onMouseLeave={() => setHovered(false)} style={{ width: '100%', height: '100%', background: '#1C1C18', position: 'relative' }}>
       {!loaded && <div style={{ position: 'absolute', inset: 0, display: 'flex', alignItems: 'center', justifyContent: 'center' }}><p style={{ fontFamily: "'VogueTTF', serif", fontSize: '9px', color: 'rgba(255,255,255,0.2)', letterSpacing: '0.16em' }}>LOADING</p></div>}
@@ -192,10 +206,10 @@ function VaultLeftSm() {
 function VaultLeftLg() {
   return <>
     <p style={{ fontFamily: "'EB Garamond', serif", fontSize: '10px', letterSpacing: '0.2em', textTransform: 'uppercase', color: BL, marginBottom: '12px' }}>Product Launch · March 2026</p>
-    <div style={{ fontFamily: "'VogueTTF', serif", fontSize: '36px', color: '#111', lineHeight: 0.9, marginBottom: '12px' }}>THE<br />VAULT.</div>
+    <div style={{ fontFamily: "'VogueTTF', serif", fontSize: 'clamp(20px, 4.3vw, 36px)', color: '#111', lineHeight: 0.9, marginBottom: '12px' }}>THE<br />VAULT.</div>
     <div style={{ borderTop: '1px solid #e8e8e8', margin: '12px 0' }} />
-    <p style={{ fontFamily: "'EB Garamond', serif", fontSize: '14px', color: '#333', lineHeight: 1.65, marginBottom: '10px' }}>March was slow. Instead of discounting, I pitched a password-gated drop: high-end brands under AED 250, positioned as a private edit.</p>
-    <p style={{ fontFamily: "'EB Garamond', serif", fontSize: '14px', color: '#333', lineHeight: 1.65, marginBottom: '14px' }}>Comment "Access" on the post and the password lands in your DMs automatically via ManyChat.</p>
+    <p style={{ fontFamily: "'EB Garamond', serif", fontSize: 'clamp(11px, 1.5vw, 14px)', color: '#333', lineHeight: 1.65, marginBottom: '10px' }}>March was slow. Instead of discounting, I pitched a password-gated drop: high-end brands under AED 250, positioned as a private edit.</p>
+    <p style={{ fontFamily: "'EB Garamond', serif", fontSize: 'clamp(11px, 1.5vw, 14px)', color: '#333', lineHeight: 1.65, marginBottom: '14px' }}>Comment "Access" on the post and the password lands in your DMs automatically via ManyChat.</p>
     <div style={{ display: 'flex', flexWrap: 'wrap', marginBottom: '12px' }}>
       {vaultPills.map(s => <PillLg key={s}>{s}</PillLg>)}
     </div>
@@ -262,10 +276,10 @@ function MetaLeftSm() {
 function MetaLeftLg() {
   return <>
     <p style={{ fontFamily: "'EB Garamond', serif", fontSize: '10px', letterSpacing: '0.2em', textTransform: 'uppercase', color: BL, marginBottom: '12px' }}>Performance Marketing · 2026</p>
-    <div style={{ fontFamily: "'VogueTTF', serif", fontSize: '36px', color: '#111', lineHeight: 0.9, marginBottom: '12px' }}>100K<br />CLICKS.</div>
+    <div style={{ fontFamily: "'VogueTTF', serif", fontSize: 'clamp(20px, 4.3vw, 36px)', color: '#111', lineHeight: 0.9, marginBottom: '12px' }}>100K<br />CLICKS.</div>
     <div style={{ borderTop: '1px solid #e8e8e8', margin: '12px 0' }} />
-    <p style={{ fontFamily: "'EB Garamond', serif", fontSize: '14px', color: '#333', lineHeight: 1.65, marginBottom: '10px' }}>Endless worked with multiple external agencies before I took over. When I ran campaigns with full creative control (my concepts, my targeting, my optimisation), the results outperformed every agency period.</p>
-    <p style={{ fontFamily: "'EB Garamond', serif", fontSize: '14px', color: '#333', lineHeight: 1.65, marginBottom: '14px' }}>AED 10,000+ monthly budget managed from scratch. 100K+ website clicks, 17 direct conversions, highest ROAS of any campaign period at Endless.</p>
+    <p style={{ fontFamily: "'EB Garamond', serif", fontSize: 'clamp(11px, 1.5vw, 14px)', color: '#333', lineHeight: 1.65, marginBottom: '10px' }}>Endless worked with multiple external agencies before I took over. When I ran campaigns with full creative control (my concepts, my targeting, my optimisation), the results outperformed every agency period.</p>
+    <p style={{ fontFamily: "'EB Garamond', serif", fontSize: 'clamp(11px, 1.5vw, 14px)', color: '#333', lineHeight: 1.65, marginBottom: '14px' }}>AED 10,000+ monthly budget managed from scratch. 100K+ website clicks, 17 direct conversions, highest ROAS of any campaign period at Endless.</p>
     <div style={{ display: 'flex', flexWrap: 'wrap', marginBottom: '12px' }}>
       {metaPills.map(s => <PillLg key={s}>{s}</PillLg>)}
     </div>
