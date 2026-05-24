@@ -29,8 +29,9 @@ function Shell({ w, h, left, right, onClick }) {
       style={{
         width: w, height: h, flexShrink: 0, display: 'flex',
         boxSizing: 'border-box', overflow: 'hidden', position: 'relative',
+        background: '#1e1c1a', padding: '6px', gap: '2px', borderRadius: '4px',
         cursor: interactive ? 'pointer' : 'default',
-        boxShadow: hovered ? '0 28px 64px rgba(0,0,0,0.32)' : '0 16px 50px rgba(0,0,0,0.22)',
+        boxShadow: hovered ? '0 28px 64px rgba(0,0,0,0.38)' : '0 16px 50px rgba(0,0,0,0.28)',
         transform: hovered ? 'rotate(-2deg) translateY(-8px)' : 'rotate(0deg) translateY(0px)',
         transition: 'transform 0.35s cubic-bezier(0.34,1.56,0.64,1), box-shadow 0.3s ease',
       }}
