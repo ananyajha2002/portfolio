@@ -28,7 +28,7 @@ function Shell({ w, h, left, right, onClick }) {
       onMouseLeave={() => interactive && setHovered(false)}
       style={{
         width: w, height: h, flexShrink: 0, display: 'flex',
-        border: '4px solid #111', boxSizing: 'border-box', overflow: 'hidden',
+        boxSizing: 'border-box', overflow: 'hidden',
         cursor: interactive ? 'pointer' : 'default',
         boxShadow: hovered ? '0 28px 64px rgba(0,0,0,0.32)' : '0 16px 50px rgba(0,0,0,0.22)',
         transform: hovered ? 'rotate(-2deg) translateY(-8px)' : 'rotate(0deg) translateY(0px)',
