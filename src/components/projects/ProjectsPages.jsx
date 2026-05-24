@@ -55,7 +55,7 @@ export const ProjectsPage1 = (
         <p style={{ fontFamily: "'EB Garamond', serif", fontStyle: 'italic', fontSize: '12px', color: MU, lineHeight: 1.4 }}>"I built what the market was already asking for."</p>
       </div>
       <p style={{ fontFamily: "'EB Garamond', serif", fontSize: '9px', letterSpacing: '0.16em', textTransform: 'uppercase', color: MU }}>Ananya Jha · Operations and Innovation</p>
-      <Num n={1} total={14} />
+      <Num n={1} total={16} />
     </L>
     <R photo>
       <img src="/assets/projects-cover.jpeg" alt="Projects" style={{ width: '100%', height: '100%', objectFit: 'cover', objectPosition: 'center center', display: 'block' }} />
@@ -63,7 +63,7 @@ export const ProjectsPage1 = (
       <div style={{ position: 'absolute', top: '14px', right: '14px', background: DK, padding: '4px 10px' }}>
         <p style={{ fontFamily: "'VogueTTF', serif", fontSize: '10px', color: '#ffffff', letterSpacing: '0.12em' }}>PROJECTS</p>
       </div>
-      <div style={{ position: 'absolute', bottom: '18px', right: '18px', fontFamily: "'EB Garamond', serif", fontSize: '9px', letterSpacing: '0.12em', color: 'rgba(255,255,255,0.7)' }}>PROJECTS · 2 / 14</div>
+      <div style={{ position: 'absolute', bottom: '18px', right: '18px', fontFamily: "'EB Garamond', serif", fontSize: '9px', letterSpacing: '0.12em', color: 'rgba(255,255,255,0.7)' }}>PROJECTS · 2 / 16</div>
     </R>
   </div>
 )
@@ -89,7 +89,7 @@ export const ProjectsPage2 = (
         {['ManyChat', 'WhatsApp API', 'Instagram'].map(s => <Pill key={s}>{s}</Pill>)}
       </div>
       <div style={{ flex: 1 }} />
-      <Num n={3} total={14} />
+      <Num n={3} total={16} />
     </L>
     <R>
       <div style={{ height: '3px', background: BL, margin: '-24px -20px 12px -14px' }} />
@@ -107,7 +107,7 @@ export const ProjectsPage2 = (
       <div style={{ borderLeft: `2px solid ${BL}`, paddingLeft: '10px', marginBottom: '8px' }}>
         <p style={{ fontFamily: "'EB Garamond', serif", fontStyle: 'italic', fontSize: '11px', color: MU, lineHeight: 1.4 }}>"the stack is the spine of how Endless runs."</p>
       </div>
-      <Num n={4} total={14} />
+      <Num n={4} total={16} />
     </R>
   </div>
 )
@@ -133,7 +133,7 @@ export const ProjectsPage3 = (
         {['Microsoft Clarity', 'Google Analytics'].map(s => <Pill key={s}>{s}</Pill>)}
       </div>
       <div style={{ flex: 1 }} />
-      <Num n={5} total={14} />
+      <Num n={5} total={16} />
     </L>
     <R>
       <div style={{ position: 'absolute', top: 0, left: 0, right: 0, height: '4px', background: BL }} />
@@ -148,7 +148,7 @@ export const ProjectsPage3 = (
         <p style={{ fontFamily: "'VogueTTF', serif", fontSize: 'clamp(20px, 6cqw, 30px)', color: '#ffffff', lineHeight: 0.88, letterSpacing: '0.01em', marginBottom: '6px' }}>3+ DAYS<br />TO SAME-DAY.</p>
         <p style={{ fontFamily: "'EB Garamond', serif", fontStyle: 'italic', fontSize: '11px', color: 'rgba(255,255,255,0.55)', lineHeight: 1.4 }}>same-day visibility into everything that matters</p>
       </div>
-      <p style={{ fontFamily: "'EB Garamond', serif", fontSize: '9px', letterSpacing: '0.12em', color: MU, textAlign: 'right', paddingTop: '6px' }}>PROJECTS · 6 / 14</p>
+      <p style={{ fontFamily: "'EB Garamond', serif", fontSize: '9px', letterSpacing: '0.12em', color: MU, textAlign: 'right', paddingTop: '6px' }}>PROJECTS · 6 / 16</p>
     </R>
   </div>
 )
@@ -162,7 +162,7 @@ export const ProjectsPage4 = (
       <div style={{ position: 'absolute', top: '14px', left: '14px', background: DK, padding: '5px 12px' }}>
         <p style={{ fontFamily: "'VogueTTF', serif", fontSize: '11px', color: '#ffffff', letterSpacing: '0.18em' }}>THE VAULT</p>
       </div>
-      <div style={{ position: 'absolute', bottom: '18px', left: '18px', fontFamily: "'EB Garamond', serif", fontSize: '9px', letterSpacing: '0.12em', color: 'rgba(255,255,255,0.65)' }}>PROJECTS · 7 / 14</div>
+      <div style={{ position: 'absolute', bottom: '18px', left: '18px', fontFamily: "'EB Garamond', serif", fontSize: '9px', letterSpacing: '0.12em', color: 'rgba(255,255,255,0.65)' }}>PROJECTS · 7 / 16</div>
     </L>
     <R>
       <div style={{ position: 'absolute', top: 0, left: 0, right: 0, height: '3px', background: BL }} />
@@ -182,7 +182,7 @@ export const ProjectsPage4 = (
       <div style={{ borderTop: `1px solid ${BL}`, borderBottom: `1px solid ${BL}`, padding: '10px 0', marginBottom: '8px' }}>
         <p style={{ fontFamily: "'EB Garamond', serif", fontStyle: 'italic', fontSize: '11px', color: MU, lineHeight: 1.5 }}>Comment 'Access' on the launch post, password lands in your DMs automatically. Built that myself too.</p>
       </div>
-      <Num n={8} total={14} />
+      <Num n={8} total={16} />
     </R>
   </div>
 )
@@ -196,7 +196,7 @@ export const ProjectsPage5 = (
       <div style={{ position: 'absolute', top: '14px', left: '14px', background: DK, padding: '5px 12px' }}>
         <p style={{ fontFamily: "'VogueTTF', serif", fontSize: '11px', color: '#ffffff', letterSpacing: '0.18em' }}>MARCH POP-UP</p>
       </div>
-      <div style={{ position: 'absolute', bottom: '18px', left: '18px', fontFamily: "'EB Garamond', serif", fontSize: '9px', letterSpacing: '0.12em', color: 'rgba(255,255,255,0.65)' }}>PROJECTS · 9 / 14</div>
+      <div style={{ position: 'absolute', bottom: '18px', left: '18px', fontFamily: "'EB Garamond', serif", fontSize: '9px', letterSpacing: '0.12em', color: 'rgba(255,255,255,0.65)' }}>PROJECTS · 9 / 16</div>
     </L>
     <R>
       <div style={{ position: 'absolute', top: 0, left: 0, right: 0, height: '3px', background: BL }} />
@@ -217,7 +217,7 @@ export const ProjectsPage5 = (
       <div style={{ borderTop: `1.5px solid ${BL}`, padding: '10px 0' }}>
         <p style={{ fontFamily: "'VogueTTF', serif", fontSize: 'clamp(16px, 4.5cqw, 22px)', color: TX, lineHeight: 0.9, letterSpacing: '0.01em' }}>ONLINE AND<br />OFFLINE.<br />BOTH AT ONCE.</p>
       </div>
-      <Num n={10} total={14} />
+      <Num n={10} total={16} />
     </R>
   </div>
 )
@@ -232,7 +232,7 @@ export const ProjectsPage6 = (
         <p style={{ fontFamily: "'VogueTTF', serif", fontSize: 'clamp(20px, 6cqw, 32px)', color: '#ffffff', lineHeight: 0.9, letterSpacing: '0.02em', marginBottom: '6px' }}>DELIVERED<br />IN 2 HOURS.</p>
         <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-end' }}>
           <p style={{ fontFamily: "'EB Garamond', serif", fontSize: '9px', letterSpacing: '0.14em', textTransform: 'uppercase', color: 'rgba(255,255,255,0.75)' }}>Brand Design · Endless Dubai</p>
-          <p style={{ fontFamily: "'EB Garamond', serif", fontSize: '9px', letterSpacing: '0.12em', color: 'rgba(255,255,255,0.65)', whiteSpace: 'nowrap', marginLeft: '8px' }}>PROJECTS · 11 / 14</p>
+          <p style={{ fontFamily: "'EB Garamond', serif", fontSize: '9px', letterSpacing: '0.12em', color: 'rgba(255,255,255,0.65)', whiteSpace: 'nowrap', marginLeft: '8px' }}>PROJECTS · 11 / 16</p>
         </div>
       </div>
     </L>
@@ -252,7 +252,7 @@ export const ProjectsPage6 = (
         ))}
       </div>
       <div style={{ flex: 1 }} />
-      <Num n={12} total={14} />
+      <Num n={12} total={16} />
     </R>
   </div>
 )
@@ -276,7 +276,7 @@ export const ProjectsPage7 = (
         ))}
       </div>
       <div style={{ flex: 1 }} />
-      <Num n={13} total={14} />
+      <Num n={13} total={16} />
     </L>
     <R>
       <div style={{ height: '3px', background: BL, margin: '-24px -20px 12px -14px' }} />
@@ -291,8 +291,67 @@ export const ProjectsPage7 = (
       </div>
       <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', paddingTop: '6px', marginTop: 'auto' }}>
         <p style={{ fontFamily: "'EB Garamond', serif", fontStyle: 'italic', fontSize: '9px', color: BL, letterSpacing: '0.1em' }}>Get in Touch →</p>
-        <p style={{ fontFamily: "'EB Garamond', serif", fontSize: '9px', letterSpacing: '0.12em', color: MU }}>PROJECTS · 14 / 14</p>
+        <p style={{ fontFamily: "'EB Garamond', serif", fontSize: '9px', letterSpacing: '0.12em', color: MU }}>PROJECTS · 14 / 16</p>
       </div>
+    </R>
+  </div>
+)
+
+/* ── Spread 8 — Endless Concierge System ─────────────────── */
+export const ProjectsPage8 = (
+  <div style={{ display: 'flex', height: '100%', overflow: 'hidden' }}>
+    <L photo>
+      {/* Recreates the app's own login screen aesthetic */}
+      <div style={{ width: '100%', height: '100%', background: 'linear-gradient(160deg, #111111 0%, #1c000a 55%, #0d0d0d 100%)', display: 'flex', flexDirection: 'column', padding: '18px 16px', boxSizing: 'border-box', borderRight: '1px solid #2a0010' }}>
+        <div style={{ marginBottom: '20px' }}>
+          <p style={{ fontFamily: "'JetBrains Mono', monospace", fontSize: '7px', letterSpacing: '0.22em', color: 'rgba(255,255,255,0.25)', marginBottom: '3px' }}>eo</p>
+          <p style={{ fontFamily: "'JetBrains Mono', monospace", fontSize: '6px', letterSpacing: '0.2em', textTransform: 'uppercase', color: BL }}>INTERNAL — OPS ONLY</p>
+        </div>
+        <div style={{ flex: 1, display: 'flex', flexDirection: 'column', justifyContent: 'center' }}>
+          <p style={{ fontFamily: "'EB Garamond', serif", fontStyle: 'italic', fontSize: '12px', color: 'rgba(255,255,255,0.4)', letterSpacing: '0.06em', marginBottom: '2px' }}>endless</p>
+          <p style={{ fontFamily: "'VogueTTF', serif", fontSize: 'clamp(22px, 6.5cqw, 34px)', color: '#ffffff', lineHeight: 0.88, letterSpacing: '0.02em' }}>CONCIERGE</p>
+          <p style={{ fontFamily: "'VogueTTF', serif", fontSize: 'clamp(22px, 6.5cqw, 34px)', color: BL, lineHeight: 0.88, letterSpacing: '0.02em', marginBottom: '10px' }}>SYSTEM</p>
+          <p style={{ fontFamily: "'EB Garamond', serif", fontSize: '9px', color: 'rgba(255,255,255,0.38)', lineHeight: 1.55, marginBottom: '18px' }}>Pickup, photograph, price, and curate every concierge piece in one place.</p>
+          <div style={{ border: '1px solid rgba(255,255,255,0.12)', padding: '5px 8px', marginBottom: '4px', display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
+            <span style={{ fontFamily: "'EB Garamond', serif", fontSize: '9px', color: 'rgba(255,255,255,0.3)' }}>Email</span>
+            <span style={{ fontFamily: "'EB Garamond', serif", fontSize: '9px', color: 'rgba(255,255,255,0.18)' }}>you@endless.ae</span>
+          </div>
+          <div style={{ border: '1px solid rgba(255,255,255,0.12)', padding: '5px 8px', marginBottom: '14px', display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
+            <span style={{ fontFamily: "'EB Garamond', serif", fontSize: '9px', color: 'rgba(255,255,255,0.3)' }}>Passcode</span>
+            <span style={{ fontFamily: "'EB Garamond', serif", fontSize: '9px', color: 'rgba(255,255,255,0.18)', letterSpacing: '0.2em' }}>••••</span>
+          </div>
+          <div style={{ background: '#ffffff', padding: '7px 10px', textAlign: 'center', marginBottom: '5px' }}>
+            <span style={{ fontFamily: "'JetBrains Mono', monospace", fontSize: '7.5px', letterSpacing: '0.22em', color: '#111111' }}>ENTER CONCIERGE →</span>
+          </div>
+          <div style={{ border: '1px solid rgba(255,255,255,0.18)', padding: '6px 10px', textAlign: 'center' }}>
+            <span style={{ fontFamily: "'JetBrains Mono', monospace", fontSize: '7.5px', letterSpacing: '0.18em', color: 'rgba(255,255,255,0.5)' }}>USE FACE ID</span>
+          </div>
+        </div>
+        <div style={{ display: 'flex', justifyContent: 'space-between', marginTop: '16px' }}>
+          <span style={{ fontFamily: "'JetBrains Mono', monospace", fontSize: '6px', letterSpacing: '0.1em', color: 'rgba(255,255,255,0.22)' }}>V 2.6 · DUBAI</span>
+          <span style={{ fontFamily: "'JetBrains Mono', monospace", fontSize: '6px', letterSpacing: '0.1em', color: 'rgba(255,255,255,0.22)' }}>NEED ACCESS?</span>
+        </div>
+        <p style={{ fontFamily: "'EB Garamond', serif", fontSize: '9px', letterSpacing: '0.12em', color: 'rgba(255,255,255,0.25)', paddingTop: '6px' }}>PROJECTS · 15 / 16</p>
+      </div>
+    </L>
+    <R>
+      <div style={{ position: 'absolute', top: 0, left: 0, right: 0, height: '3px', background: BL }} />
+      <div style={{ marginTop: '10px' }}>
+        <K color={BL}>Internal Product Build · Endless Dubai · 2025</K>
+      </div>
+      <div style={{ fontFamily: "'VogueTTF', serif", fontSize: 'clamp(22px, 6.5cqw, 36px)', color: TX, lineHeight: 0.85, letterSpacing: '0.01em', marginBottom: '8px', marginTop: '4px' }}>THE<br />SYSTEM.</div>
+      <Rule />
+      <B>Concierge is ~400 items out of 3,000+ on the site, but it does a disproportionate share of the commercial heavy lifting. It's the collection for 2-hour and same-day delivery. It's what a girl in Dubai shops at 6pm for an event at 9pm.</B>
+      <B>It had grown organically. The visible problem was a 100+ tab Excel spreadsheet — one tab per client, nothing connected to photography, pricing, or approval. Finding what you needed took longer than the review itself.</B>
+      <B>So I built a mobile app for the ops team. Open it and see all your concierge clients on one screen. Tap a client, you see their items as photos. Tap an item, edit anything — price, brand, condition, packaging. Approve, reject, push live. Internal notes. Status rolls up automatically. Works on whatever phone you already have. No training needed.</B>
+      <div style={{ display: 'flex', flexWrap: 'wrap', margin: '6px 0' }}>
+        {['Mobile App', 'Internal Tooling', 'iOS', 'Intake Workflow', 'Curation Logic', 'Inventory'].map(s => <Pill key={s}>{s}</Pill>)}
+      </div>
+      <div style={{ flex: 1 }} />
+      <div style={{ borderLeft: `2px solid ${BL}`, paddingLeft: '10px', marginBottom: '8px' }}>
+        <p style={{ fontFamily: "'EB Garamond', serif", fontStyle: 'italic', fontSize: '11px', color: MU, lineHeight: 1.45 }}>"The tools should not punish the team for not being technical."</p>
+      </div>
+      <Num n={16} total={16} />
     </R>
   </div>
 )
