@@ -65,7 +65,7 @@ const conciergePills = ['React', 'Next.js', 'Supabase', 'SQL', 'Vercel']
 
 function ConciergeLeftSm() {
   return <>
-    <p style={{ fontFamily: "'EB Garamond', serif", fontSize: '8px', letterSpacing: '0.2em', textTransform: 'uppercase', color: BL, marginBottom: '8px' }}>Internal Tool · Endless · 2025</p>
+    <p style={{ fontFamily: "'EB Garamond', serif", fontSize: '8px', letterSpacing: '0.2em', textTransform: 'uppercase', color: BL, marginBottom: '8px' }}>Internal Tool · Endless · 2026</p>
     <div style={{ fontFamily: "'VogueTTF', serif", fontSize: '18px', color: '#111', lineHeight: 0.9, marginBottom: '8px' }}>THE<br />CONCIERGE<br />SYSTEM.</div>
     <div style={{ borderTop: '1px solid #e8e8e8', margin: '8px 0' }} />
     <p style={{ fontFamily: "'EB Garamond', serif", fontSize: '11px', color: '#333', lineHeight: 1.6, marginBottom: '8px' }}>400+ consignment items managed across 100 Excel tabs. I replaced it with a mobile app built from scratch.</p>
@@ -81,7 +81,7 @@ function ConciergeLeftSm() {
 
 function ConciergeLeftLg() {
   return <>
-    <p style={{ fontFamily: "'EB Garamond', serif", fontSize: '10px', letterSpacing: '0.2em', textTransform: 'uppercase', color: BL, marginBottom: '12px' }}>Internal Tool · Endless · 2025</p>
+    <p style={{ fontFamily: "'EB Garamond', serif", fontSize: '10px', letterSpacing: '0.2em', textTransform: 'uppercase', color: BL, marginBottom: '12px' }}>Internal Tool · Endless · 2026</p>
     <div style={{ fontFamily: "'VogueTTF', serif", fontSize: '32px', color: '#111', lineHeight: 0.9, marginBottom: '12px' }}>THE<br />CONCIERGE<br />SYSTEM.</div>
     <div style={{ borderTop: '1px solid #e8e8e8', margin: '12px 0' }} />
     <p style={{ fontFamily: "'EB Garamond', serif", fontSize: '14px', color: '#333', lineHeight: 1.65, marginBottom: '10px' }}>The ops team was managing 400+ consignment items across a 100-tab Excel sheet. One tab per client, nothing connected to photos, pricing, or approvals.</p>
@@ -155,8 +155,8 @@ function VaultLeftSm() {
     </div>
     <div style={{ flex: 1 }} />
     <div style={{ background: '#111', padding: '7px 10px' }}>
-      <p style={{ fontFamily: "'VogueTTF', serif", fontSize: '9px', color: '#fff', letterSpacing: '0.05em', marginBottom: '2px' }}>AED 5,082 · 28 UNITS · 4% SELL-THROUGH</p>
-      <p style={{ fontFamily: "'EB Garamond', serif", fontStyle: 'italic', fontSize: '9px', color: 'rgba(255,255,255,0.4)', margin: 0 }}>first drop, March 2026</p>
+      <p style={{ fontFamily: "'VogueTTF', serif", fontSize: '10px', color: '#fff', letterSpacing: '0.05em', marginBottom: '3px' }}>AED 5,082 · 28 UNITS · 4% SELL-THROUGH</p>
+      <p style={{ fontFamily: "'EB Garamond', serif", fontStyle: 'italic', fontSize: '9px', color: 'rgba(255,255,255,0.65)', margin: 0 }}>first drop, March 2026</p>
     </div>
   </>
 }
@@ -174,7 +174,7 @@ function VaultLeftLg() {
     <div style={{ flex: 1 }} />
     <div style={{ background: '#111', padding: '10px 14px' }}>
       <p style={{ fontFamily: "'VogueTTF', serif", fontSize: '11px', color: '#fff', letterSpacing: '0.05em', marginBottom: '3px' }}>AED 5,082 · 28 UNITS · 4% SELL-THROUGH</p>
-      <p style={{ fontFamily: "'EB Garamond', serif", fontStyle: 'italic', fontSize: '10px', color: 'rgba(255,255,255,0.4)', margin: 0 }}>first drop, March 2026</p>
+      <p style={{ fontFamily: "'EB Garamond', serif", fontStyle: 'italic', fontSize: '10px', color: 'rgba(255,255,255,0.65)', margin: 0 }}>first drop, March 2026</p>
     </div>
   </>
 }
@@ -207,7 +207,7 @@ function MetaRight({ lg }) {
 
 function MetaLeftSm() {
   return <>
-    <p style={{ fontFamily: "'EB Garamond', serif", fontSize: '8px', letterSpacing: '0.2em', textTransform: 'uppercase', color: BL, marginBottom: '8px' }}>Performance Marketing · 2025</p>
+    <p style={{ fontFamily: "'EB Garamond', serif", fontSize: '8px', letterSpacing: '0.2em', textTransform: 'uppercase', color: BL, marginBottom: '8px' }}>Performance Marketing · 2026</p>
     <div style={{ fontFamily: "'VogueTTF', serif", fontSize: '22px', color: '#111', lineHeight: 0.9, marginBottom: '8px' }}>100K<br />CLICKS.</div>
     <div style={{ borderTop: '1px solid #e8e8e8', margin: '8px 0' }} />
     <p style={{ fontFamily: "'EB Garamond', serif", fontSize: '11px', color: '#333', lineHeight: 1.6, marginBottom: '8px' }}>Endless went through multiple agencies. The best-performing period was when I had complete creative control: highest ROAS, highest conversions.</p>
@@ -223,7 +223,7 @@ function MetaLeftSm() {
 
 function MetaLeftLg() {
   return <>
-    <p style={{ fontFamily: "'EB Garamond', serif", fontSize: '10px', letterSpacing: '0.2em', textTransform: 'uppercase', color: BL, marginBottom: '12px' }}>Performance Marketing · 2025</p>
+    <p style={{ fontFamily: "'EB Garamond', serif", fontSize: '10px', letterSpacing: '0.2em', textTransform: 'uppercase', color: BL, marginBottom: '12px' }}>Performance Marketing · 2026</p>
     <div style={{ fontFamily: "'VogueTTF', serif", fontSize: '36px', color: '#111', lineHeight: 0.9, marginBottom: '12px' }}>100K<br />CLICKS.</div>
     <div style={{ borderTop: '1px solid #e8e8e8', margin: '12px 0' }} />
     <p style={{ fontFamily: "'EB Garamond', serif", fontSize: '14px', color: '#333', lineHeight: 1.65, marginBottom: '10px' }}>Endless worked with multiple external agencies before I took over. When I ran campaigns with full creative control (my concepts, my targeting, my optimisation), the results outperformed every agency period.</p>
@@ -253,7 +253,7 @@ export default function CaseStudyBooks() {
   return (
     <div style={{ width: '100%', padding: '64px 20px 80px', boxSizing: 'border-box' }}>
       <div style={{ textAlign: 'center', marginBottom: '48px' }}>
-        <div style={{ fontFamily: "'VogueTTF', serif", fontSize: 'clamp(26px, 4vw, 46px)', color: '#111111', lineHeight: 0.88, letterSpacing: '0.02em' }}>MY FAVOURITE PROJECTS SO FAR.</div>
+        <div style={{ fontFamily: '"Playfair Display", serif', fontStyle: 'italic', fontWeight: 700, fontSize: 'clamp(26px, 4vw, 46px)', color: '#111111', letterSpacing: '-0.01em' }}>My Favourite Projects So Far.</div>
         <div style={{ width: '48px', height: '1px', background: BL, margin: '14px auto 0' }} />
       </div>
 
