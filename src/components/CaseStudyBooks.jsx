@@ -40,20 +40,15 @@ function Shell({ w, h, left, right, onClick }) {
         flex: 1, background: '#fdfcf9',
         padding: '16px 14px 14px', boxSizing: 'border-box',
         display: 'flex', flexDirection: 'column', overflowX: 'hidden', overflowY: 'auto', position: 'relative',
-        boxShadow: 'inset -6px 0 12px rgba(0,0,0,0.07)',
         scrollbarWidth: 'none', msOverflowStyle: 'none',
       }}>
         <div style={{ position: 'absolute', top: 0, left: 0, right: 0, height: '3px', background: BL }} />
         {left}
       </div>
 
-      {/* Centre gutter — solid spine matching the border */}
-      <div style={{ width: '10px', flexShrink: 0, background: '#111' }} />
-
       {/* Right page */}
       <div style={{
         flex: 1, overflow: 'hidden', position: 'relative',
-        boxShadow: 'inset 6px 0 12px rgba(0,0,0,0.07)',
       }}>
         {right}
       </div>
