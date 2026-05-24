@@ -29,7 +29,7 @@ function Shell({ w, h, left, right, onClick }) {
       style={{
         width: w, height: h, flexShrink: 0, display: 'flex',
         boxSizing: 'border-box', overflow: 'hidden', position: 'relative',
-        background: '#1e1c1a', padding: '6px', gap: '2px', borderRadius: '4px',
+        background: '#1e1c1a', padding: '6px', borderRadius: '4px',
         cursor: interactive ? 'pointer' : 'default',
         boxShadow: hovered ? '0 28px 64px rgba(0,0,0,0.38)' : '0 16px 50px rgba(0,0,0,0.28)',
         transform: hovered ? 'rotate(-2deg) translateY(-8px)' : 'rotate(0deg) translateY(0px)',
@@ -58,7 +58,7 @@ function Shell({ w, h, left, right, onClick }) {
       <div style={{
         position: 'absolute', top: 0, bottom: 0,
         left: 'calc(50% - 20px)', width: '64px',
-        background: 'linear-gradient(to right, transparent 0%, rgba(0,0,0,0.08) 35%, rgba(0,0,0,0.22) 50%, rgba(0,0,0,0.08) 65%, transparent 100%)',
+        background: 'linear-gradient(to right, transparent 0%, rgba(0,0,0,0.18) 30%, rgba(0,0,0,0.45) 50%, rgba(0,0,0,0.18) 70%, transparent 100%)',
         pointerEvents: 'none', zIndex: 10,
       }} />
     </div>
