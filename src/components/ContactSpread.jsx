@@ -67,7 +67,7 @@ export function makeContactPage({ dark = '#111111', light = '#800020', issueName
 
         {/* Download CV button */}
         <a
-          href="/assets/Ananya Jha CV.pdf"
+          href="/assets/Ananya_Jha_CV.pdf"
           download
           onClick={e => e.stopPropagation()}
           style={{
