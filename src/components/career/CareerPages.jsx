@@ -50,7 +50,7 @@ export const CareerPage1 = (
       <Rule />
       <B>I found Endless by accident. I was filming a TikTok about small UAE fashion brands and they were one of the spotlights, so I went researching for footage and stumbled onto their Instagram story: "We are hiring." I applied within the week.</B>
       <B>The interview was with Rosie and Chris, the two founders. I'd applied for an assistant role; by the end of the call they'd offered me a manager title they didn't have on the books.</B>
-      <B>Seven months in, I'm wearing nine hats at any given moment. Operations is on my title, but the work bleeds into everything: Meta ads I taught myself by watching YouTube and trusting my instinct as a customer, events I run as if they were product launches, logistics, automation, brand partnerships, email marketing, the lot. The rest I learn on the way.</B>
+      <B>Eight months in, I'm wearing nine hats at any given moment. Operations is on my title, but the work bleeds into everything: Meta ads I taught myself by watching YouTube and trusting my instinct as a customer, events I run as if they were product launches, logistics, automation, brand partnerships, email marketing, the lot. The rest I learn on the way.</B>
 <B>This is what I do at Endless. I take messy, undocumented, half-broken things and make them legible, then I make them automatic, then I make them scale.</B>
       <div style={{ flex: 1 }} />
       <div style={{ borderLeft: `2px solid ${BL}`, paddingLeft: '10px', marginBottom: '10px' }}>
