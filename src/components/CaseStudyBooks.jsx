@@ -18,7 +18,7 @@ const PillLg = ({ children }) => (
 )
 
 /* ── Notebook shell ───────────────────────────────────────────────── */
-function Shell({ w, h, left, right, onClick }) {
+function Shell({ w, h, left, right, onClick, vertical = false }) {
   const [hovered, setHovered] = useState(false)
   const interactive = !!onClick
   return (
@@ -27,7 +27,8 @@ function Shell({ w, h, left, right, onClick }) {
       onMouseEnter={() => interactive && setHovered(true)}
       onMouseLeave={() => interactive && setHovered(false)}
       style={{
-        width: w, height: h, flexShrink: 0, display: 'flex',
+        width: w, height: h, flexShrink: 0,
+        display: 'flex', flexDirection: vertical ? 'column' : 'row',
         boxSizing: 'border-box', overflow: 'hidden', position: 'relative',
         background: '#1e1c1a', padding: '6px', borderRadius: '4px',
         cursor: interactive ? 'pointer' : 'default',
@@ -36,10 +37,11 @@ function Shell({ w, h, left, right, onClick }) {
         transition: 'transform 0.35s cubic-bezier(0.34,1.56,0.64,1), box-shadow 0.3s ease',
       }}
     >
-      {/* Left page */}
+      {/* Left / top page — text content */}
       <div style={{
         flex: 1, background: '#fdfcf9',
-        padding: '16px 14px 14px', boxSizing: 'border-box',
+        padding: vertical ? '20px 18px 16px' : '16px 14px 14px',
+        boxSizing: 'border-box',
         display: 'flex', flexDirection: 'column', overflowX: 'hidden', overflowY: 'auto', position: 'relative',
         scrollbarWidth: 'none', msOverflowStyle: 'none',
       }}>
@@ -47,20 +49,32 @@ function Shell({ w, h, left, right, onClick }) {
         {left}
       </div>
 
-      {/* Right page */}
+      {/* Right / bottom page — image or media */}
       <div style={{
-        flex: 1, overflow: 'hidden', position: 'relative',
+        flex: vertical ? 'none' : 1,
+        height: vertical ? '220px' : undefined,
+        overflow: 'hidden', position: 'relative',
       }}>
         {right}
       </div>
 
-      {/* Spine shadow — overlay only, no physical gap */}
-      <div style={{
-        position: 'absolute', top: 0, bottom: 0,
-        left: 'calc(50% - 20px)', width: '64px',
-        background: 'linear-gradient(to right, transparent 0%, rgba(0,0,0,0.08) 30%, rgba(0,0,0,0.25) 50%, rgba(0,0,0,0.08) 70%, transparent 100%)',
-        pointerEvents: 'none', zIndex: 10,
-      }} />
+      {/* Spine / fold shadow */}
+      {vertical ? (
+        <div style={{
+          position: 'absolute', left: 0, right: 0,
+          top: 'calc(100% - 220px - 6px)', height: '32px',
+          transform: 'translateY(-50%)',
+          background: 'linear-gradient(to bottom, transparent, rgba(0,0,0,0.18) 50%, transparent)',
+          pointerEvents: 'none', zIndex: 10,
+        }} />
+      ) : (
+        <div style={{
+          position: 'absolute', top: 0, bottom: 0,
+          left: 'calc(50% - 20px)', width: '64px',
+          background: 'linear-gradient(to right, transparent 0%, rgba(0,0,0,0.08) 30%, rgba(0,0,0,0.25) 50%, rgba(0,0,0,0.08) 70%, transparent 100%)',
+          pointerEvents: 'none', zIndex: 10,
+        }} />
+      )}
     </div>
   )
 }
@@ -193,10 +207,11 @@ function ConciergeRightLg() {
 
 function ConciergeNotebook() {
   const [open, setOpen] = useState(false)
+  const mob = typeof window !== 'undefined' && window.innerWidth <= 767
   return (
     <>
       <Shell w="400px" h="320px" onClick={() => setOpen(true)} left={<ConciergeLeftSm />} right={<ConciergeRightSm />} />
-      {open && <Modal onClose={() => setOpen(false)}><Shell w={MODAL_W} h={MODAL_H} left={<ConciergeLeftLg />} right={<ConciergeRightLg />} /></Modal>}
+      {open && <Modal onClose={() => setOpen(false)}><Shell w={MODAL_W} h={mob ? '88vh' : MODAL_H} vertical={mob} left={<ConciergeLeftLg />} right={<ConciergeRightLg />} /></Modal>}
     </>
   )
 }
@@ -253,10 +268,11 @@ function VaultLeftLg() {
 
 function VaultNotebook() {
   const [open, setOpen] = useState(false)
+  const mob = typeof window !== 'undefined' && window.innerWidth <= 767
   return (
     <>
       <Shell w="400px" h="320px" onClick={() => setOpen(true)} left={<VaultLeftSm />} right={<VaultRight />} />
-      {open && <Modal onClose={() => setOpen(false)}><Shell w={MODAL_W} h={MODAL_H} left={<VaultLeftLg />} right={<VaultRight />} /></Modal>}
+      {open && <Modal onClose={() => setOpen(false)}><Shell w={MODAL_W} h={mob ? '88vh' : MODAL_H} vertical={mob} left={<VaultLeftLg />} right={<VaultRight />} /></Modal>}
     </>
   )
 }
@@ -322,10 +338,11 @@ function MetaLeftLg() {
 
 function MetaNotebook() {
   const [open, setOpen] = useState(false)
+  const mob = typeof window !== 'undefined' && window.innerWidth <= 767
   return (
     <>
       <Shell w="400px" h="320px" onClick={() => setOpen(true)} left={<MetaLeftSm />} right={<MetaRight />} />
-      {open && <Modal onClose={() => setOpen(false)}><Shell w={MODAL_W} h={MODAL_H} left={<MetaLeftLg />} right={<MetaRight lg />} /></Modal>}
+      {open && <Modal onClose={() => setOpen(false)}><Shell w={MODAL_W} h={mob ? '88vh' : MODAL_H} vertical={mob} left={<MetaLeftLg />} right={<MetaRight lg />} /></Modal>}
     </>
   )
 }
