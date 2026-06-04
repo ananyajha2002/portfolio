@@ -135,7 +135,7 @@ function SplashScreen({ onEnter }) {
           <video
             src="/assets/Photo Booth (AI Video Effect).mp4"
             autoPlay muted loop playsInline
-            style={{ height: '100%', width: 'auto', display: 'block' }}
+            style={{ height: 'min(60vh, 480px)', width: 'auto', display: 'block' }}
           />
         </div>
 
