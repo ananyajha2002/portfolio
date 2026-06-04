@@ -1112,3 +1112,8 @@ h1 { hyphens: none; word-break: keep-all; }
   0%, 100% { opacity: 1; }
   50%       { opacity: 0.3; }
 }
+
+/* ── Photobooth strip ─────────────────────────────────── */
+@media (max-width: 768px) {
+  .photobooth-strip { display: none !important; }
+}
