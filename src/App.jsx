@@ -125,8 +125,6 @@ function SplashScreen({ onEnter }) {
             click anywhere to enter
           </p>
         </div>
-
-      </div>
     </div>
   )
 }
