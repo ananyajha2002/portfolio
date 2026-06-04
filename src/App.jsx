@@ -101,11 +101,7 @@ function SplashScreen({ onEnter }) {
       {/* Subtle marble texture overlay */}
       <div style={{ position: 'absolute', inset: 0, backgroundImage: "url('/assets/marble-bg.jpeg')", backgroundSize: 'cover', backgroundPosition: 'center', opacity: 0.08, pointerEvents: 'none' }} />
 
-      {/* Text + video side by side */}
-      <div style={{ position: 'relative', display: 'flex', alignItems: 'stretch', gap: '32px', userSelect: 'none' }}>
-
-        {/* Text block */}
-        <div style={{ textAlign: 'center' }}>
+      <div style={{ position: 'relative', textAlign: 'center', userSelect: 'none' }}>
           {/* Main wordmark */}
           <div style={{ fontFamily: "'VogueTTF', serif", fontSize: 'clamp(48px, 12vw, 96px)', color: '#f8f5ef', lineHeight: 0.88, letterSpacing: '0.04em', marginBottom: '16px', animation: 'splashPulse 3s ease-in-out infinite' }}>
             ANANYA<br />JHA
@@ -128,15 +124,6 @@ function SplashScreen({ onEnter }) {
           <p style={{ fontFamily: "'EB Garamond', serif", fontSize: 'clamp(10px, 1.5vw, 13px)', letterSpacing: '0.24em', textTransform: 'uppercase', color: 'rgba(255,255,255,0.35)', animation: 'splashBlink 2s ease-in-out infinite' }}>
             click anywhere to enter
           </p>
-        </div>
-
-        {/* Photobooth video — same height as text block */}
-        <div className="photobooth-strip" style={{ flexShrink: 0, lineHeight: 0, pointerEvents: 'none' }}>
-          <video
-            src="/assets/Photo Booth (AI Video Effect).mp4"
-            autoPlay muted loop playsInline
-            style={{ height: 'min(60vh, 480px)', width: 'auto', display: 'block' }}
-          />
         </div>
 
       </div>
