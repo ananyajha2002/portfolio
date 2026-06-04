@@ -101,6 +101,20 @@ function SplashScreen({ onEnter }) {
       {/* Subtle marble texture overlay */}
       <div style={{ position: 'absolute', inset: 0, backgroundImage: "url('/assets/marble-bg.jpeg')", backgroundSize: 'cover', backgroundPosition: 'center', opacity: 0.08, pointerEvents: 'none' }} />
 
+      {/* Photobooth video strip */}
+      <div className="photobooth-strip" style={{
+        position: 'absolute', right: 'clamp(20px, 5vw, 72px)', top: '50%',
+        transform: 'translateY(-50%) rotate(2.5deg)',
+        boxShadow: '0 12px 40px rgba(0,0,0,0.6)',
+        lineHeight: 0, pointerEvents: 'none', userSelect: 'none',
+      }}>
+        <video
+          src="/assets/Photo Booth (AI Video Effect).mp4"
+          autoPlay muted loop playsInline
+          style={{ width: 'clamp(100px, 10vw, 150px)', display: 'block' }}
+        />
+      </div>
+
 <div style={{ position: 'relative', textAlign: 'center', userSelect: 'none' }}>
         {/* Main wordmark */}
         <div style={{ fontFamily: "'VogueTTF', serif", fontSize: 'clamp(48px, 12vw, 96px)', color: '#f8f5ef', lineHeight: 0.88, letterSpacing: '0.04em', marginBottom: '16px', animation: 'splashPulse 3s ease-in-out infinite' }}>
