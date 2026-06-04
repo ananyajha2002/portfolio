@@ -101,43 +101,44 @@ function SplashScreen({ onEnter }) {
       {/* Subtle marble texture overlay */}
       <div style={{ position: 'absolute', inset: 0, backgroundImage: "url('/assets/marble-bg.jpeg')", backgroundSize: 'cover', backgroundPosition: 'center', opacity: 0.08, pointerEvents: 'none' }} />
 
-      {/* Photobooth video strip */}
-      <div className="photobooth-strip" style={{
-        position: 'absolute', right: 'clamp(20px, 5vw, 72px)', top: '50%',
-        transform: 'translateY(-50%) rotate(2.5deg)',
-        boxShadow: '0 12px 40px rgba(0,0,0,0.6)',
-        lineHeight: 0, pointerEvents: 'none', userSelect: 'none',
-      }}>
-        <video
-          src="/assets/Photo Booth (AI Video Effect).mp4"
-          autoPlay muted loop playsInline
-          style={{ width: 'clamp(100px, 10vw, 150px)', display: 'block' }}
-        />
-      </div>
+      {/* Text + video side by side */}
+      <div style={{ position: 'relative', display: 'flex', alignItems: 'stretch', gap: '32px', userSelect: 'none' }}>
 
-<div style={{ position: 'relative', textAlign: 'center', userSelect: 'none' }}>
-        {/* Main wordmark */}
-        <div style={{ fontFamily: "'VogueTTF', serif", fontSize: 'clamp(48px, 12vw, 96px)', color: '#f8f5ef', lineHeight: 0.88, letterSpacing: '0.04em', marginBottom: '16px', animation: 'splashPulse 3s ease-in-out infinite' }}>
-          ANANYA<br />JHA
+        {/* Text block */}
+        <div style={{ textAlign: 'center' }}>
+          {/* Main wordmark */}
+          <div style={{ fontFamily: "'VogueTTF', serif", fontSize: 'clamp(48px, 12vw, 96px)', color: '#f8f5ef', lineHeight: 0.88, letterSpacing: '0.04em', marginBottom: '16px', animation: 'splashPulse 3s ease-in-out infinite' }}>
+            ANANYA<br />JHA
+          </div>
+
+          {/* Rule */}
+          <div style={{ width: '60px', height: '1px', background: '#c9b99a', margin: '0 auto 16px' }} />
+
+          {/* Subline */}
+          <p style={{ fontFamily: "'EB Garamond', serif", fontStyle: 'italic', fontSize: 'clamp(12px, 2vw, 16px)', color: '#c9b99a', letterSpacing: '0.14em', marginBottom: '24px' }}>
+            PORTFOLIO · 2026
+          </p>
+
+          {/* Intro description */}
+          <p style={{ fontFamily: "'EB Garamond', serif", fontSize: 'clamp(13px, 1.8vw, 17px)', color: 'rgba(248,245,239,0.88)', lineHeight: 1.65, letterSpacing: '0.02em', maxWidth: '480px', margin: '0 auto 32px' }}>
+            Hi! I built this portfolio from scratch to introduce myself properly. Four magazines for the professional work: my career, my time at university, everything I've built at my job at Endless and beyond, and the skills I've picked up along the way.<br /><br />And then the personal side of things: polaroids of what I love and a TV playing my favourite films at the end. Because honestly, favourite movies tell you more about a person than anything else.
+          </p>
+
+          {/* Enter prompt */}
+          <p style={{ fontFamily: "'EB Garamond', serif", fontSize: 'clamp(10px, 1.5vw, 13px)', letterSpacing: '0.24em', textTransform: 'uppercase', color: 'rgba(255,255,255,0.35)', animation: 'splashBlink 2s ease-in-out infinite' }}>
+            click anywhere to enter
+          </p>
         </div>
 
-        {/* Rule */}
-        <div style={{ width: '60px', height: '1px', background: '#c9b99a', margin: '0 auto 16px' }} />
+        {/* Photobooth video — same height as text block */}
+        <div className="photobooth-strip" style={{ flexShrink: 0, lineHeight: 0, pointerEvents: 'none' }}>
+          <video
+            src="/assets/Photo Booth (AI Video Effect).mp4"
+            autoPlay muted loop playsInline
+            style={{ height: '100%', width: 'auto', display: 'block' }}
+          />
+        </div>
 
-        {/* Subline */}
-        <p style={{ fontFamily: "'EB Garamond', serif", fontStyle: 'italic', fontSize: 'clamp(12px, 2vw, 16px)', color: '#c9b99a', letterSpacing: '0.14em', marginBottom: '24px' }}>
-          PORTFOLIO · 2026
-        </p>
-
-        {/* Intro description */}
-        <p style={{ fontFamily: "'EB Garamond', serif", fontSize: 'clamp(13px, 1.8vw, 17px)', color: 'rgba(248,245,239,0.88)', lineHeight: 1.65, letterSpacing: '0.02em', maxWidth: '480px', margin: '0 auto 32px' }}>
-          Hi! I built this portfolio from scratch to introduce myself properly. Four magazines for the professional work: my career, my time at university, everything I've built at my job at Endless and beyond, and the skills I've picked up along the way.<br /><br />And then the personal side of things: polaroids of what I love and a TV playing my favourite films at the end. Because honestly, favourite movies tell you more about a person than anything else.
-        </p>
-
-        {/* Enter prompt */}
-        <p style={{ fontFamily: "'EB Garamond', serif", fontSize: 'clamp(10px, 1.5vw, 13px)', letterSpacing: '0.24em', textTransform: 'uppercase', color: 'rgba(255,255,255,0.35)', animation: 'splashBlink 2s ease-in-out infinite' }}>
-          click anywhere to enter
-        </p>
       </div>
     </div>
   )
