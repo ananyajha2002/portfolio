@@ -117,7 +117,7 @@ function SplashScreen({ onEnter }) {
 
           {/* Intro description */}
           <p style={{ fontFamily: "'EB Garamond', serif", fontSize: 'clamp(13px, 1.8vw, 17px)', color: 'rgba(248,245,239,0.88)', lineHeight: 1.65, letterSpacing: '0.02em', maxWidth: '480px', margin: '0 auto 32px' }}>
-            Four magazines for the professional work: my career, university, everything I've built at Endless, and the skills I've picked up along the way. And then the personal side — polaroids of what I love and a TV playing my favourite films.
+            I built this from scratch to introduce myself properly. Four magazines on the work side: my career, university, what I've built at Endless, and the skills I've picked up. Then the personal stuff: polaroids of what I love and a TV playing my favourite films.
           </p>
 
           {/* Enter prompt */}
